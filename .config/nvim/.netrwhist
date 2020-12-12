@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/refat/.config'
+let g:netrw_dirhist_3='/home/refat/ProgrammingCodes/PythonCodes/pycodes'
+let g:netrw_dirhist_2='/home/refat/ProgrammingCodes/PythonCodes'
+let g:netrw_dirhist_1='/home/refat/ProgrammingCodes'
