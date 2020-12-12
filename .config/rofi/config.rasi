@@ -1,0 +1,61 @@
+configuration {
+	modi: "drun,windowcd,window";
+	width: 30;
+	lines: 12;
+	show-icons: true;
+	font: "JetBrainsMono Nerd Font Bold 11";
+	terminal: "alacritty";
+	disable-history: false;
+	sidebar-mode: true;
+	tokenize: true;
+	m: "-5";
+	line-margin: 2;
+	line-padding: 1;
+	separator-style: "none";
+	hide-scrollbar: true;
+	window-format: "{w} {c}";
+	/*fullscreen: true;*/
+	columns: 1;
+	display-drun: "Run";
+}
+
+* {
+	bg: #232530;
+	fg: #95c4ce;
+	accent: #b877db;
+
+	background-color: @bg;
+	text-color: @fg;
+}
+
+window {
+	/*padding: 100px 300px 100px 300px; // top, right, bottom, left*/
+	padding:50px;
+	border-radius: 0px;
+}
+
+prompt, entry {
+	text-color: @fg;
+	padding: 3px;
+}
+
+element {
+	border-radius: 0px;
+	padding: 3px;
+}
+
+element selected {
+	background-color: @fg;
+	text-color: @bg;
+}
+
+button selected {
+	background-color: @fg;
+	text-color: @bg;
+	border-radius: 0px;
+	padding: 0px;
+}
+
+element-icon { size: 2.3ch ; }
+
+// vim: set ft=css :
