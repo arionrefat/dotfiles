@@ -2,10 +2,11 @@
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+
+# # Use manjaro zsh prompt
+# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+#   source /usr/share/zsh/manjaro-zsh-prompt
+# fi
 
 
 # >>> conda initialize >>>
@@ -26,5 +27,5 @@ unset __conda_setup
 #Setting path for DOOM Emacs
 PATH="$HOME/.emacs.d/bin:$PATH"
 
-#For my todo list
-~/Documents/todo.sh
+# Starship prompt
+eval "$(starship init zsh)"
