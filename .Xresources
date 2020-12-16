@@ -115,7 +115,7 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! URxvt*blurRadius:                 HxV
 ! URxvt*fading:                     number
 ! URxvt*fadeColor:                  color
-! URxvt*utmpInhibit:                boolean
+! URxvt*utmpIhibit:                boolean
 ! URxvt*urgentOnBell:               boolean
 ! URxvt*visualBell:                 boolean
 ! URxvt*mapAlert:                   boolean
@@ -233,4 +233,4 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 ! -xos4-terminus-bold-r-normal--20-200-72-72-c-100-iso10646-1
 ! -xos4-terminus-bold-r-normal--24-240-72-72-c-120-iso10646-1
 ! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
-! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
+! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1n

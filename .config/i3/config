@@ -82,7 +82,7 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec brave
 #bindsym $mod+F2 exec firefox
 #bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec alacritty -e ranger
+bindsym $mod+F3 exec  alacritty -e ranger
 bindsym $mod+F4 exec discord
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F6 exec spotify

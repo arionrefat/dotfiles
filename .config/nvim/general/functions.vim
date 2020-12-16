@@ -23,3 +23,6 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
