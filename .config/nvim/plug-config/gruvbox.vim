@@ -1,9 +1,11 @@
 set background=dark
-let g:gruvbox_material_background = 'medium'
+let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_palette = 'material'
 let g:gruvbox_material_visual = 'grey background'
 let g:gruvbox_material_cursor = 'green'
-let g:gruvbox_material_disable_italic_comment = 0
 let g:gruvbox_material_sign_column_background = 'none'
 let g:gruvbox_material_statusline_style = "default"
 let g:gruvbox_material_better_performance = !has("win32")
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_transparent_background = 0

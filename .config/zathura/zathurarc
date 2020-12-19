@@ -19,7 +19,7 @@ set guioptions ""
 
 # zathurarc-dark
 
-set font "inconsolata 15"
+set font "Inconsolata Nerd Font 15"
 set default-bg "#000000" #00
 set default-fg "#F7F7F6" #01
 
@@ -63,3 +63,7 @@ map [fullscreen] f toggle_fullscreen
 set selection-clipboard clipboard
 set synctex true
 set synctex-editor-command "nvim +%{line} %{input}"
+set statusbar-v-padding 2
+set statusbar-h-padding 20
+set page-padding 1
+
