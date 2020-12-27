@@ -5,7 +5,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'powerline/powerline'
 Plug 'nlknguyen/copy-cut-paste.vim'
+Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mhinz/vim-startify'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
@@ -28,6 +30,10 @@ Plug 'lervag/vimtex'
 Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 call plug#end()
 
@@ -45,12 +51,16 @@ source $HOME/.config/nvim/plug-config/rainbowparen.vim
 source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/ranger.vim
 source $HOME/.config/nvim/plug-config/vimtex.vim
+source $HOME/.config/nvim/plug-config/vim-latex-live-preview.vim
 source $HOME/.config/nvim/plug-config/nerdcomment.vim
 source $HOME/.config/nvim/plug-config/coc-config.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/one.vim
 source $HOME/.config/nvim/plug-config/nord.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/markdown.vim
+source $HOME/.config/nvim/general/key-bind.vim
 
 "few parts of the config were taken from
 "https://github.com/ChristianChiarulli
