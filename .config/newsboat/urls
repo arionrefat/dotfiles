@@ -1,0 +1,12 @@
+"query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
+"query:Unread:unread = \"yes\"" meta
+
+https://www.reddit.com/r/archlinux/new.rss reddit Content
+https://www.reddit.com/r/linux/new.rss reddit Content
+https://www.reddit.com/r/ManjaroLinux/new.rss Reddit content
+https://www.reddit.com/r/commandline/new.rss Reddit content
+https://www.reddit.com/r/vim/new.rss Reddit content
+https://www.reddit.com/r/unixporn/new.rss Reddit
+https://news.ycombinator.com/rss News
+https://archlinux.org/feeds/packages/ Blog
+https://lukesmith.xyz/rss.xml Blog
