@@ -85,9 +85,9 @@ bindsym $mod+F2 exec brave
 bindsym $mod+F3 exec  alacritty -e ranger
 bindsym $mod+F4 exec discord
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F6 exec spotify
-bindsym $mod+F7 exec emacs
-bindsym $mod+F5 exec slack
+bindsym $mod+F5 exec spotify
+bindsym $mod+F6 exec emacs
+bindsym $mod+F7 exec slack
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -249,8 +249,6 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [title="fff"] floating enable border pixel 1
-for_window [title="qutebrowser"] floating disable
 for_window [class="fpakman"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal

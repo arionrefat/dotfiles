@@ -1,4 +1,4 @@
-set background=dark
+set background=light
 let g:gruvbox_material_background = 'soft'
 let g:gruvbox_material_palette = 'material'
 let g:gruvbox_material_visual = 'grey background'
