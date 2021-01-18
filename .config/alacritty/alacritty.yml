@@ -330,56 +330,85 @@ schemes:
       white:   '0xe6d5ae'
 
 # Apply the color scheme.
-colors: *gruvbox_material_soft_dark
+# colors: *gruvbox_material_soft_dark
 
 # colors:
+#   # Default colors
 #   primary:
-#     background: '#2e3440'
-#     foreground: '#d8dee9'
-#     dim_foreground: '#a5abb6'
-#   cursor:
-#     text: '#2e3440'
-#     cursor: '#d8dee9'
-#   vi_mode_cursor:
-#     text: '#2e3440'
-#     cursor: '#d8dee9'
-#   selection:
-#     text: CellForeground
-#     background: '#4c566a'
-#   search:
-#     matches:
-#       foreground: CellBackground
-#       background: '#88c0d0'
-#     bar:
-#       background: '#434c5e'
-#       foreground: '#d8dee9'
+#     background: '0x2a1e1d'
+#     foreground: '0xdfdab7'
+
+#   # Normal colors
 #   normal:
-#     black: '#3b4252'
-#     red: '#bf616a'
-#     green: '#a3be8c'
-#     yellow: '#ebcb8b'
-#     blue: '#81a1c1'
-#     magenta: '#b48ead'
-#     cyan: '#88c0d0'
-#     white: '#e5e9f0'
+#     black:   '0x573d25'
+#     red:     '0xbe2d26'
+#     green:   '0x6ba08a'
+#     yellow:  '0xe99c29'
+#     blue:    '0x5a86ac'
+#     magenta: '0xab80a6'
+#     cyan:    '0x74a5ac'
+#     white:   '0xdfdab7'
+
+#   # Bright colors
 #   bright:
-#     black: '#4c566a'
-#     red: '#bf616a'
-#     green: '#a3be8c'
-#     yellow: '#ebcb8b'
-#     blue: '#81a1c1'
-#     magenta: '#b48ead'
-#     cyan: '#8fbcbb'
-#     white: '#eceff4'
-#   dim:
-#     black: '#373e4d'
-#     red: '#94545d'
-#     green: '#809575'
-#     yellow: '#b29e75'
-#     blue: '#68809a'
-#     magenta: '#8c738c'
-#     cyan: '#6d96a5'
-#     white: '#aeb3bb'
+#     black:   '0x9a6b49'
+#     red:     '0xe84526'
+#     green:   '0x94d7ba'
+#     yellow:  '0xd0d04f'
+#     blue:    '0xb8d3ed'
+#     magenta: '0xd09dca'
+#     cyan:    '0x92ced6'
+#     white:   '0xfff9d4'
+
+
+colors:
+  primary:
+    background: '#2e3440'
+    foreground: '#d8dee9'
+    dim_foreground: '#a5abb6'
+  cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
+  normal:
+    black: '#3b4252'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#88c0d0'
+    white: '#e5e9f0'
+  bright:
+    black: '#4c566a'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#eceff4'
+  dim:
+    black: '#373e4d'
+    red: '#94545d'
+    green: '#809575'
+    yellow: '#b29e75'
+    blue: '#68809a'
+    magenta: '#8c738c'
+    cyan: '#6d96a5'
+    white: '#aeb3bb'
 
   # Dim colors
   #
@@ -435,7 +464,7 @@ colors: *gruvbox_material_soft_dark
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+background_opacity: 0.85
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
