@@ -3,8 +3,8 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-(setq doom-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 15)
-      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 15)
+(setq doom-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 16)
+      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 16)
       doom-big-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -35,11 +35,11 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-miramare)
+(setq doom-theme 'doom-vibrant)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Workspaces/Org-mode")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -52,6 +52,9 @@
 (require 'elcord)
 (elcord-mode)
 
+; ;; set transparency
+; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+; (add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -69,3 +72,28 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+
+;; MU4E
+
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
+;;(require 'smtpmail)
+(setq user-mail-address "arionrefat@gmail.com"
+      user-full-name  "Arion Love"
+      ;; I have my mbsyncrc in a different folder on my system, to keep it separate from the
+      ;; mbsyncrc available publicly in my dotfiles. You MUST edit the following line.
+      ;; Be sure that the following command is: "mbsync -c ~/.config/mu4e/mbsyncrc -a"
+      mu4e-get-mail-command "mbsync -c ~/.config/mu4e/mbsyncrc -a"
+      mu4e-update-interval  300
+      mu4e-main-buffer-hide-personal-addresses t
+      message-send-mail-function 'smtpmail-send-it
+      starttls-use-gnutls t
+      smtpmail-starttls-credentials '(("smtp.1and1.com" 587 nil nil))
+      mu4e-sent-folder "/Arionrefat/Sent"
+      mu4e-drafts-folder "/Arionrefat/Drafts"
+      mu4e-trash-folder "/Arionrefat/Trash"
+      mu4e-maildir-shortcuts
+      '(("/Arionrefat/Inbox"      . ?i)
+        ("/Arionrefat/Sent Items" . ?s)
+        ("/Arionrefat/Drafts"     . ?d)
+        ("/Arionrefat/Trash"      . ?t)))
