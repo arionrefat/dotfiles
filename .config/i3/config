@@ -43,7 +43,7 @@ font xft:Iosevka Nerd Font 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -89,7 +89,7 @@ bindsym $mod+F5 exec spotify
 bindsym $mod+F6 exec emacs
 bindsym $mod+F7 exec slack
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec emacs; exec notify-send "Brave Discord Emacs started" --icon="/home/refat/Pictures/Arts/Manjaro-logo.png"
+bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+m exec xinput enable 13; exec notify-send 'Trackpad Enabled'
@@ -239,7 +239,7 @@ assign [class="Code"] $ws3
 assign [class="Slack"] $ws7
 assign [class="Atom"] $ws3
 assign [class="mpv"] $ws6
-assign [class="Emacs"] $ws6
+assign [class="Emacs"] $ws3
 
 
 # Open specific applications in floating mode
