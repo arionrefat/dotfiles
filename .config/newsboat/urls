@@ -1,12 +1,21 @@
 "query:Linux Reddit:tags # \"content\" or title =~ \"\\[OC\\]\"" meta
 "query:Unread:unread = \"yes\"" meta
 
-https://www.reddit.com/r/archlinux/new.rss reddit Content
-https://www.reddit.com/r/linux/new.rss reddit Content
-https://www.reddit.com/r/ManjaroLinux/new.rss Reddit content
-https://www.reddit.com/r/commandline/new.rss Reddit content
-https://www.reddit.com/r/vim/new.rss Reddit content
-https://www.reddit.com/r/unixporn/new.rss Reddit
+https://www.reddit.com/r/archlinux.rss Reddit Content
+https://www.reddit.com/r/linux.rss Reddit Content
+https://www.reddit.com/r/commandline.rss Reddit content
+https://www.reddit.com/r/DoomEmacs.rss Reddit content
+https://www.reddit.com/r/emacs.rss Reddit content
+https://www.reddit.com/r/vim.rss Reddit content
+https://www.reddit.com/r/unixporn.rss Reddit Content
+https://www.reddit.com/r/i3wm.rss Reddit Content
+https://www.reddit.com/r/ManjaroLinux.rss Reddit Content
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA Youtube 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA Youtube
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA Youtube
+
 https://news.ycombinator.com/rss News
 https://archlinux.org/feeds/packages/ Blog
 https://lukesmith.xyz/rss.xml Blog

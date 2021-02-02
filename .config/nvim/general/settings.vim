@@ -19,4 +19,4 @@ set conceallevel=0                      " So that I can see `` in markdown files
 set smartindent                         " Makes indenting smart
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set incsearch
-colorscheme nord
+colorscheme one
