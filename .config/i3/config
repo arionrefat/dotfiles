@@ -49,7 +49,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start program launcher
-# bindsym $mod+d exec --no-startup-id dmenu_recency
+# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu'"
 
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Tab exec rofi -show window
@@ -82,18 +82,19 @@ bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec brave
 #bindsym $mod+F2 exec firefox
 #bindsym $mod+F3 exec pcmanfm
-bindsym $mod+F3 exec  alacritty -e ranger
+bindsym $mod+F3 exec kitty -e ranger
 bindsym $mod+F4 exec discord
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec spotify
 bindsym $mod+F6 exec emacs
 bindsym $mod+F7 exec slack
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
+bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec emacs; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
+# bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+m exec xinput enable 13; exec notify-send 'Trackpad Enabled'
-bindsym $mod+Shift+m exec xinput disable 13; exec notify-send 'Trackpad Disabled'
+bindsym $mod+m exec xinput enable 21; exec notify-send 'Trackpad Enabled'
+bindsym $mod+Shift+m exec xinput disable 21; exec notify-send 'Trackpad Disabled'
 # bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 # Multi-screen screenshots with scrot
@@ -240,6 +241,7 @@ assign [class="Slack"] $ws7
 assign [class="Atom"] $ws3
 assign [class="mpv"] $ws6
 assign [class="Emacs"] $ws3
+assign [class="jetbrains-idea-ce"] $ws7
 
 
 # Open specific applications in floating mode
@@ -427,19 +429,18 @@ set_from_resource $term_color15    color15
 #|  __/| |_| | |___| | | |_) / ___ \|  _ <
 #|_|    \___/|_____|_| |____/_/   \_\_| \_\
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-  client.background       #2B2C2B
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
+client.background       #F8F8F2
   # _ _____  ____
   #(_)___ / / ___| __ _ _ __  ___
   #| | |_ \| |  _ / _` | '_ \/ __|
@@ -448,8 +449,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
   #                    |_|
 
   # Set inner/outer gaps
-  gaps inner 13
-  gaps outer 2
+  gaps inner 16
+  gaps outer -2
 
   # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
   # gaps inner|outer current|all set|plus|minus <px>

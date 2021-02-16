@@ -1,7 +1,8 @@
 call plug#begin()
 Plug 'vim-airline/vim-airline'
-Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'honza/vim-snippets'
+Plug 'jiangmiao/auto-pairs'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'powerline/powerline'

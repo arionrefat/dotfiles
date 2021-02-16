@@ -50,6 +50,5 @@
 ;(unpin! t)
 
 (package! elcord)
-(package! evil-tutor)
 (package! wakatime-mode)
-(package! latex-preview-pane)
+(package! emojify)

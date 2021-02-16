@@ -3,8 +3,8 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-(setq doom-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 16)
-      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 16)
+(setq doom-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 17)
+      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 17)
       doom-big-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 24))
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -35,7 +35,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-horizon)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!

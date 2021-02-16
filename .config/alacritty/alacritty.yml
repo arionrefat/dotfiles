@@ -85,7 +85,7 @@ scrolling:
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  #multiplier: 3
+  multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
   #auto_scroll: false
@@ -109,7 +109,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Iosevka Nerd Font
+    family: Iosevka Nerd font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -120,7 +120,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Nerd Font
+    family: Iosevka Nerd font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -131,7 +131,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Nerd Font
+    family: Iosevka Nerd font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -142,7 +142,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Iosevka Nerd Font
+    family: Iosevka Nerd font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -182,247 +182,10 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# The definition of color schemes.
-schemes:
-  gruvbox_material_hard_dark: &gruvbox_material_hard_dark
-    primary:
-      background: '0x1d2021'
-      foreground: '0xd4be98'
+# Color Scheme:
 
-    normal:
-      black:   '0x32302f'
-      red:     '0xea6962'
-      green:   '0xa9b665'
-      yellow:  '0xd8a657'
-      blue:    '0x7daea3'
-      magenta: '0xd3869b'
-      cyan:    '0x89b482'
-      white:   '0xd4be98'
-
-    bright:
-      black:   '0x32302f'
-      red:     '0xea6962'
-      green:   '0xa9b665'
-      yellow:  '0xd8a657'
-      blue:    '0x7daea3'
-      magenta: '0xd3869b'
-      cyan:    '0x89b482'
-      white:   '0xd4be98'
-  gruvbox_material_medium_dark: &gruvbox_material_medium_dark
-    primary:
-      background: '0x282828'
-      foreground: '0xd4be98'
-
-    normal:
-      black:   '0x3c3836'
-      red:     '0xea6962'
-      green:   '0xa9b665'
-      yellow:  '0xd8a657'
-      blue:    '0x7daea3'
-      magenta: '0xd3869b'
-      cyan:    '0x89b482'
-      white:   '0xd4be98'
-
-    bright:
-      black:   '0x3c3836'
-      red:     '0xea6962'
-      green:   '0xa9b665'
-      yellow:  '0xd8a657'
-      blue:    '0x7daea3'
-      magenta: '0xd3869b'
-      cyan:    '0x89b482'
-      white:   '0xd4be98'
-  gruvbox_material_soft_dark: &gruvbox_material_soft_dark
-    primary:
-      background: '0x32302f'
-      foreground: '0xd4be98'
-
-    normal:
-      black:   '0x45403d'
-      red:     '0xea6962'
-      green:   '0xa9b665'
-      yellow:  '0xd8a657'
-      blue:    '0x7daea3'
-      magenta: '0xd3869b'
-      cyan:    '0x89b482'
-      white:   '0xd4be98'
-
-    bright:
-      black:   '0x45403d'
-      red:     '0xea6962'
-      green:   '0xa9b665'
-      yellow:  '0xd8a657'
-      blue:    '0x7daea3'
-      magenta: '0xd3869b'
-      cyan:    '0x89b482'
-      white:   '0xd4be98'
-  gruvbox_material_hard_light: &gruvbox_material_hard_light
-    primary:
-      background: '0xf9f5d7'
-      foreground: '0x654735'
-
-    normal:
-      black:   '0x654735'
-      red:     '0xc14a4a'
-      green:   '0x6c782e'
-      yellow:  '0xb47109'
-      blue:    '0x45707a'
-      magenta: '0x945e80'
-      cyan:    '0x4c7a5d'
-      white:   '0xf2e5bc'
-
-    bright:
-      black:   '0x654735'
-      red:     '0xc14a4a'
-      green:   '0x6c782e'
-      yellow:  '0xb47109'
-      blue:    '0x45707a'
-      magenta: '0x945e80'
-      cyan:    '0x4c7a5d'
-      white:   '0xf2e5bc'
-  gruvbox_material_medium_light: &gruvbox_material_medium_light
-    primary:
-      background: '0xfbf1c7'
-      foreground: '0x654735'
-
-    normal:
-      black:   '0x654735'
-      red:     '0xc14a4a'
-      green:   '0x6c782e'
-      yellow:  '0xb47109'
-      blue:    '0x45707a'
-      magenta: '0x945e80'
-      cyan:    '0x4c7a5d'
-      white:   '0xeee0b7'
-
-    bright:
-      black:   '0x654735'
-      red:     '0xc14a4a'
-      green:   '0x6c782e'
-      yellow:  '0xb47109'
-      blue:    '0x45707a'
-      magenta: '0x945e80'
-      cyan:    '0x4c7a5d'
-      white:   '0xeee0b7'
-  gruvbox_material_soft_light: &gruvbox_material_soft_light
-    primary:
-      background: '0xf2e5bc'
-      foreground: '0x654735'
-
-    normal:
-      black:   '0x654735'
-      red:     '0xc14a4a'
-      green:   '0x6c782e'
-      yellow:  '0xb47109'
-      blue:    '0x45707a'
-      magenta: '0x945e80'
-      cyan:    '0x4c7a5d'
-      white:   '0xe6d5ae'
-
-    bright:
-      black:   '0x654735'
-      red:     '0xc14a4a'
-      green:   '0x6c782e'
-      yellow:  '0xb47109'
-      blue:    '0x45707a'
-      magenta: '0x945e80'
-      cyan:    '0x4c7a5d'
-      white:   '0xe6d5ae'
-
-# Apply the color scheme.
-# colors: *gruvbox_material_soft_dark
-
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x2a1e1d'
-#     foreground: '0xdfdab7'
-
-#   # Normal colors
-#   normal:
-#     black:   '0x573d25'
-#     red:     '0xbe2d26'
-#     green:   '0x6ba08a'
-#     yellow:  '0xe99c29'
-#     blue:    '0x5a86ac'
-#     magenta: '0xab80a6'
-#     cyan:    '0x74a5ac'
-#     white:   '0xdfdab7'
-
-#   # Bright colors
-#   bright:
-#     black:   '0x9a6b49'
-#     red:     '0xe84526'
-#     green:   '0x94d7ba'
-#     yellow:  '0xd0d04f'
-#     blue:    '0xb8d3ed'
-#     magenta: '0xd09dca'
-#     cyan:    '0x92ced6'
-#     white:   '0xfff9d4'
-
-
-colors:
-  primary:
-    background: '#2e3440'
-    foreground: '#d8dee9'
-    dim_foreground: '#a5abb6'
-  cursor:
-    text: '#2e3440'
-    cursor: '#d8dee9'
-  vi_mode_cursor:
-    text: '#2e3440'
-    cursor: '#d8dee9'
-  selection:
-    text: CellForeground
-    background: '#4c566a'
-  search:
-    matches:
-      foreground: CellBackground
-      background: '#88c0d0'
-    bar:
-      background: '#434c5e'
-      foreground: '#d8dee9'
-  normal:
-    black: '#3b4252'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
-    magenta: '#b48ead'
-    cyan: '#88c0d0'
-    white: '#e5e9f0'
-  bright:
-    black: '#4c566a'
-    red: '#bf616a'
-    green: '#a3be8c'
-    yellow: '#ebcb8b'
-    blue: '#81a1c1'
-    magenta: '#b48ead'
-    cyan: '#8fbcbb'
-    white: '#eceff4'
-  dim:
-    black: '#373e4d'
-    red: '#94545d'
-    green: '#809575'
-    yellow: '#b29e75'
-    blue: '#68809a'
-    magenta: '#8c738c'
-    cyan: '#6d96a5'
-    white: '#aeb3bb'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  #dim:
-  #  black:   '0x000000'
-  #  red:     '0x8c3336'
-  #  green:   '0x7a8530'
-  #  yellow:  '0x97822e'
-  #  blue:    '0x506d8f'
-  #  magenta: '0x80638e'
-  #  cyan:    '0x497e7a'
-  #  white:   '0x9a9a9a'
+import:
+  - ~/.config/alacritty/themes/dracula.yml
 
   # Indexed Colors
   #
