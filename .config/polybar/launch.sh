@@ -21,11 +21,7 @@ launch_bar() {
 	fi
 }
 
-if [[ "$1" == "--material" ]]; then
-	style="material"
-	launch_bar
-
-elif [[ "$1" == "--shades" ]]; then
+if [[ "$1" == "--shades" ]]; then
 	style="shades"
 	launch_bar
 
@@ -62,8 +58,8 @@ else
 	Usage : launch.sh --theme
 
 	Available Themes :
-	--blocks    --colorblocks    --cuts      --docky
-	--forest    --grayblocks     --hack      --material
+	--blocks    --colorblocks    --cuts
+	--forest    --grayblocks     --hack
 	--shades    --shapes
 	EOF
 fi
