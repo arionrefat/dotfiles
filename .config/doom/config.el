@@ -73,27 +73,3 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-
-;; MU4E
-
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-;;(require 'smtpmail)
-(setq user-mail-address "arionrefat@gmail.com"
-      user-full-name  "Arion Love"
-      ;; I have my mbsyncrc in a different folder on my system, to keep it separate from the
-      ;; mbsyncrc available publicly in my dotfiles. You MUST edit the following line.
-      ;; Be sure that the following command is: "mbsync -c ~/.config/mu4e/mbsyncrc -a"
-      mu4e-get-mail-command "mbsync -c ~/.config/mu4e/mbsyncrc -a"
-      mu4e-update-interval  300
-      mu4e-main-buffer-hide-personal-addresses t
-      message-send-mail-function 'smtpmail-send-it
-      starttls-use-gnutls t
-      smtpmail-starttls-credentials '(("smtp.1and1.com" 587 nil nil))
-      mu4e-sent-folder "/Arionrefat/Sent"
-      mu4e-drafts-folder "/Arionrefat/Drafts"
-      mu4e-trash-folder "/Arionrefat/Trash"
-      mu4e-maildir-shortcuts
-      '(("/Arionrefat/Inbox"      . ?i)
-        ("/Arionrefat/Sent Items" . ?s)
-        ("/Arionrefat/Drafts"     . ?d)
-        ("/Arionrefat/Trash"      . ?t)))

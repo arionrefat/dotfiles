@@ -27,7 +27,7 @@ user_interface = "alternative"
 ## Classic Interface ##
 song_status_format = " $6%a $7⟫⟫ $3%t $7⟫⟫ $4%b "
 
-visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
 visualizer_sync_interval = "60"
 visualizer_in_stereo = "yes"
