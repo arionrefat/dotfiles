@@ -136,3 +136,10 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+## "bat" as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# ~/.bashrc
+
+eval "$(starship init bash)"

@@ -13,3 +13,5 @@ eval "$(starship init zsh)"
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
+### "bat" as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"

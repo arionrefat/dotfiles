@@ -35,7 +35,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-horizon)
+(setq doom-theme 'doom-Iosvkem)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -52,8 +52,12 @@
 (require 'elcord)
 (elcord-mode)
 
+(require 'company)
+(setq company-idle-delay 0.2
+      company-minimum-prefix-length 3)
+
 ; ;; set transparency
-; (set-frame-parameter (selected-frame) 'alpha '(90 90))
+; (set-frame-parameter (selected-frame) 'alpha '(85 85))
 ; (add-to-list 'default-frame-alist '(alpha 90 90))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
