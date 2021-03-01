@@ -12,7 +12,7 @@ theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
-theme.font          = "JetBrains Mono Medium 10"
+theme.font          = "Iosevka Nerd Font 11"
 
 
 -- {{{ Colors

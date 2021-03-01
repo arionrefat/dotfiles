@@ -80,13 +80,12 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec brave
-#bindsym $mod+F2 exec firefox
 #bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec alacritty -e ranger
 bindsym $mod+F4 exec discord
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec spotify
-bindsym $mod+F6 exec emacs
+bindsym $mod+F6 exec spotify
+bindsym $mod+F5 exec emacs
 bindsym $mod+F7 exec slack
 bindsym $mod+t exec --no-startup-id pkill compton
 # bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec emacs; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
