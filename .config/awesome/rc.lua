@@ -214,7 +214,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            -- wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
         },
@@ -259,24 +259,41 @@ globalkeys = gears.table.join(
     awful.key({ "Mod4" }, "F2",
         function ()
         awful.util.spawn("brave") end,
-        {description = "Open brave browser", group = "My_cuts"}),
+        {description = "Open brave browser", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F4",
         function ()
         awful.util.spawn("discord") end,
-            {description = "Open Discord", group = "My_cuts"}),
+            {description = "Open Discord", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F5",
         function ()
         awful.util.spawn("emacs") end,
-            {description = "Open Doom Emacs", group = "My_cuts"}),
+            {description = "Open Doom Emacs", group = "My_Binds"}),
 
 
     awful.key({ "Mod4" }, "F3",
         function ()
         awful.util.spawn("alacritty -e ranger") end,
-            {description = "Open ranger via alacritty", group = "My_cuts"}),
+            {description = "Open ranger via alacritty", group = "My_Binds"}),
 
+    awful.key({ "Mod4" }, "F7",
+        function ()
+        awful.util.spawn("xinput disable 21")
+        naughty.notify({ text = "Disabled Trackpad", timeout = 3 }) end,
+            {description = "Disable Trackpad", group = "My_Binds"}),
+
+
+    awful.key({ "Mod4" }, "F8",
+        function ()
+        awful.util.spawn("xinput enable 21")
+        naughty.notify({ text = "Enabled Trackpad", timeout = 3 }) end,
+            {description = "Enable Trackpad", group = "My_Binds"}),
+
+    awful.key({ "Ctrl", "Mod1" }, "l",
+        function ()
+        awful.util.spawn("blurlock") end,
+            {description = "Lock", group = "My_Binds"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -511,8 +528,6 @@ awful.rules.rules = {
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
-          "Sxiv",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
           "xtightvncviewer"},
@@ -551,7 +566,7 @@ awful.rules.rules = {
        properties = { screen = 1, tag = "7" } },
 
     { rule = { class = "Pcmanfm" },
-       properties = { screen = 1, tag = "7" } },
+       properties = { screen = 1, tag = "5" } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
@@ -633,5 +648,4 @@ awful.spawn.with_shell("fix_xcursor")
 awful.spawn.with_shell("ff-theme-util")
 awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("pcmac-tray")
-
 -- }}}
