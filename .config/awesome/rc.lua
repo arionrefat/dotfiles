@@ -88,7 +88,6 @@ awful.layout.layouts = {
 -- Create a launcher widget and a main menu
 myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", function() awesome.quit() end },
@@ -271,7 +270,6 @@ globalkeys = gears.table.join(
         awful.util.spawn("emacs") end,
             {description = "Open Doom Emacs", group = "My_Binds"}),
 
-
     awful.key({ "Mod4" }, "F3",
         function ()
         awful.util.spawn("alacritty -e ranger") end,
@@ -279,14 +277,13 @@ globalkeys = gears.table.join(
 
     awful.key({ "Mod4" }, "F7",
         function ()
-        awful.util.spawn("xinput disable 21")
+        awful.util.spawn("xinput disable 13")
         naughty.notify({ text = "Disabled Trackpad", timeout = 3 }) end,
             {description = "Disable Trackpad", group = "My_Binds"}),
 
-
     awful.key({ "Mod4" }, "F8",
         function ()
-        awful.util.spawn("xinput enable 21")
+        awful.util.spawn("xinput enable 13")
         naughty.notify({ text = "Enabled Trackpad", timeout = 3 }) end,
             {description = "Enable Trackpad", group = "My_Binds"}),
 
@@ -294,6 +291,23 @@ globalkeys = gears.table.join(
         function ()
         awful.util.spawn("blurlock") end,
             {description = "Lock", group = "My_Binds"}),
+
+    -- Screenshot Selection
+    awful.key({  modkey, "Shift"}, "Print",
+        function ()
+        awful.util.spawn("scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/sam/Pictures/Screenshots'")
+    end),
+
+    -- Screenshot
+    awful.key({ "Mod4" }, "Print",
+        function ()
+        awful.util.spawn("scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`'")
+    end),
+
+    -- Volume controls
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -356,19 +370,6 @@ globalkeys = gears.table.join(
     awful.key({ "Mod4" }, "d",
         function ()
         awful.util.spawn("rofi -show drun")
-    end),
-
-    -- Screenshot Selection
-    awful.key({  modkey, "Shift"}, "Print",
-        function ()
-        awful.util.spawn("scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/sam/Pictures/Screenshots'")
-    end),
-
-
-    -- Screenshot
-    awful.key({ "Mod4" }, "Print",
-        function ()
-        awful.util.spawn("scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`'")
     end),
 
 

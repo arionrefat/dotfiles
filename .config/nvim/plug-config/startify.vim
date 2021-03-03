@@ -28,10 +28,10 @@ let g:startify_bookmarks = [
             \ { 'c': '~/.config/i3/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'a': '~/.config/alacritty/alacritty.yml' },
+            \ { 'w': '~/.config/awesome/rc.lua' },
             \ { 'z': '~/.zshrc' },
             \ { 'b': '~/TutCodes' },
 	        \ { 't': '/usr/share/nvim/runtime/tutor/en/vim-01-beginner.tutor' },
-            \ { '1': '~/Documents/todo.sh'},
             \ ]
 
 let g:startify_enable_special = 0   " Shows Empty buffer and quit shortcuts
