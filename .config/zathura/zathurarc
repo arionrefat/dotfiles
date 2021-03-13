@@ -46,12 +46,13 @@ set completion-fg "#E0E0E0" #0C
 set notification-bg "#90A959" #0B
 set notification-fg "#151515" #00
 
-set recolor "true"
-set recolor-lightcolor "#000000" #00
-set recolor-darkcolor "#E0E0E0" #06
-set recolor-reverse-video "true"
-set recolor-keephue "true"
+set selection-clipboard clipboard
 
+set recolor "true"
+set recolor-darkcolor "#ebdbb2"
+set recolor-darkcolor "#ffcc99"
+set recolor-darkcolor "#F9F9F9"
+set recolor-darkcolor "#b1b1b1"
 
 set render-loading "false"
 set scroll-step 50

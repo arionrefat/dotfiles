@@ -68,7 +68,7 @@ theme.widget_mail                               = theme.dir .. "/icons/mail.png"
 theme.widget_mail_on                            = theme.dir .. "/icons/mail_on.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = dpi(0)
+theme.useless_gap                               = dpi(7)
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -287,6 +287,18 @@ function theme.at_screen_connect(s)
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contains an icon indicating which layout we're using.
+
+
+    -- Eminent-like task filtering
+    local orig_filter = awful.widget.taglist.filter.all
+
+    -- Taglist label functions
+    awful.widget.taglist.filter.all = function (t, args)
+        if t.selected or #t:clients() > 0 then
+            return orig_filter(t, args)
+        end
+    end
+
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
     s.mylayoutbox:buttons(my_table.join(
@@ -317,8 +329,8 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
-            keyboardlayout,
+            -- wibox.widget.systray(),
+            -- keyboardlayout,
             spr,
             arrl_ld,
             wibox.container.background(mpdicon, theme.bg_focus),

@@ -51,4 +51,3 @@
 
 (package! elcord)
 (package! wakatime-mode)
-(package! emojify)

@@ -8,10 +8,13 @@ local dpi = require("beautiful.xresources").apply_dpi
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 local gears_shape = require("gears.shape")
-local wibox = require("wibox")
 local awful_widget_clienticon = require("awful.widget.clienticon")
 local gtk = require("beautiful.gtk")
 
+local gears = require("gears")
+local lain  = require("lain")
+local awful = require("awful")
+local wibox = require("wibox")
 
 -- Helper functions for modifying hex colors:
 --
@@ -289,7 +292,7 @@ theme.menu_submenu = "▸ "
 theme = theme_assets.recolor_layout(theme, theme.wibar_fg)
 
 -- Recolor titlebar icons:
---
+
 theme = theme_assets.recolor_titlebar(
     theme, theme.titlebar_fg_normal, "normal"
 )
@@ -319,16 +322,16 @@ theme.awesome_icon = theme_assets.awesome_icon(
 )
 
 -- Generate taglist squares:
---local taglist_square_size = dpi(4)
---theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
-    --taglist_square_size, theme.gtk.header_button_border_color
---)
---theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
-    --taglist_square_size, theme.gtk.header_button_border_color
---)
+local taglist_square_size = dpi(4)
+theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
+    taglist_square_size, theme.gtk.header_button_border_color
+)
+theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
+    taglist_square_size, theme.gtk.header_button_border_color
+)
 -- Or disable them:
-theme.taglist_squares_sel = nil
-theme.taglist_squares_unsel = nil
+-- theme.taglist_squares_sel = nil
+-- theme.taglist_squares_unsel = nil
 
 -- Generate wallpaper:
 local wallpaper_bg = theme.gtk.base_color

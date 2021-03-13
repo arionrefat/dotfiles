@@ -185,7 +185,7 @@ draw_bold_text_with_bright_colors: true
 # colorscheme:
 
 import:
-  - ~/.config/alacritty/themes/horizon-dark.yaml
+  - ~/.config/alacritty/themes/tokyo-night.yaml
 
   # Indexed Colors
   #

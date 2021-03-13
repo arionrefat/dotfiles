@@ -3,16 +3,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-(setq doom-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 17)
-      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 17)
-      doom-big-font (font-spec :family "JetBrains Mono Medium Nerd Font" :size 24))
-(after! doom-themes
-  (setq doom-themes-enable-bold t
-        doom-themes-enable-italic t))
-(custom-set-faces!
-  '(font-lock-comment-face :slant italic)
-  '(font-lock-keyword-face :slant italic))
-
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -29,36 +19,39 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 18)
+      doom-variable-pitch-font (font-spec :family "Iosevka Nerd Font" :size 22)
+      doom-big-font (font-spec :family "Iosevka Nerd Font" :size 24))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-vibrant)
 
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic)
+  '(font-lock-keyword-face :slant italic))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Workspaces/Org-mode")
+
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-
-;; For wakatime
-(global-wakatime-mode)
-
-(require 'elcord)
-(elcord-mode)
-
+;; for company mode
 (require 'company)
 (setq company-idle-delay 0.2
       company-minimum-prefix-length 3)
 
-; ;; set transparency
-; (set-frame-parameter (selected-frame) 'alpha '(85 85))
-; (add-to-list 'default-frame-alist '(alpha 90 90))
+;; For wakatime
+(global-wakatime-mode)
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -76,4 +69,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
