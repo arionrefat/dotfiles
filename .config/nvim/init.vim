@@ -27,9 +27,6 @@ source $HOME/.config/nvim/plug-config/markdown.vim
 source $HOME/.config/nvim/general/key-bind.vim
 source $HOME/.config/nvim/plug-config/barbar.vim
 
-"""NeoVide
-source $HOME/.config/nvim/general/guivim.vim
-
 "Inspiration taken from
 "https://github.com/ChristianChiarulli
 "https://github.com/ChristianChiarulli/nvim
