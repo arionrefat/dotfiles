@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "gtk/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 
 -- Enable gaps
 beautiful.useless_gap = 7
@@ -105,9 +105,6 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
-
--- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
@@ -663,6 +660,7 @@ client.connect_signal("unfocus", function(c) c.border_width = 0 end)
 
 -- Autostart
 awful.spawn.with_shell("picom -f")
+awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("fix_xcursor")
 awful.spawn.with_shell("ff-theme-util")
 awful.spawn.with_shell("xfce4-power-manager")

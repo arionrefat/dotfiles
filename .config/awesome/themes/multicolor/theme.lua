@@ -17,10 +17,10 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "Terminus 8"
+theme.font                                      = "Terminus 9"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
-theme.bg_normal                                 = "#000000"
+theme.bg_normal                                 = "#00000080"
 theme.bg_focus                                  = "#000000"
 theme.bg_urgent                                 = "#000000"
 theme.fg_normal                                 = "#aaaaaa"
@@ -70,6 +70,7 @@ theme.layout_max                                = theme.confdir .. "/icons/max.p
 theme.layout_fullscreen                         = theme.confdir .. "/icons/fullscreen.png"
 theme.layout_magnifier                          = theme.confdir .. "/icons/magnifier.png"
 theme.layout_floating                           = theme.confdir .. "/icons/floating.png"
+theme.awesome_icon = theme.confdir .. "/icons/awesome-icon.png"
 theme.titlebar_close_button_normal              = theme.confdir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_close_button_focus               = theme.confdir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_minimize_button_normal           = theme.confdir .. "/icons/titlebar/minimize_normal.png"
@@ -196,6 +197,9 @@ local bat = lain.widget.bat({
     end
 })
 
+-- Awesome Icon
+local awesome_icon = wibox.widget.imagebox(theme.awesome_icon)
+
 -- ALSA volume
 local volicon = wibox.widget.imagebox(theme.widget_vol)
 theme.volume = lain.widget.alsa({
@@ -300,6 +304,7 @@ function theme.at_screen_connect(s)
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            awesome_icon,
             s.mytaglist,
             s.mypromptbox,
             mpdicon,
@@ -311,8 +316,8 @@ function theme.at_screen_connect(s)
             -- wibox.widget.systray(),
             --mailicon,
             --theme.mail.widget,
-            netdownicon,
-            netdowninfo,
+            -- netdownicon,
+            -- netdowninfo,
             -- netupicon,
             -- netupinfo.widget,
             volicon,

@@ -2,7 +2,7 @@
     frame_width = 0
     frame_color = "#000000"
 
-    font = BlexMono Nerd Font 12
+    font = TerminessTTF Nerd Font 10
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
@@ -134,7 +134,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = #263238
+    separator_color = auto
 
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -145,7 +145,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = palemoon
+    browser = brave
 
     # Align icons left/right/off
     icon_position = left
@@ -154,7 +154,7 @@
     icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/
 
     # Limit icons size.
-    max_icon_size=128
+    max_icon_size=256
 
 [shortcuts]
 
@@ -181,7 +181,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#263238"
+    background = "#000000"
     foreground = "#556064"
     timeout = 10
 

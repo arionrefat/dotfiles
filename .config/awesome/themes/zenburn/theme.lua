@@ -8,12 +8,11 @@ local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
+-- theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
-theme.font          = "Iosevka Nerd Font 11"
-
+theme.font      = "Iosevka 10"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -35,7 +34,7 @@ theme.border_marked = "#CC9393"
 
 -- {{{ Titlebars
 theme.titlebar_bg_focus  = "#3F3F3F"
-theme.titlebar_bg_normal = "#3F3F3F"
+theme.titlebar_bg_normal = "#3F3F3F80"
 -- }}}
 
 -- There are other variable sets

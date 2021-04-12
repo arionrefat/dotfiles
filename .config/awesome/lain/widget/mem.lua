@@ -16,7 +16,7 @@ local gmatch, lines, floor = string.gmatch, io.lines, math.floor
 local function factory(args)
     local mem      = { widget = wibox.widget.textbox() }
     local args     = args or {}
-    local timeout  = args.timeout or 2
+    local timeout  = args.timeout or 5
     local settings = args.settings or function() end
 
     function mem.update()
