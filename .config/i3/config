@@ -234,7 +234,7 @@ assign [class="Brave-browser"] $ws2
 assign [class="Pcmanfm"] $ws5
 assign [class="discord"] $ws4
 assign [class="Slack"] $ws7
-assign [class="mpv"] $ws6
+assign [class="mpv"] $ws1
 assign [class="Emacs"] $ws3
 assign [class="jetbrains-idea-ce"] $ws7
 
@@ -444,8 +444,8 @@ client.background       #F8F8F2
   #                    |_|
 
   # Set inner/outer gaps
-  gaps inner 16
-  gaps outer -2
+  gaps inner 14
+  gaps outer -1
 
   # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
   # gaps inner|outer current|all set|plus|minus <px>

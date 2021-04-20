@@ -22,7 +22,6 @@ luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/one.vim
 source $HOME/.config/nvim/plug-config/nord.vim
-source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/markdown.vim
 source $HOME/.config/nvim/general/key-bind.vim
 source $HOME/.config/nvim/plug-config/barbar.vim

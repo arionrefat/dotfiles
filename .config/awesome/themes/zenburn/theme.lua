@@ -12,7 +12,7 @@ local theme = {}
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Iosevka 10"
+theme.font      = "Terminus 9"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"

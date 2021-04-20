@@ -284,7 +284,7 @@ globalkeys = gears.table.join(
         awful.util.spawn("kitty -e ranger") end,
             {description = "Open ranger via alacritty", group = "My_Binds"}),
 
-    awful.key({ "Mod4" }, "F7",
+    awful.key({ "Mod4" }, "F10",
         function ()
         awful.util.spawn("bash -c ~/.scripts/touchpadout.sh")
         naughty.notify({ text = "Disabled Trackpad", timeout = 3 }) end,
