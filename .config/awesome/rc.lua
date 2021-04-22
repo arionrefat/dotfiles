@@ -771,14 +771,9 @@ end)
 -- client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 
--- remove those motherfucking borders
-client.connect_signal("focus", function(c) c.border_width = 0 end)
-client.connect_signal("unfocus", function(c) c.border_width = 0 end)
-
 -- Autostart
 awful.spawn.with_shell("picom -f")
 awful.spawn.with_shell("fix_xcursor")
-awful.spawn.with_shell("ff-theme-util")
 awful.spawn.with_shell("xfce4-power-manager")
 
 -- possible workaround for tag preservation when switching back to default screen:

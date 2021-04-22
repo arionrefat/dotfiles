@@ -1,3 +1,4 @@
+packloadall
 set relativenumber
 set nu
 syntax on
@@ -6,6 +7,7 @@ set termguicolors
 set incsearch
 set scrolloff=8
 set wildmode=longest,list,full
+filetype plugin on
 " This disables auto-comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

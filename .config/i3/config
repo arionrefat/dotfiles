@@ -372,20 +372,13 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # \__,_| .__/| .__/|_|_|\___\__,_|\__|_|\___/|_| |_|___/
 #      |_|   |_|
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
+exec --no-startup-id clipit -n
 # exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
+exec_always feh --bg-scale /home/refat/Pictures/nord-backgrounds/programming/3840x2160/vim.png
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always picom -f
-
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
