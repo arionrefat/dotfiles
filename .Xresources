@@ -9,23 +9,6 @@ Xft.lcdfilter: lcddefault
 xcursor.theme: Bibata-Modern-Ice
 xscreensaver.fade:   false
 xscreensaver.unfade: false
-! ===== urxvt =====
-URxvt.scrollBar: off
-URxvt.internalBorder:    22
-URxvt.imLocale: en_US.UTF-8
-URxvt.termName: xterm-256color
-URxvt.font: xft:Iosevka Nerd Font Mono:size=12
-URxvt.iso14755: false
-
-! URxvt.perl-ext-common:default,resize-font
-! URxvt.keysym.C-j:resize-font:smaller
-! URxvt.keysym.C-k:resize-font:bigger
-! URxvt.keysym.C-h:resize-font:reset
-urxvt*depth:32
-URxvt.cursorUnderline: true
-URxvt.scrollBar_right: false
-URxvt.letterSpace: 2
-
 ! =======color scheme==========
 
 *background:#141720

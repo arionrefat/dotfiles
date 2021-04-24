@@ -75,7 +75,7 @@ local terminal     = "alacritty"
 local vi_focus     = true -- vi-like client focus - https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true -- cycle trough all previous client or just the first -- https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = os.getenv("GUI_EDITOR") or "gvim"
+local gui_editor   = os.getenv("GUI_EDITOR") or "emacs"
 local browser      = os.getenv("BROWSER") or "brave"
 local scrlocker    = "slock"
 
@@ -266,11 +266,6 @@ globalkeys = my_table.join(
         function ()
         awful.util.spawn("discord") end,
             {description = "Open Discord", group = "My_Binds"}),
-
-    awful.key({ "Mod4" }, "F5",
-        function ()
-        awful.util.spawn("emacs") end,
-            {description = "Open Doom Emacs", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F3",
         function ()
@@ -775,6 +770,7 @@ end)
 awful.spawn.with_shell("picom -f")
 awful.spawn.with_shell("fix_xcursor")
 awful.spawn.with_shell("xfce4-power-manager")
+awful.spawn.with_shell("feh --bg-scale /home/refat/Pictures/walls/Astronout.jpg")
 
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
