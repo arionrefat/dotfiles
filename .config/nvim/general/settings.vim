@@ -22,4 +22,6 @@ set smarttab                            " Makes tabbing smarter will realize you
 set incsearch
 set scrolloff=8
 " colorscheme gruvbox-material
-colorscheme nord
+" colorscheme nord
+colorscheme one
+

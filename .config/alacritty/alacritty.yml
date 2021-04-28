@@ -1,41 +1,48 @@
-# This value is used to set the `$TERM` environment variable for
-# each instance of Alacritty. If it is not present, alacritty will
-# check the local terminfo database and use `alacritty` if it is
-# available, otherwise `xterm-256color` is used.
-
 env:
   TERM: xterm-256color
 
-# Colors (One Darker)
 colors:
   # Default colors
   primary:
-    background: "#232731"
-    foreground: "#D8DEE9"
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
+
+    # Bright and dim foreground colors
+    #dim_foreground: '0x9a9a9a'
+    bright_foreground: '0xe6efff'
 
   # Normal colors
   normal:
-    black: "#4C566A"
-    red: "#bf616a"
-    green: "#A3BE8C"
-    yellow: "#D7BA7D"
-    blue: "#5e81ac"
-    magenta: "#B48EAD"
-    cyan: "#88c0d0"
-    white: "#abb2bf"
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'
 
   # Bright colors
   bright:
-    black: "#4C566A"
-    red: "#bf616a"
-    green: "#A3BE8C"
-    yellow: "#D7BA7D"
-    blue: "#5e81ac"
-    magenta: "#B48EAD"
-    cyan: "#88c0d0"
-    white: "#abb2bf"
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xe6efff'
 
-  # background_opacity: 1.0
+  # Dim colors
+  dim:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'
 
   # Change cursor colors
   cursor:
@@ -49,31 +56,31 @@ cursor:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Iosevka Nerd Font
+    family: BlexMono Nerd Font
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Iosevka Nerd Font
+    family: BlexMono Nerd Font
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: Iosevka Nerd Font
+    family: BlexMono Nerd Font
     # Style can be specified to pick a specific face.
     style: Italic
 
   bold_italic:
-    family: Iosevka Nerd Font
+    family: BlexMono Nerd Font
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # If `true`, bold text is drawn using the bright color variants.
   draw_bold_text_with_bright_colors: true
 
-  size: 14.0
+  size: 13.0
 
   ligatures: true
 

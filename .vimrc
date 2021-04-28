@@ -7,6 +7,12 @@ set termguicolors
 set incsearch
 set scrolloff=8
 set wildmode=longest,list,full
+
+" Autocompete
+set complete+=kspell
+set completeopt=menuone,longest
+set shortmess+=c
+
 filetype plugin on
 " This disables auto-comment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -20,3 +26,7 @@ map <C-l> <C-w>l
 	autocmd BufWritePre * %s/\s\+$//e
 	autocmd BufWritePre * %s/\n\+\%$//e
 	autocmd BufWritePre *.[ch] %s/\%$/\r/e
+
+colorscheme one
+set background=dark
+let g:one_allow_italics = 1

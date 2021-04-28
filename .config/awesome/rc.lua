@@ -279,25 +279,25 @@ globalkeys = my_table.join(
 
     awful.key({ "Mod4" }, "F10",
         function ()
-        awful.util.spawn("bash -c ~/.scripts/touchpadout.sh")
+        awful.util.spawn("bash -c ~/.scripts/touchpadOff.sh")
         naughty.notify({ text = "Disabled Trackpad", timeout = 3 }) end,
-            {description = "Disable Trackpad", group = "My_Binds"}),
+            {description = "ﳶDisable Trackpad", group = "My_Binds"}),
 
 
     awful.key({ "Mod4" }, "F8",
         function ()
-        awful.util.spawn("bash -c ~/.scripts/touchpadin.sh")
+        awful.util.spawn("bash -c ~/.scripts/touchpadOn.sh")
         naughty.notify({ text = "Enabled Trackpad", timeout = 3 }) end,
-            {description = "Enable Trackpad", group = "My_Binds"}),
+            {description = "ﳶEnable Trackpad", group = "My_Binds"}),
 
     awful.key({altkey, "Ctrl"}, "c",
         function ()
-            awful.util.spawn("bash -c ~/.scripts/dmconf.sh") end,
+            awful.util.spawn("bash -c ~/.scripts/dmconf") end,
             {description = "Open config files using Dmenu", group = "My_Binds"}),
 
     awful.key({altkey, "Ctrl"}, "k",
         function ()
-            awful.util.spawn("bash -c ~/.scripts/dmlogout.sh") end,
+            awful.util.spawn("bash -c ~/.scripts/dmlogout") end,
             {description = "Power Options", group = "My_Binds"}),
 
     -- By direction client focus
@@ -770,7 +770,7 @@ end)
 awful.spawn.with_shell("picom -f")
 awful.spawn.with_shell("fix_xcursor")
 awful.spawn.with_shell("xfce4-power-manager")
-awful.spawn.with_shell("feh --bg-scale /home/refat/Pictures/walls/Astronout.jpg")
+-- awful.spawn.with_shell("feh --bg-scale /home/refat/Pictures/wall.jpg")
 
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
