@@ -375,7 +375,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit -n
 # exec_always --no-startup-id sbxkb
-exec_always feh --bg-scale /home/refat/Pictures/wall.jpg
+exec_always feh --bg-scale /home/refat/.config/awesome/themes/multicolor/wall.png
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id fix_xcursor
 exec_always picom -f
