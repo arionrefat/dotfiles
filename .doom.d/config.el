@@ -26,8 +26,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-horizon)
-(setq doom-theme 'doom-horizon)
+(setq doom-theme 'doom-moonlight)
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -50,9 +49,10 @@
 (setq company-idle-delay 0.2
       company-minimum-prefix-length 3)
 
+(setq confirm-kill-emacs nil)
+
 ;; For wakatime
 (global-wakatime-mode)
-
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;

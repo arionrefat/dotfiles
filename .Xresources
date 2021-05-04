@@ -9,8 +9,11 @@ Xft.lcdfilter: lcddefault
 xcursor.theme: Bibata-Modern-Ice
 xscreensaver.fade:   false
 xscreensaver.unfade: false
-! =======color scheme==========
 
+# Disabling menuBar from emacs
+emacs.menuBar: off
+
+! =======color scheme==========
 *background:#141720
 *foreground:#ffffff
 *cursorColor:#b48ead
