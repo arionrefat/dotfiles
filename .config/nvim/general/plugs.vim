@@ -37,7 +37,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'airblade/vim-rooter'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
