@@ -4,10 +4,20 @@
 * Screenshots:
 
 #+CAPTION: Screenshots
-#+ATTR_HTMK: :alt Screenshot :title Screenshot :align left
+#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
 [[https://raw.githubusercontent.com/arionrefat/dotfiles/master/.screenshots/ss3.png]]
 
+#+CAPTION: Screenshots
+#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
+[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/.screenshots/ss1.png]]
+
 * Softwares I use:
-| Terminal | st    |
-| Browser  | brave |
-| Editor   | Vim   |
+| Terminal      | st         |
+| Window Manger | AwesomeWM  |
+|               | i3wm       |
+| Browser       | brave      |
+| Editor        | Vim        |
+|               | NeoVim     |
+|               | DOOM Emacs |
+|               | VSCodium   |
+| Filemanager   | Ranger     |
