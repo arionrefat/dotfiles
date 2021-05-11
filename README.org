@@ -3,11 +3,11 @@
 
 * Screenshots:
 
-[[file:/home/refat/.screenshots/ss1.png]]
-[[file:/home/refat/.screenshots/ss3.png]]
+#+CAPTION: Screenshots
+#+ATTR_HTMK: :alt Screenshot :title Screenshot :align left
+[[https://github.com/arionrefat/dotfiles/tree/master/.screenshots/ss3.png]]
 
 * Softwares I use:
-** Terminal : suckless-terminal(st)
-** Browser : brave
-** Editor : Vim, NeoVim, VSCodium
-** Filemanager : Ranger
+| Terminal | st    |
+| Browser  | brave |
+| Editor   | Vim   |
