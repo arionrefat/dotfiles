@@ -13,6 +13,7 @@ set wildmode=longest,list,full
 set complete+=kspell
 set completeopt=menuone,longest
 set shortmess+=c
+set path+=**
 
 filetype plugin on
 " This disables auto-comment
@@ -27,6 +28,10 @@ map <C-l> <C-w>l
 	autocmd BufWritePre * %s/\s\+$//e
 	autocmd BufWritePre * %s/\n\+\%$//e
 	autocmd BufWritePre *.[ch] %s/\%$/\r/e
+
+" set Vim-specific sequences for RGB colors (For ST Terminal)
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 colorscheme one
 set background=dark

@@ -10,28 +10,33 @@ xcursor.theme: Bibata-Modern-Ice
 xscreensaver.fade:   false
 xscreensaver.unfade: false
 
-# Disabling menuBar from emacs
+! Disabling menuBar from emacs
 emacs.menuBar: off
 
+xterm*selectToClipboard: true
+xterm*disallowedWindowOps: 20,21,SetXProp
+*.font:	Iosevka Nerd Font :pixelsize=19:antialias=true:autohint=true;
+
 ! =======color scheme==========
-*background:#141720
-*foreground:#ffffff
-*cursorColor:#b48ead
-*fading: 35
-*fadeColor: #4C566A
-*color0:#1a1a1a
-*color1:#fc6c6d
-*color2:#40bf80
-*color3:#d9864d
-*color4:#50afe9
-*color5:#c577d7
-*color6:#5698ac
-*color7:#dfdfdf
-*color8:#a6a6a6
-*color9:#d8854d
-*color10:#26734d
-*color11:#ecbe7e
-*color12:#8585ad
-*color13:#cc6699
-*color14:#46d9f9
-*color15:#5b6268
+*.background:#141720
+*.foreground:#ffffff
+*.cursorColor:#b48ead
+*.revCursorColor:  #555555
+*.fading: 35
+*.fadeColor: #4C566A
+*.color0:#1a1a1a
+*.color1:#fc6c6d
+*.color2:#40bf80
+*.color3:#d9864d
+*.color4:#50afe9
+*.color5:#c577d7
+*.color6:#5698ac
+*.color7:#dfdfdf
+*.color8:#a6a6a6
+*.color9:#d8854d
+*.color10:#26734d
+*.color11:#ecbe7e
+*.color12:#8585ad
+*.color13:#cc6699
+*.color14:#46d9f9
+*.color15:#5b6268

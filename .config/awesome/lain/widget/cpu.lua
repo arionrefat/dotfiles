@@ -18,7 +18,7 @@ local tostring = tostring
 local function factory(args)
     local cpu      = { core = {}, widget = wibox.widget.textbox() }
     local args     = args or {}
-    local timeout  = args.timeout or 1
+    local timeout  = args.timeout or 3
     local settings = args.settings or function() end
 
     function cpu.update()
