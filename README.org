@@ -1,0 +1,13 @@
+* Welcome to my dotfiles!
+
+
+* Screenshots:
+
+[[file:/home/refat/.screenshots/ss1.png]]
+[[file:/home/refat/.screenshots/ss3.png]]
+
+* Softwares I use:
+** Terminal : suckless-terminal(st)
+** Browser : brave
+** Editor : Vim, NeoVim, VSCodium
+** Filemanager : Ranger
