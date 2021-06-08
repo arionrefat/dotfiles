@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+#
+# Script name: dmconf
+# Description: Choose from a list of configuration files to edit.
+# Dependencies: dmenu, emacsclient
+# GitLab: https://www.gitlab.com/dwt1/dmscripts
+# License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
+# Contributors: Derek Taylor
+#               Simon Ingelsson
+#               HostGrady
+# Usage:
+# to use other editor than emacsclient set DMEDITOR accordingly
+#   Example: `DMEDITOR="alacritty -e nvim" ./dmconf`
+DMCONFIG="$HOME/.config/dmscripts/dmconf"
+if [ -f "$DMCONFIG" ]; then
+	source "$DMCONFIG"
+else
+	: "${DMEDITOR:=emacsclient -c -a emacs}"
+# An array of options to choose.
+# You can edit this list to add/remove config files.
+	declare -A options
+	options[awesome]="$HOME/.config/awesome/rc.lua"
+	options[alacritty]="$HOME/.config/alacritty/alacritty.yml"
+	options[bash]="$HOME/.bashrc"
+	options[doom emacs config.el]="$HOME/.config/doom/config.el"
+	options[doom emacs init.el]="$HOME/.config/doom/init.el"
+	options[doom emacs packages.el]="$HOME/.config/doom/packages.el"
+	options[dunst]="$HOME/.config/dunst/dunstrc"
+	options[i3]="$HOME/.config/i3/config"
+	options[ncmpcpp]="$HOME/.config/ncmpcpp/config"
+	options[neovim]="$HOME/.config/nvim/init.vim"
+	options[picom]="$HOME/.config/picom/picom.conf"
+	options[polybar]="$HOME/.config/polybar/config"
+	options[vim]="$HOME/.vimrc"
+	options[xresources]="$HOME/.Xresources"
+	options[zsh]="$HOME/.zshrc"
+fi
+# Clean options array making sure that the files exist
+declare -A options_clean
+  for i in "${!options[@]}"; do
+    [[ -f ${options["${i}"]} ]] && options_clean["${i}"]=${options["${i}"]}
+  done
+
+# Piping the above array (cleaned) into dmenu.
+# We use "printf '%s\n'" to format the array one item to a line.
+choice=$(printf '%s\n' "${!options_clean[@]}" | sort | dmenu -i -l 20 -p 'Edit config:' "$@")
+
+
+# What to do when/if we choose a file to edit.
+if [ "$choice" ]; then
+  cfg=$(printf '%s\n' "${options_clean["${choice}"]}")
+  $DMEDITOR "$cfg"
+
+# What to do if we just escape without choosing anything.
+else
+    echo "Program terminated." && exit 0
+fi
