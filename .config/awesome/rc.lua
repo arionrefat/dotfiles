@@ -527,14 +527,14 @@ globalkeys = my_table.join(
     awful.key({  modkey, "Shift"}, "Print",
         function ()
         awful.util.spawn("scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/sam/Pictures/Screenshots'")
-    end),
+    end, {description = "Select screenshot", group = "My_Binds"}),
 
     -- Screenshot
     awful.key({}, "Print",
         function ()
         awful.util.spawn("scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`'")
         naughty.notify({ text = "Screenshot Taken ", timeout = 3 })
-    end)
+        end, {description = "Full screen Screenshot", group = "My_Binds"})
 )
 
 clientkeys = my_table.join(

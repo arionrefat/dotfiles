@@ -1,11 +1,6 @@
-" normal/insert
-nmap <C-s> <Plug>MarkdownPreview
-nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-p> <Plug>MarkdownPreviewToggle
-nnoremap <leader>gy :Goyo<CR>
-
-nnoremap <M-TAB> :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
+"This unsets the `last search pattern` register by hitting return
+nnoremap <CR> :noh<CR><CR>
+autocmd BufWritePre * %s/\s\+$//e
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -28,3 +23,6 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
