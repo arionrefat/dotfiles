@@ -2,13 +2,14 @@ env:
   TERM: xterm-256color
 
 colors:
+
   # Default colors
   primary:
     background: '0x1e2127'
     foreground: '0xabb2bf'
 
     # Bright and dim foreground colors
-    #dim_foreground: '0x9a9a9a'
+    dim_foreground: '0x9a9a9a'
     bright_foreground: '0xe6efff'
 
   # Normal colors
@@ -49,6 +50,8 @@ colors:
     text: "#3B4252"
     cursor: "#ECEFF4"
 
+  background_opacity: 0.8
+
 cursor:
   style:
     blinking: Never
@@ -56,31 +59,31 @@ cursor:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     # Style can be specified to pick a specific face.
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # If `true`, bold text is drawn using the bright color variants.
   draw_bold_text_with_bright_colors: true
 
-  size: 13.0
+  size: 14.0
 
   ligatures: true
 
@@ -93,8 +96,8 @@ font:
 
 window:
   padding:
-    x: 15
-    y: 15
+    x: 17
+    y: 17
 
   dynamic_padding: true
 

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/refat/Learn&Grep/Machfiles/zsh/.config/zsh'
 let g:netrw_dirhist_7='/home/refat/Learn&Grep/VIM-Fundamentals/Vimtutor'
 let g:netrw_dirhist_6='/home/refat/.vim'
 let g:netrw_dirhist_5='/home/refat/.config/kitty'

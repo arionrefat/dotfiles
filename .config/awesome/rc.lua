@@ -526,7 +526,7 @@ globalkeys = my_table.join(
     -- Screenshot Selection
     awful.key({  modkey, "Shift"}, "Print",
         function ()
-        awful.util.spawn("scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f /home/sam/Pictures/Screenshots'")
+        awful.util.spawn("scrot -u 'screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f /home/refat/Pictures/screenshots'")
     end, {description = "Select screenshot", group = "My_Binds"}),
 
     -- Screenshot

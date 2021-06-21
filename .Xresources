@@ -1,10 +1,10 @@
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
-Xft.rgba: rgb
+Xft.rgba: rgba
 Xft.autohint: false
 Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
+! Xft.lcdfilter: lcddefault
 
 xcursor.theme: Bibata-Modern-Ice
 xscreensaver.fade:   false
@@ -16,6 +16,7 @@ emacs.menuBar: off
 xterm*selectToClipboard: true
 xterm*disallowedWindowOps: 20,21,SetXProp
 *.font:	Iosevka Nerd Font :pixelsize=19:antialias=true:autohint=true;
+! *.alpha: 1.0
 
 ! =======color scheme==========
 *.background:#141720

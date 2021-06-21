@@ -9,4 +9,4 @@ let g:gruvbox_material_better_performance = 1
 let g:gruvbox_material_better_performance = !has("win32")
 let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_transparent_background = 0
+let g:gruvbox_material_transparent_background = 1

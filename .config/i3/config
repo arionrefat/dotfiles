@@ -53,8 +53,6 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Tab exec rofi -show window
-# launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##

@@ -2,7 +2,7 @@
     frame_width = 0
     frame_color = "#000000"
 
-    font = SauceCodePro Nerd Font 10
+    font = SauceCodePro Nerd Font 9
 
     # Allow a small subset of html markup:
     #   <b>bold</b>

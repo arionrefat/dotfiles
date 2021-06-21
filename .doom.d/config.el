@@ -19,14 +19,14 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Iosevka" :size 17)
-      doom-variable-pitch-font (font-spec :family "Iosevka" :size 19)
+(setq doom-font (font-spec :family "Iosevka" :size 19)
+      doom-variable-pitch-font (font-spec :family "SauceCodePro Nerd Font" :size 19)
       doom-big-font (font-spec :family "Iosevka" :size 22))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-nord)
+(setq doom-theme 'doom-vibrant)
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
@@ -46,8 +46,8 @@
 
 ;; for company mode
 (require 'company)
-(setq company-idle-delay 0.2
-      company-minimum-prefix-length 3)
+(setq company-idle-delay 0.1
+      company-minimum-prefix-length 2)
 
 (setq confirm-kill-emacs nil)
 

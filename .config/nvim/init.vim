@@ -23,14 +23,16 @@ source $HOME/.config/nvim/plug-config/barbar.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/codi.vim
-source $HOME/.config/nvim/plug-config/lsp-config.vim
 source $HOME/.config/nvim/plug-config/neovim-snip.vim
+source $HOME/.config/nvim/plug-config/nerdTree.vim
 
 luafile $HOME/.config/nvim/lua/compe-config.lua
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 luafile $HOME/.config/nvim/lua/treesitter.lua
 luafile $HOME/.config/nvim/lua/lsp-install.lua
 luafile $HOME/.config/nvim/lua/neovim-lsp-config.lua
+luafile $HOME/.config/nvim/lua/formatt.lua
+" luafile $HOME/.config/nvim/lua/settings.lua
 
 "Inspiration taken from
 "https://github.com/ChristianChiarulli
