@@ -1,0 +1,12 @@
+#!/bin/sh
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+export PATH="$HOME/.local/bin":$PATH
+# export PATH=$HOME/.miniconda/bin:$PATH
+export PATH=/home/refat/.fnm:$PATH
+eval "`fnm env`"
+eval "$(zoxide init zsh)"
+export EDITOR='vim'
+export VISUAL='vim'
+
