@@ -38,6 +38,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 Plug 'metakirby5/codi.vim'
+Plug 'cocopon/iceberg.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

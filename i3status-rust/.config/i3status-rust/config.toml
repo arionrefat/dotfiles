@@ -1,0 +1,59 @@
+theme = "nord-dark"
+icons = "awesome5"
+
+[[block]]
+block = "focused_window"
+max_width = 21
+show_marks = "visible"
+
+[[block]]
+block = "cpu"
+interval = 2
+format = "{barchart} {utilization} {frequency}"
+
+[[block]]
+block = "memory"
+format_mem = "{mem_used}"
+display_type = "memory"
+icons = true
+interval = 5
+warning_mem = 80
+warning_swap = 80
+critical_mem = 95
+critical_swap = 95
+
+[[block]]
+block = "temperature"
+collapsed = false
+interval = 1
+format = "{max}"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage} {time}"
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "used"
+format = "{icon} {available}"
+
+[[block]]
+block = "sound"
+max_vol = 100
+
+[[block]]
+block = "backlight"
+device = "amdgpu_bl0"
+
+[[block]]
+block = "hueshift"
+hue_shifter = "redshift"
+step = 50
+click_temp = 4000
+
+[[block]]
+block = "time"
+interval = 60
+format = "%a %d/%m %R"

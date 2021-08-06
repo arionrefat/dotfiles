@@ -23,5 +23,5 @@ set incsearch
 set scrolloff=8
 
 let g:nvcode_termcolors=256
-colorscheme palenight
-" au colorscheme * hi normal guibg=000000
+colorscheme nvcode
+au colorscheme * hi normal guibg=000000

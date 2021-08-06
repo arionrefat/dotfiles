@@ -11,9 +11,6 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-# set default desktop layout (default is tiling)
-# workspace_layout tabbed <stacking|tabbed>
-
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 0
 default_floating_border normal
@@ -37,34 +34,19 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:Iosevka Nerd Font 12
+font xft: Terminus 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-# bindsym $mod+d exec "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu'"
-
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+Tab exec rofi -show window
-
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-# exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
 
 # Volume controls
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master 2%+"; exec notify-send "Volume raised by 2%"
@@ -76,30 +58,22 @@ bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master 2%-"; exec notify
 #| |_) | || |\  | |_| | || |\  | |_| |___) |
 #|____/___|_| \_|____/___|_| \_|\____|____/
 
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec brave
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F1 exec alacritty -e ranger
 bindsym $mod+F4 exec discord
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F6 exec spotify
 bindsym $mod+F5 exec emacs
-bindsym $mod+F7 exec slack
-bindsym $mod+t exec --no-startup-id pkill compton
-# bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec emacs; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
+bindsym $mod+p exec dmenu_run
 bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+m exec xinput enable 13; exec notify-send 'Trackpad Enabled'
-bindsym $mod+Shift+m exec xinput disable 13; exec notify-send 'Trackpad Disabled'
-# bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-# Multi-screen screenshots with scrot
+bindsym $mod+F10 exec bash ~/.scripts/touchpadOff.sh.sh; exec notify-send 'Trackpad Disabled'
+bindsym $mod+Shift+F10 exec bash ~/.scripts/touchpadOn.sh; exec notify-send 'Trackpad Enabled'
 bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym Ctrl+Mod1+l exec betterlockscreen -l dimblur
 
-# focus_follows_mouse no
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -126,8 +100,8 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+bindsym $mod+Escape workspace back_and_forth
+bindsym $mod+Ctrl+Escape move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
@@ -171,23 +145,19 @@ bindsym $mod+minus scratchpad show
 #  \ V  V / (_) | |  |   <\__ \ |_) | (_| | (_|  __/
 #   \_/\_/ \___/|_|  |_|\_\___/ .__/ \__,_|\___\___|
 
-# _ __   __ _ _ __ ___   ___  ___
-#| '_ \ / _` | '_ ` _ \ / _ \/ __|
-#| | | | (_| | | | | | |  __/\__ \
-#|_| |_|\__,_|_| |_| |_|\___||___/
-
-
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 "01 "
-set $ws2 "02 "
-set $ws3 "03 "
-set $ws4 "04 "
-set $ws5 "05 "
-set $ws6 "06 "
-set $ws7 "07 "
-set $ws8 "08 "
+set $ws1 "一"
+set $ws2 "二"
+set $ws3 "三"
+set $ws4 "四"
+set $ws5 "五"
+set $ws6 "六"
+set $ws7 "七"
+set $ws8 "八"
+set $ws9 "九"
+set $ws10 "十"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -198,6 +168,8 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -208,6 +180,8 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
+bindsym $mod+Ctrl+0 move container to workspace $ws10
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -218,6 +192,8 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws9; workspace $ws10
 
 #    _            _                  _
 #   / \   ___ ___(_) __ _ _ __      / \   _ __  _ __
@@ -234,35 +210,15 @@ assign [class="discord"] $ws4
 assign [class="Slack"] $ws7
 assign [class="mpv"] $ws1
 assign [class="Emacs"] $ws3
-assign [class="jetbrains-idea-ce"] $ws7
-
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="calamares"] floating enable border normal
-for_window [class="Clipgrab"] floating enable
-for_window [title="File Transfer*"] floating enable
-for_window [class="fpakman"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
-for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Oblogout"] fullscreen enable
-for_window [class="octopi"] floating enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window [class="Simple-scan"] floating enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
-for_window [class="Xfburn"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -284,16 +240,16 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+bindsym Ctrl+Mod1+k mode "$mode_system"
+
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (h)ibernate, (r)eboot, (s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym s exec --no-startup-id i3exit shutdown, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -353,38 +309,34 @@ bindsym $mod+Ctrl+Shift+Up resize grow height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Down resize shrink height 10 px or 10 ppt
 bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
 
-
-# Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
-
 #    _         _            _             _
 #   / \  _   _| |_ ___  ___| |_ __ _ _ __| |_
 #  / _ \| | | | __/ _ \/ __| __/ _` | '__| __|
 # / ___ \ |_| | || (_) \__ \ || (_| | |  | |_
 #/_/   \_\__,_|\__\___/|___/\__\__,_|_|   \__|
 
-#                   _ _           _   _
-#  __ _ _ __  _ __ | (_) ___ __ _| |_(_) ___  _ __  ___
-# / _` | '_ \| '_ \| | |/ __/ _` | __| |/ _ \| '_ \/ __|
-#| (_| | |_) | |_) | | | (_| (_| | |_| | (_) | | | \__ \
-# \__,_| .__/| .__/|_|_|\___\__,_|\__|_|\___/|_| |_|___/
-#      |_|   |_|
+exec --no-startup-id bash ~/.config/i3/autostart.sh
 
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id clipit -n
-# exec_always --no-startup-id sbxkb
-exec_always feh --bg-scale /home/refat/.config/awesome/themes/multicolor/wall.png
-exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id fix_xcursor
-exec_always picom -f
+#  _ _____     _        _
+# (_)___ / ___| |_ __ _| |_ _   _ ___       _ __ ___
+# | | |_ \/ __| __/ _` | __| | | / __|_____| '__/ __|
+# | |___) \__ \ || (_| | |_| |_| \__ \_____| |  \__ \
+# |_|____/|___/\__\__,_|\__|\__,_|___/     |_|  |___/
 
-# ____   ___  _  __   ______    _    ____
-#|  _ \ / _ \| | \ \ / / __ )  / \  |  _ \
-#| |_) | | | | |  \ V /|  _ \ / _ \ | |_) |
-#|  __/| |_| | |___| | | |_) / ___ \|  _ <
-#|_|    \___/|_____|_| |____/_/   \_\_| \_\
-
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
+bar {
+    font pango: Terminus, FontAwesome 10
+    position top
+    status_command /usr/bin/i3status-rs /home/refat/.config/i3status-rust/config.toml
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
+}
 
 # Theme colors
 
@@ -413,11 +365,11 @@ client.background       #F8F8F2
   # gaps outer all plus 5
 
   # Smart gaps (gaps used if only more than one container on the workspace)
-  smart_gaps on
+  # smart_gaps on
 
   # Smart borders (draw borders around container only if it is not the only container on this workspace)
   # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-  smart_borders on
+  # smart_borders on
 
   # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
   set $mode_gaps Gaps: (o) outer, (i) inner
