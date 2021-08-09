@@ -1,0 +1,87 @@
+# Ranger
+super + F1
+	kitty -e ranger
+
+# Brave
+super + F2
+	brave
+
+# PcManfm
+super + F3
+    pcmanfm
+
+# Discord
+super + F4
+    discord
+
+# Touchpad OFF or on
+super + F10
+    bash -c {~/.scripts/touchpadOff.sh, ~/.scripts/touchpadOn.sh}
+
+#Rofi
+super + d
+    rofi -show drun
+
+#Dmenu
+super + p
+    dmenu_run -c -bw 3 -l 15 -g 3
+
+# Emacs(DOOM)
+super + a
+    emacs
+
+#Pavucontrol
+super + v
+    pavucontrol
+
+#Xkill
+super + x
+    xkill
+
+#reload sxhkd:
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+#Nitrogen
+ctrl + alt + i
+    nitrogen
+
+#arcolinux-logout
+ctrl + alt + l
+    betterlockscreen -l dimblur
+
+#arcolinux-logout
+ctrl + alt + k
+    arcolinux-logout
+
+#Xfce4-settings-manager
+ctrl + alt + m
+     pavucontrol
+
+#Scrot
+Print
+    scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`'
+
+#screeenshooter
+ctrl + Print
+    flameshot gui
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+# Mute microphone
+super + ctrl + F4
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+#Picom Toggle
+ctrl + alt + o
+    ~/.config/arco-dwm/scripts/picom-toggle.sh

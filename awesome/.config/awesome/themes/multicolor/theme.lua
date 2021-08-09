@@ -17,12 +17,12 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.confdir                                   = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
 theme.wallpaper                                 = theme.confdir .. "/wall.png"
-theme.font                                      = "Terminus 9"
+theme.font                                      = "Terminus 9.5"
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
-theme.bg_normal                                 = "#00000090"
-theme.bg_focus                                  = "#00000090"
-theme.bg_urgent                                 = "#00000090"
+theme.bg_normal                                 = "#000000"
+theme.bg_focus                                  = "#000000"
+theme.bg_urgent                                 = "#000000"
 theme.fg_normal                                 = "#aaaaaa"
 theme.fg_focus                                  = "#ff8c00"
 theme.fg_urgent                                 = "#af1d18"
@@ -55,7 +55,7 @@ theme.widget_vol                                = theme.confdir .. "/icons/spkr.
 theme.taglist_squares_sel                       = theme.confdir .. "/icons/square_a.png"
 theme.taglist_squares_unsel                     = theme.confdir .. "/icons/square_b.png"
 theme.tasklist_plain_task_name                  = true
-theme.tasklist_disable_icon                     = true
+theme.tasklist_disable_icon                     = false
 theme.useless_gap                               = 9
 theme.layout_tile                               = theme.confdir .. "/icons/tile.png"
 theme.layout_tilegaps                           = theme.confdir .. "/icons/tilegaps.png"
@@ -143,29 +143,6 @@ theme.fs = lain.widget.fs({
     end
 })
 
-
--- Mail IMAP check
---[[ commented because it needs to be set before use
-local mailicon = wibox.widget.imagebox()
-theme.mail = lain.widget.imap({
-    timeout  = 180,
-    server   = "server",
-    mail     = "mail",
-    password = "keyring get mail",
-    settings = function()
-        if mailcount > 0 then
-            mailicon:set_image(theme.widget_mail)
-            widget:set_markup(markup.fontfg(theme.font, "#cccccc", mailcount .. " "))
-        else
-            widget:set_text("")
-            --mailicon:set_image() -- not working in 4.0
-            mailicon._private.image = nil
-            mailicon:emit_signal("widget::redraw_needed")
-            mailicon:emit_signal("widget::layout_changed")
-        end
-    end
-})
---]]
 
 -- CPU
 local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
@@ -307,15 +284,11 @@ function theme.at_screen_connect(s)
             awesome_icon,
             s.mytaglist,
             s.mypromptbox,
-            mpdicon,
-            theme.mpd.widget,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            --mailicon,
-            --theme.mail.widget,
             -- netdownicon,
             -- netdowninfo,
             -- netupicon,
