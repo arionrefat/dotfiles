@@ -49,8 +49,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun
 
 # Volume controls
-bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master 2%+"; exec notify-send "Volume raised by 2%"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master 2%-"; exec notify-send "Volume lowered by 2%"
+bindsym XF86AudioRaiseVolume exec "~/.config/i3/volume.sh up"
+bindsym XF86AudioLowerVolume exec "~/.config/i3/volume.sh down"
+bindsym XF86AudioMute exec "~/.config/i3/volume.sh mute"
 
 # ____ ___ _   _ ____ ___ _   _  ____ ____
 #| __ )_ _| \ | |  _ \_ _| \ | |/ ___/ ___|
@@ -67,7 +68,7 @@ bindsym $mod+F5 exec emacs
 bindsym $mod+p exec dmenu_run
 bindsym $mod+Ctrl+s exec brave; exec discord; exec pcmanfm; exec notify-send "Workspace Environment Initialized" --icon="/home/refat/Pictures/nord-backgrounds/operating-systems/3840x2160/archlinux.png"
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+F10 exec bash ~/.scripts/touchpadOff.sh.sh; exec notify-send 'Trackpad Disabled'
+bindsym $mod+F10 exec bash ~/.scripts/touchpadOff.sh; exec notify-send 'Trackpad Disabled'
 bindsym $mod+Shift+F10 exec bash ~/.scripts/touchpadOn.sh; exec notify-send 'Trackpad Enabled'
 bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
 bindsym $mod+Shift+Print --release exec --no-startup-id flameshot gui
@@ -195,30 +196,33 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws9; workspace $ws10
 
-#    _            _                  _
-#   / \   ___ ___(_) __ _ _ __      / \   _ __  _ __
-#  / _ \ / __/ __| |/ _` | '_ \    / _ \ | '_ \| '_ \
-# / ___ \\__ \__ \ | (_| | | | |  / ___ \| |_) | |_) |
-#/_/   \_\___/___/_|\__, |_| |_| /_/   \_\ .__/| .__/
-#                   |___/                |_|   |_|
+#     _            _
+#    / \   ___ ___(_) __ _ _ __
+#   / _ \ / __/ __| |/ _` | '_ \
+#  / ___ \\__ \__ \ | (_| | | | |
+# /_/   \_\___/___/_|\__, |_| |_|
+#                    |___/
+# __        __         _
+# \ \      / /__  _ __| | _____ _ __   __ _  ___ ___
+#  \ \ /\ / / _ \| '__| |/ / __| '_ \ / _` |/ __/ _ \
+#   \ V  V / (_) | |  |   <\__ \ |_) | (_| | (_|  __/
+#    \_/\_/ \___/|_|  |_|\_\___/ .__/ \__,_|\___\___|
+#                              |_|
 
 # Open applications on specific workspaces
-assign [class="spotify"] $ws8
+assign [class="Spotify"] $ws8
 assign [class="Brave-browser"] $ws2
 assign [class="Pcmanfm"] $ws5
 assign [class="discord"] $ws4
-assign [class="Slack"] $ws7
-assign [class="mpv"] $ws1
+assign [class="mpv"] $ws6
 assign [class="Emacs"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [title="i3_help"] floating enable sticky enable border normal
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="Pavucontrol"] floating enable
-for_window [class="qt5ct"] floating enable sticky enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -230,7 +234,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # ____                           ___        _   _
 #|  _ \ _____      _____ _ __   / _ \ _ __ | |_(_) ___  _ __  ___
@@ -315,7 +319,7 @@ bindsym $mod+Ctrl+Shift+Left resize grow width 10 px or 10 ppt
 # / ___ \ |_| | || (_) \__ \ || (_| | |  | |_
 #/_/   \_\__,_|\__\___/|___/\__\__,_|_|   \__|
 
-exec --no-startup-id bash ~/.config/i3/autostart.sh
+exec --no-startup-id ~/.config/i3/autostart.sh
 
 #  _ _____     _        _
 # (_)___ / ___| |_ __ _| |_ _   _ ___       _ __ ___
@@ -326,6 +330,7 @@ exec --no-startup-id bash ~/.config/i3/autostart.sh
 bar {
     font pango: Terminus, FontAwesome 10
     position top
+    tray_output none
     status_command /usr/bin/i3status-rs /home/refat/.config/i3status-rust/config.toml
     colors {
         separator #666666
@@ -365,11 +370,11 @@ client.background       #F8F8F2
   # gaps outer all plus 5
 
   # Smart gaps (gaps used if only more than one container on the workspace)
-  # smart_gaps on
+  smart_gaps on
 
   # Smart borders (draw borders around container only if it is not the only container on this workspace)
   # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-  # smart_borders on
+  smart_borders on
 
   # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
   set $mode_gaps Gaps: (o) outer, (i) inner

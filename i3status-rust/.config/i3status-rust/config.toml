@@ -1,9 +1,9 @@
 theme = "nord-dark"
-icons = "awesome5"
+icons = "awesome"
 
 [[block]]
 block = "focused_window"
-max_width = 21
+max_width = 25
 show_marks = "visible"
 
 [[block]]

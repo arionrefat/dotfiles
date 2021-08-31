@@ -16,7 +16,8 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
-    Key([mod], "Escape", lazy.screen.toggle_group(), desc="move back and forth between groups"),
+    Key([mod], "Escape", lazy.screen.toggle_group(),
+        desc="move back and forth between groups"),
     Key([mod], "Tab", lazy.layout.next(),
         desc="Move window focus to other window"),
 
@@ -51,7 +52,8 @@ keys = [
 
     # Toggle between different layouts as defined below
     Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod, "control"], "space", lazy.window.toggle_floating(), desc="Toggle floating"),
+    Key([mod, "control"], "space",
+        lazy.window.toggle_floating(), desc="Toggle floating"),
     Key([mod, "shift"], "q", lazy.window.kill(), desc="Kill focused window"),
 
     Key([mod, "control"], "r", lazy.restart(), desc="Restart Qtile"),
@@ -71,11 +73,28 @@ for i in groups:
         # mod1 + shift + letter of group = switch to & move focused window to group
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
             desc="Switch to & move focused window to group {}".format(i.name)),
-        # Or, use below if you prefer not to switch to that group.
-        # # mod1 + shift + letter of group = move focused window to group
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-        #     desc="move focused window to group {}".format(i.name)),
     ])
+
+
+@hook.subscribe.client_new
+def func(c):
+    if c.name == "Discord":
+        c.togroup("4")
+    elif c.name == "discord":
+        c.cmd_static(0)
+    elif c.name == "pcmanfm":
+        c.togroup("5")
+    elif c.name == "Pcmanfm":
+        c.cmd_static(0)
+    elif c.name == "Brave-browser":
+        c.togroup("2")
+    elif c.name == "Brave-browser":
+        c.cmd_static(0)
+    elif c.name == "mpv":
+        c.togroup("6")
+    elif c.name == "mpv":
+        c.cmd_static(0)
+
 
 layout_theme = {"border_width": 2,
                 "margin": 10,
@@ -102,7 +121,7 @@ widget_defaults = dict(
     font='Terminus',
     fontsize=15,
     padding=2,
-    background= '#2E3440'
+    background='#1A1B26'
 )
 
 extension_defaults = widget_defaults.copy()
@@ -112,16 +131,21 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayoutIcon(),
-                widget.Sep(padding = 10),
+                widget.Sep(padding=10),
                 widget.GroupBox(
-                    inactive= '#4c566a',
+                    padding_x=5,
+                    borderwidth=0,
+                    active='#ffffff',
+                    inactive='#ffffff',
                     rounded=True,
-                    highlight_method='block',
-                    urgent_alert_method='block',
-                    disable_drag=True
+                    highlight_method="block",
+                    highlight_color='#1A1B26',
+                    block_highlight_text_color='#ffffff',
+                    this_current_screen_border='#3D59A1',
+                    hide_unused=True
                 ),
                 widget.Prompt(),
-                widget.WindowName(max_chars = 25, padding = 5),
+                widget.WindowName(max_chars=40, padding=5),
                 widget.Moc(),
                 widget.Chord(
                     chords_colors={
@@ -135,9 +159,9 @@ screens = [
                 widget.TextBox(''),
                 widget.ThermalSensor(),
                 widget.Sep(),
-                widget.Memory(format = '{MemUsed: .0f} M'),
+                widget.Memory(format='{MemUsed: .0f} M'),
                 widget.Sep(),
-                widget.Battery(format=' {percent:2.0%}', update_interval = 10),
+                widget.Battery(format=' {percent:2.0%}', update_interval=10),
                 widget.Sep(),
                 widget.TextBox('墳'),
                 widget.Volume(),
@@ -147,9 +171,12 @@ screens = [
                 widget.Clock(format=' %Y-%m-%d %a '),
                 widget.Spacer(),
                 widget.TextBox(' '),
-                widget.Notify(),
+                widget.Notify(default_timeout=10),
+                #  widget.Systray(),
             ],
             20,
+            # margin = [10,10,0,10],
+            opacity = 1,
         ),
     ),
 ]
@@ -165,19 +192,18 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
-    # Run the utility of `xprop` to see the wm class and name of an X client.
     *layout.Floating.default_float_rules,
-    Match(wm_class='confirmreset'),  # gitk
-    Match(wm_class='makebranch'),  # gitk
-    Match(wm_class='maketag'),  # gitk
-    Match(wm_class='ssh-askpass'),  # ssh-askpass
-    Match(title='branchdialog'),  # gitk
-    Match(title='pinentry'),  # GPG key password entry
+    Match(wm_class='Nitrogen'),
+    Match(wm_class='Lightdm-settings'),
+    Match(wm_class='Lxappearance'),
+    Match(wm_class='Pavucontrol'),
+    Match(title='alsamixer'),
 ])
+
 auto_fullscreen = False
 focus_on_window_activation = "smart"
 reconfigure_screens = True
@@ -186,9 +212,11 @@ reconfigure_screens = True
 # focus, should we respect this or not?
 auto_minimize = True
 
+
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+
 
 wmname = "qtile"

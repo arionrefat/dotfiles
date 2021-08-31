@@ -1,6 +1,6 @@
 # Ranger
 super + F1
-	kitty -e ranger
+	urxvt -e ranger
 
 # Brave
 super + F2
@@ -80,7 +80,7 @@ XF86AudioMute
 
 # Mute microphone
 super + ctrl + F4
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle; {notify-send "Mic Muted", notify-send "Mic Unmuted"}
 
 #Picom Toggle
 ctrl + alt + o

@@ -13,7 +13,11 @@
 
 * Softwares I use:
 | Terminal      | st         |
-| Window Manger | AwesomeWM  |
+|               | alacritty  |
+|               | kitty      |
+| Window Manger | awesomeWM  |
+|               | dwm        |
+|               | qtile      |
 |               | i3wm       |
 | Browser       | brave      |
 | Editor        | Vim        |
@@ -21,3 +25,5 @@
 |               | DOOM Emacs |
 |               | VSCodium   |
 | Filemanager   | Ranger     |
+
+I use *GNU Stow* That's why it looks like this

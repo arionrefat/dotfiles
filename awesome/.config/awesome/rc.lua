@@ -16,10 +16,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
                       require("awful.hotkeys_popup.keys")
 local mytable       = awful.util.table or gears.table -- 4.{0,1} compatibility
 
--- }}}
-
 -- {{{ Error handling
-
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -49,19 +46,6 @@ do
     end)
 end
 
--- }}}
-
--- {{{ Autostart windowless processes
-
--- This function will run once every time Awesome is started
-local function run_once(cmd_arr)
-    for _, cmd in ipairs(cmd_arr) do
-        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
-    end
-end
-
-run_once({ "urxvtd", "unclutter -root" }) -- comma-separated entries
-
 -- This function implements the XDG autostart specification
 --[[
 awful.spawn.with_shell(
@@ -71,8 +55,6 @@ awful.spawn.with_shell(
     'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
 )
 --]]
-
--- }}}
 
 -- {{{ Variable definitions
 
@@ -187,16 +169,7 @@ local mymainmenu = freedesktop.menu.build {
     }
 }
 
--- hide menu when mouse leaves it
---mymainmenu.wibox:connect_signal("mouse::leave", function() mymainmenu:hide() end)
-
--- Set the Menubar terminal for applications that require it
---menubar.utils.terminal = terminal
-
--- }}}
-
 -- {{{ Screen
-
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", function(s)
     -- Wallpaper
@@ -225,8 +198,6 @@ end)
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) end)
 
--- }}}
-
 -- {{{ Mouse bindings
 
 root.buttons(mytable.join(
@@ -235,8 +206,6 @@ root.buttons(mytable.join(
     awful.button({ }, 5, awful.tag.viewprev)
 ))
 
--- }}}
-
 -- {{{ Key bindings
 
 globalkeys = mytable.join(
@@ -244,7 +213,7 @@ globalkeys = mytable.join(
     awful.key({ "Control",           }, "space", function() naughty.destroy_all_notifications() end,
               {description = "destroy all notifications", group = "hotkeys"}),
 
-    -- X screen locker
+    --  screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
               {description = "lock screen", group = "hotkeys"}),
 
@@ -395,7 +364,7 @@ globalkeys = mytable.join(
               {description = "dropdown application", group = "launcher"}),
 
     -- Widgets popups
-    awful.key({ altkey, }, "c", function () if beautiful.cal then beautiful.cal.show(7) end end,
+    awful.key({ altkey, }, "l", function () if beautiful.cal then beautiful.cal.show(7) end end,
               {description = "show calendar", group = "widgets"}),
     awful.key({ altkey, }, "h", function () if beautiful.fs then beautiful.fs.show(7) end end,
               {description = "show filesystem", group = "widgets"}),
@@ -474,16 +443,17 @@ globalkeys = mytable.join(
         function ()
             awful.util.spawn("arcolinux-logout") end,
             {description = "Power Options", group = "My_Binds"}),
+
      -- Rofi
-    awful.key({ "Mod4" }, "d",
+    awful.key({ "Mod4" }, "p",
         function ()
         awful.util.spawn("rofi -show drun")
     end, {description = "Spawm Rofi", group = "My_Binds"}),
 
      -- Dmenu
-    awful.key({ "Mod4" }, "p",
+    awful.key({ "Mod4" }, "d",
         function ()
-        awful.util.spawn("dmenu_run")
+        awful.util.spawn("dmenu_run -c -bw 3 -l 15 -g 3")
     end, {description = "Spawm Dmenu", group = "My_Binds"}),
 
     -- Screenshot Selection
@@ -629,10 +599,7 @@ clientbuttons = mytable.join(
 -- Set keys
 root.keys(globalkeys)
 
--- }}}
-
 -- {{{ Rules
-
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -659,15 +626,9 @@ awful.rules.rules = {
         class = {
           "Arandr",
           "Blueman-manager",
-          "Gpick",
-          "Kruler",
-          "MessageWin",  -- kalarm.
           "Sxiv",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-          "Wpa_gui",
-          "veromix",
-          "xtightvncviewer"},
-
+          "Nitrogen"
+        },
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
         name = {
@@ -701,9 +662,6 @@ awful.rules.rules = {
     { rule = { class = "Emacs" },
        properties = { screen = 1, tag = "3" } },
 
-    { rule = { class = "jetbrains-idea-ce" },
-       properties = { screen = 1, tag = "7" } },
-
     { rule = { class = "Pcmanfm" },
        properties = { screen = 1, tag = "5" } },
 
@@ -711,10 +669,7 @@ awful.rules.rules = {
           properties = { maximized = true } },
 }
 
--- }}}
-
 -- {{{ Signals
-
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
@@ -779,6 +734,17 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
--- Autostart
-awful.spawn.with_shell("bash ~/.config/awesome/autostart.sh")
+-- Autostart windowless processes
+-- This function will run once every time Awesome is started
+local function run_once(cmd_arr)
+    for _, cmd in ipairs(cmd_arr) do
+        awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
+    end
+end
 
+run_once({  "optimus-manager-qt",
+            "xfce4-power-manager",
+            "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+            "picom -b  --config ~/.config/picom.conf",
+            "numlockx on",
+        }) -- comma-separated entries
