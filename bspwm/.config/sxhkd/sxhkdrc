@@ -26,7 +26,7 @@ super + F10
 
 #Rofi
 super + d
-    rofi -show drun
+    dmenu_run -c -bw 3 -l 15 -g 3
 
 #Dmenu
 super + shift +  p

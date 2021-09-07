@@ -426,13 +426,13 @@ globalkeys = mytable.join(
         function ()
         awful.util.spawn("bash -c ~/.scripts/touchpadOff.sh")
         naughty.notify({ text = "Disabled Trackpad", timeout = 3 }) end,
-            {description = "ﳶDisable Trackpad", group = "My_Binds"}),
+            {description = "Disable Trackpad", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F8",
         function ()
         awful.util.spawn("bash -c ~/.scripts/touchpadOn.sh")
         naughty.notify({ text = "Enabled Trackpad", timeout = 3 }) end,
-            {description = "ﳶEnable Trackpad", group = "My_Binds"}),
+            {description = "Enable Trackpad", group = "My_Binds"}),
 
     awful.key({altkey, "Ctrl"}, "c",
         function ()
@@ -447,7 +447,7 @@ globalkeys = mytable.join(
      -- Rofi
     awful.key({ "Mod4" }, "p",
         function ()
-        awful.util.spawn("rofi -show drun")
+        awful.util.spawn("sh -c ~/.config/rofi/launchers/colorful/launcher.sh")
     end, {description = "Spawm Rofi", group = "My_Binds"}),
 
      -- Dmenu
@@ -455,6 +455,13 @@ globalkeys = mytable.join(
         function ()
         awful.util.spawn("dmenu_run -c -bw 3 -l 15 -g 3")
     end, {description = "Spawm Dmenu", group = "My_Binds"}),
+
+    --Mute Mic
+    awful.key({ "Mod4" , "Ctrl"}, "F4",
+        function ()
+          awful.util.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle")
+        naughty.notify({ text = "Mic Mute", timeout = 3 })
+    end, {description = "Mute Mic", group = "My_Binds"}),
 
     -- Screenshot Selection
     awful.key({  modkey, "Shift"}, "Print",

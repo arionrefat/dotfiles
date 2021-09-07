@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/refat'
 let g:netrw_dirhist_4='/home/refat/Projects'
 let g:netrw_dirhist_3='/home/refat/.vim'
 let g:netrw_dirhist_2='/home/refat/.config/awesome'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_9='/home/refat/.config/awesome/themes/multicolor'
 let g:netrw_dirhist_8='/home/refat/.config/awesome/themes'
 let g:netrw_dirhist_7='/home/refat/.vim'
 let g:netrw_dirhist_6='/home/refat'
-let g:netrw_dirhist_5='/home/refat/.cache'
