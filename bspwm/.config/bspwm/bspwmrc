@@ -1,7 +1,7 @@
 #! /bin/sh
 
 #Polybar
-$HOME/.config/polybar/launch.sh --forest
+$HOME/.config/polybar/launch.sh --blocks
 
 #autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -22,6 +22,13 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      false
 bspc config single_monocle       true
 bspc config history_aware_focus  true
+
+# Border Color
+
+bspc config normal_border_color "#44475a"
+bspc config active_border_color "#6272a4"
+bspc config focused_border_color "#8be9fd"
+bspc config presel_feedback_color "#6272a4"
 
 # Resize using super + mouse(1,2,3)
 bspc config pointer_modifier mod4

@@ -419,8 +419,8 @@ globalkeys = mytable.join(
 
     awful.key({ "Mod4" }, "F1",
         function ()
-        awful.util.spawn("alacritty -e ranger") end,
-            {description = "Open ranger via alacritty", group = "My_Binds"}),
+        awful.util.spawn("alacritty -e nnn") end,
+            {description = "Open nnn via alacritty", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F10",
         function ()
@@ -445,13 +445,13 @@ globalkeys = mytable.join(
             {description = "Power Options", group = "My_Binds"}),
 
      -- Rofi
-    awful.key({ "Mod4" }, "p",
+    awful.key({ "Mod4" }, "d",
         function ()
-        awful.util.spawn("sh -c ~/.config/rofi/launchers/colorful/launcher.sh")
+        awful.util.spawn("sh -c ~/.config/rofi/launchers/ribbon/launcher.sh")
     end, {description = "Spawm Rofi", group = "My_Binds"}),
 
      -- Dmenu
-    awful.key({ "Mod4" }, "d",
+    awful.key({ "Mod4" }, "p",
         function ()
         awful.util.spawn("dmenu_run -c -bw 3 -l 15 -g 3")
     end, {description = "Spawm Dmenu", group = "My_Binds"}),
@@ -671,6 +671,9 @@ awful.rules.rules = {
 
     { rule = { class = "Pcmanfm" },
        properties = { screen = 1, tag = "5" } },
+
+    { rule = { class = "jetbrains-studio" },
+       properties = { screen = 1, tag = "7" } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },

@@ -118,9 +118,9 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='Terminus',
-    fontsize=15,
-    padding=2,
+    font='Iosevka Nerd Font',
+    fontsize=14,
+    padding=3,
     background='#1A1B26'
 )
 
@@ -176,7 +176,7 @@ screens = [
             ],
             20,
             # margin = [10,10,0,10],
-            opacity = 1,
+            opacity=1,
         ),
     ),
 ]

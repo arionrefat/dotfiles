@@ -2,11 +2,11 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # Ranger
 super + F1
-	urxvt -e ranger
+	kitty -e nnn
 
 # Brave
 super + F2
@@ -22,11 +22,11 @@ super + F4
 
 # Touchpad OFF or on
 super + F10
-    bash -c {~/.scripts/touchpadOff.sh, ~/.scripts/touchpadOn.sh}
+    bash -c {~/.scripts/touchpadOff.sh, ~/.scripts/touchpadOn.sh}; {notify-send "Touchpad turned off", notify-send "Touchpad turned on"}
 
 #Rofi
 super + d
-    dmenu_run -c -bw 3 -l 15 -g 3
+    sh -c ~/.config/rofi/launchers/ribbon/launcher.sh
 
 #Dmenu
 super + shift +  p
