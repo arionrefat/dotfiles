@@ -40,8 +40,8 @@ let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'a': '~/.config/alacritty/alacritty.yml' },
             \ { 'w': '~/.config/awesome/rc.lua' },
-            \ { 'z': '~/.zshrc' },
-            \ { 'b': '~/TutCodes' },
+            \ { 'z': '~/.config/zsh/zshrc' },
+            \ { 'b': '~/Workspaces' },
 	        \ { 't': '/usr/share/nvim/runtime/tutor/en/vim-01-beginner.tutor' },
             \ ]
 

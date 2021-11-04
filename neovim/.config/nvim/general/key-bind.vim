@@ -1,11 +1,13 @@
-" normal/insert
-nmap <C-s> <Plug>MarkdownPreview
-nmap <M-s> <Plug>MarkdownPreviewStop
-nmap <C-p> <Plug>MarkdownPreviewToggle
+"Leader Key
+let g:mapleader="\<Space>"
+
 nnoremap <leader>gy :Goyo<CR>
 
 nnoremap <M-TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
+
+" Bind Escape to terminal
+tnoremap <Esc> <C-\><C-n>
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>
@@ -23,8 +25,20 @@ imap <right> <nop>
 " Moving the selected line from Visual Mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+
 nnoremap <leader>u :UndotreeToggle<CR>
+
+nnoremap <silent> <Leader>sh :DashboardFindHistory<CR>
+nnoremap <silent> <Leader>sf :DashboardFindFile<CR>
+nnoremap <silent> <Leader>sc :DashboardChangeColorscheme<CR>
+nnoremap <silent> <Leader>sa :DashboardFindWord<CR>
+nnoremap <silent> <Leader>sb :DashboardJumpMark<CR>
+nnoremap <silent> <Leader>sn :DashboardNewFile<CR>
+
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>

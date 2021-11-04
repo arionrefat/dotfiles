@@ -8,11 +8,15 @@ set mouse=a
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set laststatus=0
+set laststatus=2
 set showtabline=2
 set statusline+=%*
 set statusline+=%#warningmsg#
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+set hidden
+set nobackup
+set nowritebackup
+set cmdheight=2     " Give more space for displaying messages.
 set noerrorbells
 set iskeyword+=-                      	" treat dash separated words as a word text object
 set pumheight=10                        " Makes popup menu smaller
@@ -22,5 +26,21 @@ set smarttab                            " Makes tabbing smarter will realize you
 set incsearch
 set scrolloff=8
 
+let g:neovide_cursor_vfx_mode = "pixiedust"
+let g:neovide_transparency=0.8
+
 let g:nvcode_termcolors=256
-colorscheme nvcode
+
+" Example config in VimScript
+let g:tokyonight_style = "strom"
+let g:tokyonight_italic_functions = 1
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:tokyonight_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+
+" Load the colorscheme
+colorscheme tokyonight
