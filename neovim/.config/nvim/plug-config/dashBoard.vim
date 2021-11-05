@@ -1,4 +1,4 @@
-let g:dashboard_default_executive = 'fzf'
+let g:dashboard_default_executive = 'telescope'
 let g:indentLine_fileTypeExclude = ['dashboard']
 
 let g:dashboard_custom_header = [

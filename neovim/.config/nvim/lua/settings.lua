@@ -1,6 +1,6 @@
 vim.g.neovide_cursor_vfx_mode = "pixiedust"
-vim.g.neovide_cursor_vfx_particle_density=11.0
-vim.g.neovide_cursor_vfx_particle_lifetime=6.2
+vim.g.neovide_cursor_vfx_particle_density=13.0
+vim.g.neovide_cursor_vfx_particle_lifetime=8.2
 vim.wo.number = true  -- set number
 vim.wo.relativenumber = false -- set relative number
 vim.o.guifont = "Fantasque Nerd Font:h16"
@@ -34,7 +34,6 @@ set conceallevel=0                      " So that I can see `` in markdown files
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set incsearch
 set scrolloff=8
-set completeopt=menu,menuone,noselect
 syntax enable
 
 let g:neovide_cursor_antialiasing=v:true

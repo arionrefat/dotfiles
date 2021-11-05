@@ -4,7 +4,6 @@ let g:mapleader="\<Space>"
 nnoremap <leader>gy :Goyo<CR>
 
 nnoremap <M-TAB> :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
 
 " Bind Escape to terminal
 tnoremap <Esc> <C-\><C-n>
