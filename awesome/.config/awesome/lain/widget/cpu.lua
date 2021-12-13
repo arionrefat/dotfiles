@@ -18,7 +18,7 @@ local function factory(args)
     args           = args or {}
 
     local cpu      = { core = {}, widget = args.widget or wibox.widget.textbox() }
-    local timeout  = args.timeout or 2
+    local timeout  = args.timeout or 3
     local settings = args.settings or function() end
 
     function cpu.update()

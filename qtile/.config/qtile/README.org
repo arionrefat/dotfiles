@@ -1,4 +1,0 @@
-#+TITLE: Qtile Config
-#+PROPERTY: header-args :tangle config.py
-
-*   Table of Contents :toc:

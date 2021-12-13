@@ -66,9 +66,9 @@ cmp.setup {
   sources = {
       { name = 'nvim_lsp' },
       { name = 'nvim_lua' },
-      { name = 'buffer' },
-      { name = 'luasnip' },
       { name = 'path' },
+      { name = 'luasnip' },
+      { name = 'buffer', keyword_length = 3},
   },
   formatting = {
       format = require('lspkind').cmp_format({
@@ -82,11 +82,20 @@ cmp.setup {
         },
       }),
     },
+    experimental = {
+        ghost_text = true
+    },
 }
 
-cmp.setup.cmdline('/', {
+cmp.setup.cmdline(
+    '/', {
     sources = {
       { name = 'buffer' },
     },
+}, ':', {
+  sources = {
+    { name = 'cmdline' }
+  }
 })
 
+require("luasnip/loaders/from_vscode").lazy_load()

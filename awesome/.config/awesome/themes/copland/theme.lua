@@ -66,7 +66,7 @@ theme.layout_max                                = theme.dir .. "/icons/max.png"
 theme.layout_fullscreen                         = theme.dir .. "/icons/fullscreen.png"
 theme.layout_magnifier                          = theme.dir .. "/icons/magnifier.png"
 theme.layout_floating                           = theme.dir .. "/icons/floating.png"
-theme.useless_gap                               = 8
+theme.useless_gap                               = 10
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -112,27 +112,6 @@ theme.cal = lain.widget.cal({
         bg   = theme.bg_normal
     }
 })
-
--- Mail IMAP check
---[[ to be set before use
-theme.mail = lain.widget.imap({
-    timeout  = 180,
-    server   = "server",
-    mail     = "mail",
-    password = "keyring get mail",
-    settings = function()
-        mail  = ""
-        count = ""
-
-        if mailcount > 0 then
-            mail = "<span font='Terminus 5'> </span>Mail "
-            count = mailcount .. " "
-        end
-
-        widget:set_markup(markup(blue, mail) .. count)
-    end
-})
---]]
 
 -- MPD
 local mpdicon = wibox.widget.imagebox()
@@ -375,14 +354,14 @@ function theme.at_screen_connect(s)
             awesomeicon,
             first,
             bar_spr,
-            s.mytaglist,
+            s.mytaglist, --middle widget
             first,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            -- wibox.widget.systray(),
             spr,
             cpuicon,
             cpu,

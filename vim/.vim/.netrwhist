@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/refat/.dotfiles/alacritty'
 let g:netrw_dirhist_1='/home/refat/.vim'
 let g:netrw_dirhist_0='/home/refat/.config/nvim'
 let g:netrw_dirhist_9='/home/refat/.vim'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='/etc/default/grub-btrfs'
 let g:netrw_dirhist_5='/home/refat'
 let g:netrw_dirhist_4='/home/refat/Projects'
 let g:netrw_dirhist_3='/home/refat/.vim'
-let g:netrw_dirhist_2='/home/refat/.config/awesome'

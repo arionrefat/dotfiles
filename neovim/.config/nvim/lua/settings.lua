@@ -1,9 +1,5 @@
-vim.g.neovide_cursor_vfx_mode = "pixiedust"
-vim.g.neovide_cursor_vfx_particle_density=13.0
-vim.g.neovide_cursor_vfx_particle_lifetime=8.2
 vim.wo.number = true  -- set number
 vim.wo.relativenumber = false -- set relative number
-vim.o.guifont = "Fantasque Nerd Font:h16"
 vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore
 vim.o.showtabline = 2 -- Always show tabs
 vim.o.updatetime = 300 -- Faster completion
@@ -19,23 +15,22 @@ vim.o.mouse = "a" -- Enable your mouse
 vim.g.nvcode_termcolors=256
 
 vim.cmd([[
-set list
-filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set laststatus=2
-set statusline+=%*
-set statusline+=%#warningmsg#
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
-set noerrorbells
-set iskeyword+=-                      	" treat dash separated words as a word text object
-set conceallevel=0                      " So that I can see `` in markdown files
-set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set incsearch
-set scrolloff=8
-syntax enable
+    set list
+    filetype plugin indent on
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
+    set laststatus=2
+    set noshowmode                          " We don't need to see things like -- INSERT -- anymore
+    set noerrorbells
+    set iskeyword+=-                      	" treat dash separated words as a word text object
+    set conceallevel=2                      " So that I can see `` in markdown files
+    set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
+    set incsearch
+    set scrolloff=8
+    syntax enable
+    colorscheme palenight
 
-let g:neovide_cursor_antialiasing=v:true
-colorscheme tokyonight
+    autocmd BufWritePre * %s/\s\+$//e
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 ]])

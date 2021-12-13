@@ -1,5 +1,4 @@
 #!/bin/sh
-alias f='zi'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # Colorize grep output (good for log files)
@@ -8,9 +7,9 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+alias cp="cp -iv"
+alias mv='mv -iv'
+alias rm='rm -iv'
 
 # easier to read disk
 alias df='df -h'                          # human-readable sizes
@@ -26,7 +25,8 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 alias list_systemctl="systemctl list-unit-files --state=enabled"
 
 #list
-alias ls='lsd'
+alias ls='lsd -l'
+alias ll='lsd -al'
 alias l.="ls -A | egrep '^\.'"
 
 #pacman unlock
@@ -88,16 +88,16 @@ alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 #mounting the folder Public for exchange between host and guest on virtualbox
 alias vbm="sudo /usr/local/bin/arcolinux-vbox-share"
 
-#youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+#yt-dlp
+alias yta-aac="yt-dlp --extract-audio --audio-format aac "
+alias yta-best="yt-dlp --extract-audio --audio-format best "
+alias yta-flac="yt-dlp --extract-audio --audio-format flac "
+alias yta-m4a="yt-dlp --extract-audio --audio-format m4a "
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias yta-opus="yt-dlp --extract-audio --audio-format opus "
+alias yta-vorbis="yt-dlp --extract-audio --audio-format vorbis "
+alias yta-wav="yt-dlp --extract-audio --audio-format wav "
+alias ytv-best="yt-dlp -f bestvideo+bestaudio "
 
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
@@ -147,6 +147,9 @@ alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
+
+#Fzf with bat preview
+alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>

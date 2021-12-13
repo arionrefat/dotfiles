@@ -1,8 +1,6 @@
 call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'nlknguyen/copy-cut-paste.vim'
@@ -12,11 +10,10 @@ Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'mhinz/vim-startify'
 Plug 'rbgrouleff/bclose.vim'
-Plug 'psliwka/vim-smoothie'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
-" Plug 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime'
 Plug 'turbio/bracey.vim'
 Plug 'lervag/vimtex'
 Plug 'vimsence/vimsence'
@@ -32,5 +29,6 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()

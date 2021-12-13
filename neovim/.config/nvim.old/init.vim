@@ -15,14 +15,12 @@ source $HOME/.config/nvim/plug-config/nerdcomment.vim
 source $HOME/.config/nvim/plug-config/coc-config.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/markdown.vim
-source $HOME/.config/nvim/plug-config/barbar.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/codi.vim
 
 " Lua plugins
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 luafile $HOME/.config/nvim/lua/treesitter.lua
-luafile $HOME/.config/nvim/lua/barbar.lua
 
 "Inspiration taken from
 "https://github.com/ChristianChiarulli

@@ -16,7 +16,7 @@ local function factory(args)
     args           = args or {}
 
     local temp     = { widget = args.widget or wibox.widget.textbox() }
-    local timeout  = args.timeout or 1
+    local timeout  = args.timeout or 5
     local tempfile = args.tempfile or "/sys/devices/virtual/thermal/thermal_zone0/temp"
     local settings = args.settings or function() end
 

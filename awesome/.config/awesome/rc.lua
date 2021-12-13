@@ -1,4 +1,4 @@
--- {{{ Required libraries
+-- Required libraries
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -10,13 +10,12 @@ local wibox         = require("wibox")
 local beautiful     = require("beautiful")
 local naughty       = require("naughty")
 local lain          = require("lain")
---local menubar       = require("menubar")
 local freedesktop   = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup")
                       require("awful.hotkeys_popup.keys")
 local mytable       = awful.util.table or gears.table -- 4.{0,1} compatibility
 
--- {{{ Error handling
+-- Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -30,7 +29,6 @@ end
 -- Handle runtime errors after startup
 do
     local in_error = false
-
     awesome.connect_signal("debug::error", function (err)
         if in_error then return end
 
@@ -56,30 +54,19 @@ awful.spawn.with_shell(
 )
 --]]
 
--- {{{ Variable definitions
-
-local themes = {
-    "copland",         -- 1
-    "dremora",         -- 2
-    "multicolor",      -- 3
-    "powerarrow",      -- 4
-    "powerarrow-dark", -- 5
-    "steamburn",       -- 6
-}
-
-local chosen_theme = themes[1]
+local chosen_theme = "copland"
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 local terminal     = "alacritty"
-local vi_focus     = true -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
+local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = os.getenv("GUI_EDITOR") or "emacs"
+local gui_editor   = os.getenv("GUI_EDITOR") or "emacsclient -c -a 'emacs'"
 local browser      = os.getenv("BROWSER") or "firefox"
-local scrlocker    = "betterlockscreen -l dimblur"
+local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" , "6", "7", "8", "9" }
+awful.util.tagnames = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
@@ -145,8 +132,6 @@ awful.util.tasklist_buttons = mytable.join(
 
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 
--- }}}
-
 -- {{{ Menu
 
 -- Create a launcher widget and a main menu
@@ -211,7 +196,7 @@ root.buttons(mytable.join(
 globalkeys = mytable.join(
     -- Destroy all notifications
     awful.key({ "Control",           }, "space", function() naughty.destroy_all_notifications() end,
-              {description = "destroy all notifications", group = "hotkeys"}),
+              {description = "close all notifications", group = "hotkeys"}),
 
     --  screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
@@ -407,11 +392,6 @@ globalkeys = mytable.join(
     awful.key({ modkey }, "a", function () awful.spawn(gui_editor) end,
               {description = "run gui editor", group = "launcher"}),
 
-    awful.key({ "Mod4" }, "F4",
-        function ()
-        awful.util.spawn("discord") end,
-            {description = "Open Discord", group = "My_Binds"}),
-
     awful.key({ "Mod4" }, "F3",
         function ()
         awful.util.spawn("pcmanfm") end,
@@ -419,35 +399,35 @@ globalkeys = mytable.join(
 
     awful.key({ "Mod4" }, "F1",
         function ()
-        awful.util.spawn("alacritty -e nnn") end,
+        awful.util.spawn("kitty -e nnn") end,
             {description = "Open nnn via alacritty", group = "My_Binds"}),
+
+    awful.key({ "Mod4" }, "F4",
+        function ()
+        awful.util.spawn("kitty -e ranger") end,
+            {description = "Open ranger via alacritty", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F10",
         function ()
-        awful.util.spawn("bash -c ~/.scripts/touchpadOff.sh")
-        naughty.notify({ text = "Disabled Trackpad", timeout = 3 }) end,
+        awful.spawn.with_shell("~/.scripts/touchpadOff.sh")
+        naughty.notify({ title = "Trackpad Disabled" , timeout = 3 }) end,
             {description = "Disable Trackpad", group = "My_Binds"}),
 
     awful.key({ "Mod4" }, "F8",
         function ()
-        awful.util.spawn("bash -c ~/.scripts/touchpadOn.sh")
-        naughty.notify({ text = "Enabled Trackpad", timeout = 3 }) end,
+        awful.spawn.with_shell("~/.scripts/touchpadOn.sh")
+        naughty.notify({ title = "Trackpad Enabled" , timeout = 3 }) end,
             {description = "Enable Trackpad", group = "My_Binds"}),
-
-    awful.key({altkey, "Ctrl"}, "c",
-        function ()
-            awful.util.spawn("bash -c ~/.scripts/dmconf") end,
-            {description = "Open config files using Dmenu", group = "My_Binds"}),
 
     awful.key({altkey, "Ctrl"}, "k",
         function ()
-            awful.util.spawn("arcolinux-logout") end,
+            awful.spawn.with_shell("~/.scripts/dmlogout") end,
             {description = "Power Options", group = "My_Binds"}),
 
      -- Rofi
     awful.key({ "Mod4" }, "d",
         function ()
-        awful.util.spawn("sh -c ~/.config/rofi/launchers/ribbon/launcher.sh")
+        awful.util.spawn("rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/config.rasi")
     end, {description = "Spawm Rofi", group = "My_Binds"}),
 
      -- Dmenu
@@ -464,7 +444,7 @@ globalkeys = mytable.join(
     end, {description = "Mute Mic", group = "My_Binds"}),
 
     -- Screenshot Selection
-    awful.key({  modkey, "Shift"}, "Print",
+    awful.key({  altkey, "Ctrl"}, "s",
         function ()
         awful.util.spawn("flameshot gui")
     end, {description = "Select screenshot", group = "My_Binds"}),
@@ -472,8 +452,7 @@ globalkeys = mytable.join(
     -- Screenshot
     awful.key({}, "Print",
         function ()
-        awful.util.spawn("scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`'")
-        naughty.notify({ text = "Screenshot Taken ", timeout = 3 })
+        awful.spawn.with_shell("flameshot full -c -p ~/Pictures/screenshots")
         end, {description = "Full screen Screenshot", group = "My_Binds"}),
 
     -- Prompt
@@ -625,25 +604,16 @@ awful.rules.rules = {
 
     -- Floating clients.
     { rule_any = {
-        instance = {
-          "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
-          "pinentry",
-        },
+        instance = {},
         class = {
           "Arandr",
-          "Blueman-manager",
           "Sxiv",
           "Nitrogen"
         },
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
-        name = {
-          "Event Tester",  -- xev.
-        },
+        name = {},
         role = {
-          "AlarmWindow",  -- Thunderbird's calendar.
-          "ConfigManager",  -- Thunderbird's about:config.
           "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
       }, properties = { floating = true }},
@@ -653,27 +623,21 @@ awful.rules.rules = {
       }, properties = { titlebars_enabled = false }
     },
 
-        -- Set Apps to always map on the first tag on screen 1.
-    { rule = { class = "discord" },
-       properties = { screen = 1, tag = "4" } },
-
+    -- Set Apps to always map on the first tag on screen 1.
     { rule = { class = "Brave-browser" },
-       properties = { screen = 1, tag = "2" } },
+       properties = { screen = 1, tag = "II" } },
 
     { rule = { class = "firefox" },
-       properties = { screen = 1, tag = "2" } },
+       properties = { screen = 1, tag = "II" } },
 
     { rule = { class = "mpv" },
-       properties = { screen = 1, tag = "6" } },
+       properties = { screen = 1, tag = "VI" } },
 
     { rule = { class = "Emacs" },
-       properties = { screen = 1, tag = "3" } },
+       properties = { screen = 1, tag = "III" } },
 
     { rule = { class = "Pcmanfm" },
-       properties = { screen = 1, tag = "5" } },
-
-    { rule = { class = "jetbrains-studio" },
-       properties = { screen = 1, tag = "7" } },
+       properties = { screen = 1, tag = "V" } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
@@ -715,7 +679,7 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c, { size = 16 }) : setup {
+    awful.titlebar(c, { size = 20 }) : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
@@ -752,9 +716,8 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({  "optimus-manager-qt",
-            "xfce4-power-manager",
-            "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-            "picom -b  --config ~/.config/picom.conf",
-            "numlockx on",
-        }) -- comma-separated entries
+run_once({"xfce4-power-manager",
+          "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+          "picom -b",
+          "optimus-manager-qt",
+          "numlockx on", }) -- comma-separated entries
