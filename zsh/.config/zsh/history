@@ -23930,3 +23930,4267 @@ ls
 cd .local/share
 ls
 nnn
+nnn
+ranger
+z zsh
+nnn
+ranger
+zsh-update-plugins
+ls
+ls
+z zsh
+nnn
+cd
+ncdu
+cd
+fish
+z zsh
+nnn
+nvim
+zsh
+nnn
+z zsh
+nnn
+z sh
+z zsh
+nnn
+cd
+nnn
+ranger
+ls
+cd _JAVA_AWT_WM_NONREPARENTING=1
+z zsh
+nnn
+cd Workspaces
+ls
+rxfetch
+z zsh
+nnn
+nvim zshrc
+volume_key
+volume_key -h
+ls
+nnn
+ranger
+ranger
+cd .config
+cd ranger
+l
+ls
+nnn
+ranger
+cd
+ranger
+paru
+ls
+xmodmap -pke ~/.Xmodmap
+nvim
+xmodmap -pke ~/.Xmodmap
+xmodmap ~/.Xmodmap
+nvim
+xterm
+twm
+cd /etc/X11/xinit
+ls
+doas nvim xinitrc
+nnn
+ranger
+doas nvim xinitrc
+big
+big | fzf
+xmodmap ~/.Xmodmap
+nvim ~/.Xmodmap
+nvim .xinitrc
+cd /etc/X11/xinit
+doas nvim xinitrc
+bat xinitr
+bat xinitrc
+doas nvim xinitrc
+xmodmap ~/.Xmodmap
+nnn
+nnn
+nvim .xinitrc
+nvim .xinitrc
+nnn
+nvim .zprofile
+nvim .zprofile
+xmodmap ~/.Xmodmap
+nvim
+nvim
+nvim .xinitrc
+nvim
+nnn
+nvim
+nnn
+z /etc/X11/xinit
+doas nvim xinitrc
+ls
+nnn
+big
+ranger
+paru
+cleanup
+big
+big
+doas pacman -S openimagedenoise
+doas pacman -Rns openimagedenoise
+doas pacman -Rns python-numpy
+doas pacman -Rns opencollada
+doas pacman -Rns blender
+doas pacman -Rns lazygit
+paru -Rns lazygit-git
+doas pacman -Rns david
+doas pacman -Rns dav1d
+doas pacman -Rns orc
+doas pacman -Scc
+nnn
+nnn
+rxfetch
+rxfetch
+rxfetch
+rxfetch
+rxfetch
+paru
+redshift -O 4200
+ls
+alpha
+nvim
+nvim
+z st
+z st
+doas make clean install
+nvim
+ranger
+z dwm
+nnn
+doas make clean install
+nnn
+doas make clean install
+redshift -O 4200
+rxfetch
+neofetch
+big | fzf
+neofetch
+nvim
+nvim
+z nvim
+nvim
+ranger
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z nivm
+nvim
+nvim
+z nvim
+nvim
+nnn
+ranger
+nvim
+nvim
+nvim
+nvim
+redshift -x
+paru
+doas pacman -S nvidia
+nvim
+nvim
+nvim
+nvim $(fzf)
+cd /etc
+nvim pacman.conf
+doas vim pacman.conf
+nnn
+nvim pacman.conf
+nvim pacman.conf
+nvim pacman.conf
+nvim pacman.conf
+paru
+ls
+cd Downloads
+ls
+rm G.\ M.\ Refatul_Islam_201482_CSE320Quiz3.pdf
+ls
+cd
+nvim
+wakatime
+wakatime --help
+doas pacman -S wakatime
+big
+cleanup
+nvim
+doas pacman -S timeshift
+ls
+cd Downloads
+ls
+cd royal
+ls
+nnn
+ls
+cd Downloads
+ls
+nvim
+z nvim
+nvim
+z
+nvim
+nvim
+nvim
+nvim
+z s
+z st
+z st
+nvim config.h
+doas make clean install
+nvim
+cd Downloads
+ls
+cd
+cd Workspaces
+nnn
+paru
+cd
+weechat
+doom upgrade
+doom
+doom everywhere
+cd .doom.d
+cd
+cd .emacs.d
+nnn
+nnn
+lisp
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+redshift -O 4200
+neofetch
+cd Pictures
+cd ALT
+nnn
+ranger
+ranger
+rxfetch
+ls
+z st
+z st
+nnn
+doas make clean install
+nvim
+nvim
+nvim
+redshift -O 4200
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+doas pacman -S black
+pip install black
+cargo install stylua
+nvim
+z nvim
+cd lua
+ls
+nvim null-ls.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nnn
+nvim
+nvim
+nvim
+nvim
+yarn add --dev --exact prettier\
+
+nnn
+yarn remove --dev --exact prettier
+yarn remove prettier
+nnn
+nnn
+cd
+wakatime
+doas pacman -Rns wakatime
+nvim
+nnn
+nnn
+doas pacman -S prettier
+paru
+nvim
+z nvim
+ls
+nnn
+nvim
+nvim
+z Workspaces
+ls
+fzf -e
+nvim $(fzf)
+n
+ls
+nvim
+nnn
+z java
+ls
+nvim script.js
+nvim script.js
+nvim
+nvim script.js
+nvim
+prettier
+cd Downloads
+python CFG.py
+python CFG.py
+paru
+cd Workspaces
+big
+dc
+man dcc
+man dc
+man dd
+c
+cd
+cd Downloads
+ls
+wget https://raw.githubusercontent.com/mattany/CFGChecker/master/CFG.py
+ls
+nnn
+nvim CFG.py
+nvim CFG.py
+stylua
+stylua --help
+z down
+nvim CFG.py
+nvim
+nvim CFG.py
+z nivm
+z nvim
+nvim
+nnn
+nvim init.lua
+nvim init.lua
+nvim init.lua
+nvim
+nvim
+cd .doom.d
+ls
+nvim config.el
+doom sync
+doom
+doom clean
+doom purge
+doom sync
+doom doctor
+doom upgrade
+z .doom
+ls
+nnn
+nnn
+ranger
+ytop
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d\
+
+doom install
+doom install
+nnn
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d\
+
+doom install
+doom doctor
+doom sync
+doom clean
+ls
+nvim
+paru
+emacs --daemon
+doas pacman -S wakatime
+doas pacman -S wakatime-cli
+doas pacman -S wakatime
+wakatime
+doom sync
+wakatime --entity
+doas pacman -Rns wakatime
+paru -S wakatime
+paru -S wakatime-git
+cd
+nnn
+cd .wakatime
+ls
+./wakatime-cli-linux-amd64 --entity
+./wakatime-cli-linux-amd64 --today
+nnn
+ranger
+ls
+cd
+cd .local/bin
+doas mv wakatime /usr/bin
+nnn
+cd
+cd
+cd /usr/bin
+nnn
+wakatime
+cd Workspaces
+cd Org-mode
+ls
+nnn
+cd .config/awe
+cd .config/awesome
+ranger
+cd Downloads
+ls
+ex gtk-master.zip
+nnn
+ranger
+mv Dracula /usr/share/themes
+sudo mv Dracula /usr/share/themes
+ls
+cd /usr/share/themes
+ls
+nnn
+ls
+rm -rf Dracula
+sudo rm -rf Dracula
+ls
+nnn
+doas pacman -Rns termite-terminfo
+cd /usr/share/fonts
+ls
+nnn
+nnn
+doas nnn
+iso
+cd /usr/share/icons
+nnn
+doas nnn
+cd Downloads
+nnn
+ex Dracula.zip
+nnn
+doas mv Dracula /usr/share/icons
+doas mv Dracula /usr/share/icons
+cd Downloads
+ls
+doas mv .ttf* /usr/share/fonts/TTF
+doas mv .*ttf /usr/share/fonts/TTF
+doas mv *.ttf /usr/share/fonts/TTF
+nnn
+ls
+big
+doas pacman -Rns texlive-bin
+doas pacman -Rns texlive-core
+doas pacman -Rns latex-mk
+doas pacman -Rns ghostscript
+doas pacman -Rns latex-mk
+nvim
+z nvim
+ranger
+nvim
+nnn
+ranger
+doas pacman -Rns inkscape
+cd
+ls
+cd Downloads
+ls
+cd .doom.d
+ls
+vim init.el
+doom sync
+ls
+cd
+paru -s discord
+ls
+cd Downloads
+ls
+cd
+cd
+man wc
+cd Downloads
+man wc
+wc -w CFG.py
+wc -l CFG.py
+man wc
+wc -m -w -l CFG.py
+emacs --daemon
+pip install pylint
+pylint -v
+ping 8.8.8.8
+ping 8.8.8.8
+cd .doom.d
+nvim config.el
+nnn
+doas pacman -Rns emacs
+doas pacman -S gccemacs
+paru -s gccemacs
+paru -s  emacs-native-comp-git
+paru -S  emacs-native-comp-git
+paru -S  emacs-native-comp-git-enhanced
+nnn
+ytop
+doas pacman -Scc
+doas pacman -S emacs
+paru -s emacs
+nvim
+doom sync
+doom sync
+ytop
+doom sync
+doom doctor
+emacs --daemon
+doom sync
+cd Videos/
+ls
+cd Editors
+ytv-best https://youtu.be/J0OaRy85MOo
+cd Videos
+nnn
+cd Videos
+ytv-best https://youtu.be/48JlgiBpw_I
+nnn
+ranger
+htop
+ranger
+doom sync
+doom doctor
+doom clean
+doom sync
+doom sync
+doom clean
+doom doctor
+cd Documents
+cd
+cd Downloads
+ls
+rm CFG.py
+ls
+wget https://raw.githubusercontent.com/mattany/CFGChecker/master/CFG.py
+emacs --daemon
+pacman -S gnutls
+doas pacman -Rns newsboat
+nnn
+cd .config
+nnn
+ranger
+doom sync
+doom sync
+doom doctor
+z doo
+nnn
+nvim
+doom sync
+emacs --debug-init
+nvim
+doom sync
+z doom
+ls
+nnn
+doom sync
+z doom
+nnn
+doom sync
+doom doctor
+doom sync
+nvim
+nvim
+nvim
+doom sync
+doom sync
+nvim
+z doom
+ls
+nvim init.el
+doom sync
+doom sync
+doom doctor
+doom
+Xorg --help
+ls
+cd
+nvim
+nvimnnn
+nnn
+cd /temp
+cd /tmp
+ls
+nnn
+ls
+cd
+paru
+rxfetch
+nvim
+nvim
+nvim
+nvim
+ncdu
+ncdu
+nvim
+nvim
+nvim
+nvim
+nvim -v
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+ls
+cd .config
+cd
+cd Downloads
+ls
+cd Downloads
+ls
+ex Hotel\ management\ system.zip
+nnn
+cd Downloads
+ls
+nnn
+ls
+neofetch
+paru
+nvim
+ls
+cd Dow
+cd Downloads
+ls
+mv royal /opt/lampp/htdocs
+sudo mv royal /opt/lampp/htdocs
+ls
+cd
+cd Videos
+nnn
+ls
+cd
+cd /opt/lampp
+ls
+cd htdocs
+nnn
+doas nnn
+nnn
+ls
+nnn
+chmod +a royal
+chmod +ga royal
+chmod +rwx royal
+ls
+cd royal
+ls
+xampp start
+sudo xampp start
+emacs --daemon
+doom sync
+cd .emacs.d
+nnn
+ranger
+xampp stop
+sudo xampp stop
+redshift -O 4200
+cd .config
+cd
+cd /opt/lampp/htdocs
+cd royal
+ls
+nnn
+ls
+nvim rooms.php
+git init
+z 
+z royal
+ls
+z
+ls
+cd Downloads
+ls
+wget https://drive.google.com/file/d/1JV_JoHzP4LxWhzJCVxFDijqlyyrukaaQ/view
+ls
+nnn
+ls
+nvim LabTask.java
+ranger
+nvim
+doom sync
+nvim
+doom sync
+doom doctor
+paru
+emacs --daemon
+nvim
+redshift -O 4200
+man rg
+doom upgrade
+doom upgrade
+doom sync
+doom upgrade
+nvim
+doom sync
+doom upgrade
+doom upgrade
+doom sync
+cd https://drive.google.com/drive/u/0/folders/1Nj4P0VnI7JicF5Dko_1qOCK_9n89Oyz-
+cd Videos
+cd Editors
+ls
+cd Workspaces
+git pu;;
+git pull
+git push
+git push --force
+nvim
+redshift -x
+doom sync
+doom sync
+nvim
+nvim
+ls
+rxfetch
+rxfetch
+rxfetch
+cd Videos/Editors
+ytv-nvim
+yt-dlp https://youtu.be/jlF1N0R24cA
+nvim
+nvim
+nvim
+z nvim
+ls
+nnn
+nvim
+nvim
+cd lua
+ls
+nvim alphA.lua
+nnn
+nvim alphA.lua
+nnn
+nvim
+nvim
+..
+nvim init.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z Workspaces
+ls
+z 21
+cd java
+ls
+..
+ls
+nnn
+nnn
+nvim
+nvim
+nvim
+downgrada
+doas pacman -Rns downgrade
+paru
+nvim
+nvim
+z nvim
+nnn
+nnn
+paru -S clang-format-all-git
+z 21
+ls
+cd java
+ls
+nvim LabTask.class
+nvim LabTask.jva
+nvim LabTask.java
+nvim LabTask.java
+nvim LabTask.java
+z nvim
+nvim
+z dwm
+ls
+nnn
+doas make clean install
+nvim
+nvim
+z nvim
+z dwm
+nvim config.h
+nvim config.h
+doas make clean install
+ls
+z dwm
+nnn
+doas make clean install
+nvim
+nvim
+z nivm
+z dwm
+nnn
+doas make clean install
+z dwm
+z 
+z java
+z java
+ls
+z java
+ls
+ranger
+nnn
+ranger
+redshift -O 4200
+redshift-gtk
+nvim
+nvim
+ls
+rxfetch
+z royal
+ls
+ls
+nnn
+cd admin
+ls
+nnn
+nvim
+nvim
+nnn
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+exec
+man exec
+rxfetch
+rxfetch
+neofetch
+ls
+cd Downloads
+ls
+nnn
+rm -rf * 
+ls
+ls
+cd
+paru
+nvim
+nvim
+ls
+z nvim
+nvim
+cd lua
+z nivm
+z nivm
+z nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z wee
+nnn
+doom sync
+weechat
+doas pacman -Rns weechat
+doas pacman -Rns ruby
+nnn
+cd .config
+ranger
+z
+fzf -e
+cd /
+fzf e
+fzf -e
+cd
+ls
+weechat
+go
+go clean
+ls
+nnn
+nvim
+cd Videos
+ls
+ytop
+cd Videos
+ls
+ranger
+cd https://drive.google.com/drive/u/0/folders/1Nj4P0VnI7JicF5Dko_1qOCK_9n89Oyz-
+cd Videos
+ls
+cd Tutorial
+ls
+nnn
+mkdir Javascript
+ls
+cd Javascript
+ytv-best https://youtu.be/JR9wsVYp8RQ
+nnn
+ls
+paru
+ls
+cd Music
+ls
+cd
+nvim
+man emacs 
+info emacs
+man info
+info info
+doas pacman -Rns info
+notify-send "Brightness:\"$(cat /sys/class/backlight/intel_backlight/brightness)\"" \
+
+cd .config
+ls
+z wdm
+z dwm
+nnn
+cat /sys/class/backlight/*/brightness
+notify-send "Brightness:\"$(cat /sys/class/backlight/*/brightness)\""
+doom sync
+doom upgrade
+ls
+ls
+nnn
+ranger
+cd Pictures
+cd
+cd Downloads
+nnn
+ranger
+nvim
+nvim
+ranger
+ranger
+nvim
+cd .doom.d
+ls
+file emac.png
+file emacs.png
+convert emacsD.png -resize 450x350 resized.png
+nnn
+nnn
+ranger
+cd .doom.d
+cd .doom.d
+nnn
+ranger
+cd .doom.d
+convert emacsD.png -resize 450x350 resized.png
+nnn
+ranger
+z doom
+nnn
+doom sync
+doom sync
+doom sync
+doom doctor
+doom upgrade
+doom doctor
+doom
+doom build
+doom sync
+doom doctor
+z doom
+nnn
+ytop
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z nvim
+nnn
+nvim
+nvim
+z nvim
+nnn
+cd lua
+mkdir user
+nnn
+ranger
+nvim
+nvim
+nnn
+nvim
+cd user
+nnn
+nvim
+nvim
+nvim
+nvim
+nvim
+z dwm
+nvim config.h
+nvim
+nvim
+doom sync
+doom clean
+doom doctor
+/usr/bin/npm -g --prefix /home/refat/.emacs.d/.local/etc/lsp/npm/typescript-language-server install typescript-language-server
+z nivm
+nvim
+doom sync
+doom sync
+doom doctor
+ls
+nnn
+ytop
+git
+man git
+ls
+man ex
+ex
+ex
+man ex
+nano
+doas pacman -S micro
+micro
+ranger
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d\
+
+~/.emacs.d/bin/doom install\
+
+doom sync
+doom sync
+doom doctor
+nvim
+/usr/bin/npm -g --prefix /home/refat/.emacs.d/.local/etc/lsp/npm/typescript-language-server install typescript-language-server
+/usr/bin/npm -g --prefix /home/refat/.emacs.d/.local/etc/lsp/npm/typescript-language-server install typescript-language-server
+/usr/bin/npm -g --prefix /home/refat/.emacs.d/.local/etc/lsp/npm/typescript-language-server install typescript-language-server
+ranger
+redshift -O 4200
+doom sync
+doom doctor
+cd Videos/Editors
+ytv-best https://youtu.be/AyhPmypHDEw
+cd .config/awesome
+ls
+cd themes
+ls
+cd copland
+wget https://cdn.phundrak.com/img/emacs-purple.png
+nnn
+file emacs-purple.png
+nnn
+ranger
+convert wall.png 1920x1080 wall.png
+convert wall.png 1920x1080 wall22.png
+convert wall.png 3840x2160 wall22.png
+ls
+nnn
+ranger
+ranger
+paru -S ttf-cascadia-code
+paru -S nordic-wallpapers
+paru -S nordic-wallpapers
+doas pacman -Scc
+ytop
+ncdu
+cd Pictures
+ls
+git pull
+nnn
+n
+git pull
+nnn
+ranger
+cd
+cd Pictures
+ls
+cd ALT
+ls
+nvim
+z nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+paru -Rns micro
+cd Pictures/ALT
+wget https://cdn.phundrak.com/img/emacs-purple.png
+nnn
+wget https://cdn.phundrak.com/img/emacs-purple.png
+nnn
+cd
+paru -S nordic-wallpapers
+paru -S nordic-wallpapers
+cd /usr/share/backgrounds
+nnn
+ranger
+ls
+nvim
+z nvim
+nvim
+nvim
+nvim
+nvim
+ls
+nvim
+nvim
+kitty list-fonts
+nvim
+ranger
+rangernvim
+nnn
+ranger
+ls
+ytop
+kitty list-fonts
+ranger
+nvim
+ls
+cd Downloads
+ls
+cd
+nvim
+nvim
+nvim
+paru
+nnn
+z nvim
+ls
+nvim init.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+man nvim
+nvim -u
+man nvim
+nvim --clean
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+redshift -O 4200
+cd .config
+ls
+z nivm
+z nvim
+nnn
+z nvim
+cd lua/user
+ls
+nvim plugins.lua
+nvim
+kitty list-fonts
+ls
+ls
+doom sync
+nvim
+nvim
+doom sync
+kitty list-fonts
+nvim
+doom sync
+nvim
+z nvim
+nvim
+cd lua/user
+nvim
+nnn
+nvim
+nvim
+nvim
+nnn
+nvim
+cd
+cd .local
+cd share/nvim
+nnn
+ranger
+cd
+nvim
+nvim
+z nvim
+cd usr/include/qt/QtWidgets/QTileRules
+nnn
+n
+ls
+ranger
+nvim
+nvim
+nvim
+nvim
+ls
+nvim
+z dwm
+nvim config.h
+ls
+cd Downloads
+ls
+nnn
+ls
+z nvim
+z
+z con
+nnn
+nvim picom.conf
+z st
+z st
+z st
+nnn
+z st
+nvim config.h
+doas make clean install
+z st
+nnn
+n
+git pull
+..
+ls
+cd bracey.vim
+nnn
+..
+nnn
+ls
+cd sonokai
+nnn
+git pull
+nnn
+n
+git pull
+nnn
+n
+git pull
+ranger
+n
+git pull
+..
+nnn
+cd
+vim
+nnn
+z st
+nnn
+z dwm
+nvim config.h
+neofetch
+cd .config
+cd
+ranger
+cd .dotfiles
+ls
+git add .
+git commit -m "Updated COnfigs"
+git push
+ls
+nvim
+z nvim
+nvim
+ls
+cd 
+ls
+cd Learn\&Grep
+ls
+cd rustlings
+git pull
+ncdu
+nvim
+nvim
+ncdu
+neofetch
+doas xampp start
+cd 
+z
+z nimv
+nvim
+z nvim
+nvim lua/user/colorizer.lua
+nvim lua/user/colorscheme.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+cd /opt/lampp/htdocs/royal/admin
+ls
+ls
+nvim index.php
+composer global require friendsofphp/php-cs-fixer
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nnn
+ranger
+z royal
+cd admin
+nvim index.php
+nvim index.php
+nvim
+man composer
+composer
+composer global remove friendsofphp/php-cs-fixer
+cd .config
+nnn
+z
+nvim .zprofile
+nnn
+ranger
+cd Downloads
+curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer
+sudo chmod a+x php-cs-fixer
+sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+nnn
+ranger
+z dwm
+nvim config.h
+cd
+cd Videos
+ls
+cd Unix
+ls
+ytv-best https://youtu.be/9YOZmI-zWok
+doas xampp start
+doas xampp stop
+doas xampp start
+z admin
+ls
+..
+nnn
+ranger
+z admin
+nnn
+ranger
+cd ~/.config/alacritty
+nnn
+z kit
+nnn
+doom dync
+doom sync
+doom sync
+doom doctor
+doom upgrade
+ls
+ls
+nvim
+z royal
+cd admin
+nnn
+nvim index.php
+nvim
+nvim index.php
+nvim index.php
+ytop
+paru -S nyxt
+ping 8.8.8.8
+nnn
+ping 8.8.8.8
+paru -S nyxt
+cd /
+fzf -e
+ls
+doas pacman -Scc
+bash
+vim .bashrc
+nvim .bashrc
+sudo pacman-mirrors
+sudo pacman -Syy
+paru
+z admin
+nvim index.php
+nvim index.php
+nvim
+nvim
+nvim index.php
+nvim
+nvim index.php
+nvim
+ls
+neofetch
+paru
+vim .bashrc
+bash
+redshift -O 4200
+cd .config
+nnn
+nvim
+nvim
+reboot
+nvim
+nvim
+nvim
+neofetch
+neofetch
+redshift -O 3500
+ls
+cd Downloads
+ls
+cd
+cd
+nvim
+cd
+z .con
+nnn
+cd nyxt
+ls
+nnn
+cd .config/nyxt
+ls
+nvim init.lisp
+nvim
+doom sync
+doas pacman -S exa
+doas pacman -S  mediainfo
+doas pacman -S zipinfo
+paru -S zipinfo
+doas pacman -S pdftoppm
+paru -S pdftoppm
+paru -S ffmpegthumbnailer
+doas pacman -S ppoppler
+doas pacman -S poppler
+nvim
+z doom
+ranger
+doom sync
+doom doctor
+doom clean
+doom purge
+doom build
+doom sync
+doom doctor
+rxfetch
+doom sync
+doom sync
+doom sync
+doom doctor
+z nvim
+nvim init.lua
+ls
+cd
+ytop
+xkill
+xkill
+ytop
+xkill
+paru
+screenkey
+doas pacman -Rns screenkey-git
+doas pacman -S screenkey-git
+screenkey
+doas pacman -Rns screenkey-git
+sudo pacman -S screenkey
+screenkey
+ls
+nnn
+redshift -x
+nnn
+cd Downloads
+ls
+ffmpeg -i 2021-12-23\ 14-08-12.mkv -r 10 emacs.gif
+nnn
+ranger
+ytop
+xkill
+nnn
+nnn
+z nvim
+ls
+nvim
+nvim
+ls
+cd lua
+cd user
+ls
+ls
+cd Colorizer.lua
+nvim colorscheme.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+ls
+ls
+z nvim
+ls
+cd 
+cd .config
+nvim pic
+nvim picom.conf
+ranger
+cleanup
+paru
+rxfetch
+nvim
+nvim
+z royal
+ls
+cd admin
+ls
+nvim index.php
+nvim
+whereis php
+whereis php-cs-fixer
+cd /usr/local/bin/
+doas rm php-cs-fixer
+whereis php-cs-fixer
+nvim
+doom sync
+doom sync
+doom doctor
+xkill
+doas xampp start
+ranger
+n
+nnn
+doas xampp restart
+z royal
+ls
+cd admin
+nnn
+nvim index.php
+nnn
+cd Downloads
+ls
+ex Hotel\ management\ system.zip
+ls
+nnn
+doas xampp restart
+doas xampp stop
+doas xampp start
+doas xampp stop
+doas xampp stop
+doas xampp start
+doas xampp start
+ls
+nvim
+nvim
+z royal
+ls
+nnn
+nnn
+doas xampp stop
+doas xampp start
+cd
+cd .cache
+nnn
+cd
+cd
+doas xampp restart
+doas rm -rf .cache
+doas xampp start
+z royal
+ls
+nnn
+nvim index.php
+cd admin
+nvim index.php
+ncdu
+redshift -O 4200
+ranger
+nvim
+nvim
+ls
+doas pacman -Rns ttf-cascadia-code
+cd Downloads
+ls
+nnn
+ex CascadiaCode.zip
+nnn
+doas nnn
+ls
+nnn
+ranger
+cd
+kitty list-fonts
+nvm
+nvim
+nnn
+ranger
+doas pacman -Rns ttf-fira-mono
+nvim
+nvim
+cd /usr/share/fonts/TTF
+ls
+ranger
+doas nnn
+doas nnn
+ls
+doom sync
+nvim
+nvim
+doom sync
+doas xampp start
+nvim
+nvim
+cd royal
+z royal
+ranger
+doas nnn
+doas ranger
+ls
+..
+cd
+z /opt/lampp/htdocs/Hamim_Resting_Place
+z admin
+ls
+nvim index.php
+doas xampp stop
+cd Videos/Editors
+ytv-best https://youtu.be/8oNycFLwKfE
+cd .config/BraveSoftware
+nnn
+fzf e
+fzf -e
+fzf
+paru
+rxfetch
+nvim
+nvim
+nvim
+nvim
+z st
+ls
+z st
+nvim config.h
+doas make clean install
+cd Videos/Unix
+ls
+..
+nnn
+cd Unix
+ytv-best https://youtu.be/ol_FuovYoBs
+nvim
+redshift -O 4200
+redshift -x
+ls
+doas pacman -S stumpwm
+paru -S stumpwm
+paru -S stumpwm
+cleanup
+sbcl --help
+whereis stumpwm
+nnn
+doas pacman -S quicklisp
+paru -S quicklisp
+doas pacman -S xterm
+cleanup
+paru -S sbcl
+cleanup
+nvim ~/.config/stumpwm/config
+touch ~/.config/stumpwm/config
+mkdir ~/.config/stumpwm/
+touch ~/.config/stumpwm/config
+nvim ~/.config/stumpwm/config
+ls
+cd
+whereis stumpwm
+cd /usr/share/xsessions
+ls
+nvim stumpwm
+ls
+nnn
+cd /usr/share/xsessions
+nnn
+doas mv stumpwm stumpwm.desktop
+ls
+ls
+neofetch
+ls
+ls
+cd /etc
+ls
+nnn
+cd /usr/share/xsessions
+nvim stumpwm.desktop
+ls
+bat stumpwm.desktop
+paru
+ls
+ytop
+ncdu
+doom sync
+doom upgrade
+nvim
+ytop
+xkill
+doom sync
+nvim 
+cd .config
+cd stacer
+nnn
+cd
+cd .config
+nnn
+cd
+mkdir ~/.stumpwm.d
+nnn
+nvim ~/.stumpwm.d/init.lisp
+nvim ~/.stumpwm.d/init.lisp
+cat /sys/class/power_supply/BAT0/capacity | tr -d '\\r\\n'
+nvm
+z dwm
+nvim config.h
+git clone https://github.com/stumpwm/stumpwm-contrib ~/.stumpwm.d/modules
+cd .stumpwm.d
+ls
+nnn
+ls
+cd .stumpwm.d
+ls
+nnn
+nnn
+ls
+nvim
+z ~/.stumpwm.d
+ls
+nnn
+ls
+ls
+cd .stumpwm.d
+ls
+nvim init.lisp
+brave
+nnn
+ls
+cd .stumpwm.d
+ls
+nvim init.lisp
+z dw
+z aw
+ls
+nnn
+ranger
+ranger
+w3m
+paru -S w3m-imgcat
+doas pacman -S ueberzug 
+doas pacman -Rns ueberzug 
+pip install ueberzug 
+ueberzug
+nvim
+z ran
+ls
+nnn
+ranger
+ranger
+z ~/.config/awesome
+nnn
+ranger
+paru -Rns stumpwm
+paru -Rns quicklisp
+paru -Rns sbcl
+cd .config/nyxt
+ls
+nnn
+man mc
+mc
+paru -Rns mc
+cleanup
+doas pacman -Rns xkeyboard-config
+doas pacman -Rns drbl
+doas pacman -Rns clonezilla
+man bc
+man screen
+doas pacman -S xz
+doas pacman -Rns xz
+sbc
+cleanup
+big
+big
+cd /usr//share/xsessions
+nnn
+doas nnn
+cd
+nnn
+emacs --daemon
+ls
+mc
+nvim
+nvim
+ls
+nvim
+cd .config/awesome
+ranger
+ls
+nnn
+ranger
+nvim
+ls
+doas pacman -Scc
+neofetch
+rxfetch
+nvim
+doas pacman -R ncmpcpp
+doas pacman -R ncmpcpp mpd
+cleanup
+clean
+ping 8.8.8.8
+doom sync
+doom sync
+nvim
+nvim
+nnn
+doom sync
+doom upgrade
+doom sync
+nvim
+pacman -S mpd mpc
+doom sync
+doom sync
+doom sync
+doom doctor
+doom sync
+doom sync
+doom clean
+doom doctor
+mpd
+ytop
+htop
+doas pacman -Rns mpd mpc
+cleanup
+pacman -S mpd mpc
+doas pacman -Rns mpd mpc
+cleanup
+ytop
+man du
+ls
+cd Downloads
+ls
+cd
+du Workspaces
+du Workspaces | fzf
+ytop
+z admin
+ls
+sudo pacman -S sbcl
+doas xampp start
+cd Videos
+ytv-best https://youtu.be/04XxpzUV4Sk
+ls
+redshift -x
+doas pacman -S sbcl
+paru -S quicklisp
+ls
+z dwm
+ls
+nvim
+nvim config.h
+nvim config.h
+doas make clean install
+redshift -O 4200
+paru
+ls
+cd .config
+ls
+cd nyx
+cd nyxt
+ls
+nvim init.lisp
+nvim
+nvim init.lisp
+z dadmin
+z admin
+ls
+nvim index.php
+z dwm
+nnn
+doas make clean install
+z sl
+killall slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+xsetroot -name "[status2d] ^c#FF0000^red text with blue rectangle^c#55cdfc^^r3,3,14,14^^f20^^c#FFFFFF^^b#f7a8b8^ and white text on pink background "\
+\
+
+doas make clean install
+slsh
+slstatus
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+z sls
+ls
+nvim config.h
+killall slstatus
+htop
+exit
+cd /etc
+nnn
+LS
+ls
+doas vim sddm.conf.d
+doas vim sddm.conf
+ls
+cd sddm.conf.d
+ls
+vim kde_settings.conf
+z sls
+ls
+nvim config.h
+nnn
+nvim config.h
+doas make clean install
+reboot
+nvim
+z sls
+ls
+nvim config.h
+z sls
+doas make clean install
+killall slstatus
+slstatus
+slstatus
+killall slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+z sls
+nvim config.h
+killall slstatus
+doas make clean install
+slstatus
+reboot
+z sls
+ls
+nvim config.h
+z sls
+doas make clean install
+killall slstatus
+slstatus
+ls
+z sls
+nvim config.h
+doas make clean install
+revoot
+reboot
+z dwm
+nvim config.h
+z sls
+nvim config.h
+killall slstatus
+doas make clean install
+slstatus
+nnn
+doas make clean install
+slstatus
+nvim config.h
+doas make clean install
+slstatus
+z sls
+nvim
+nvim config.h
+doas make clean install
+reboot
+z dwm
+ls
+nvim config.h
+doas make clean install
+z dwm
+nvim config.h
+vim config.h
+doas make clean install
+reboot
+ls
+ls
+neofetch
+whoami
+ls
+cd
+paru
+paru -Rns quicklisp
+doas pacman -Rns sbcl
+cleanup
+nvim
+doom sync
+doom doctor
+doom sync
+doas pacman -Scc
+fzf -e
+cd /
+fzf -e
+cd /usr/share/common-lisp
+nnn
+..
+doas rm common-lisp
+doas rm -rf common-lisp
+cd
+cd /
+fzf -e
+man guile
+fzf -e
+man slsh
+z dwm
+nvim config.h
+nvim
+z dwm
+doas make clean install
+z dwm
+doas make clean install
+nvim
+z dwm
+doas make clean install
+rxfetch
+neofetch
+neofetch
+ls
+nvim
+z dwm
+doas make clean install
+doas xampp start
+rm -rf .cache
+z admin
+ls
+nvim index.php
+nnn
+ranger
+ranger
+ranger
+doas xampp stop
+doas xampp restart
+doas xampp start
+doas xampp start
+doas xampp stop
+z admin
+nnn
+ranger
+doas xampp stop
+doas xampp start
+doas xampp start
+doas xampp stop
+rm -rf .cache
+doas xampp start
+cd Downloads
+nnn
+cd Downloads
+nnn
+z admin
+ls
+nvim create_user.php
+ls
+nvim user_details.php
+ls
+nnn
+ls
+nnn
+ranger
+nvim rooms.php
+nnn
+..
+ls
+nvim rooms.php
+z admin
+nnn
+..
+nvim rooms.php
+z admin
+nnn
+z admin
+//
+z admin
+..
+nnn
+..
+nnn
+z admin
+ls
+..
+pcmanfm
+ls
+nnn
+nnn
+ranger
+paru -S roficlip
+roficlip
+clipster -d
+rofi -dmenu 
+roficlip
+roficlip
+roficlip
+clipster -sp
+roficlip
+rofi -dmenu -i -lines 20 -width 80 -p 'selection: '
+rofi -dmenu -i
+whereis roficlip
+cd /usr/bin/
+doas vim roficlip
+roficlip
+clipster -d
+z dwm
+z nvim
+z dwm
+nvim config.h
+doas vim roficlip
+doas make clean install
+roficlip
+redshift -O 4200
+ranger
+nvim
+z nvim
+nvim init.lua
+nvim init.lua
+nvim
+nvim
+nvim
+nvim
+nnn
+ranger
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z 21
+ls
+cd Lab06
+ls
+javac Task1.java java Task1
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+z 21
+cd java
+javac Task1.java && java Task1
+ls
+..
+nnn
+cd Lab06
+ls
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+javac Task1.java && java Task1
+ls
+nnn
+ranger
+ranger
+z admin
+..
+ls
+doas xampp start
+z damin
+z admin
+..
+ls
+nvim index.html
+roficlip
+z admin
+..
+ranger
+z admin
+..
+ranger
+git add .
+git commit -m "init"
+git branch -M master
+git remote add origin git@github.com:arionrefat/Hamim_Resting_Place.git
+git push -u origin master
+nvim index.html
+git add .
+git commit -m "added customer"
+git push
+z admin
+..
+git add .
+git commit -m "cleaned code"
+git push
+rxfetch
+paru
+nvim
+doas xampp stop
+z admin
+..
+nvim index.html
+git add .
+git commit -m "cleaned code"
+git push
+doas xampp start
+z nvim
+z admin
+..
+ls
+nvim index.html
+git add .
+git commit -m "cleaned code"
+git push
+paru
+ls -a | wc -l
+z con
+ls -a | wc -l
+man feh
+ls -a
+nvim
+nvim
+ranger
+ytop
+doas xampp start
+neofetch
+paru
+cd Downloads
+nnn
+ls
+ls
+ex Hotel\ management\ system.zip
+nnn
+doas nnn
+z admin
+nnn
+ranger
+doas xampp stop
+doas xampp start
+z admin
+nnn
+/usr/bin/npm -g --prefix /home/refat/.emacs.d/.local/etc/lsp/npm/bash-language-server install bash-language-server
+/usr/bin/npm -g --prefix /home/refat/.emacs.d/.local/etc/lsp/npm/bash-language-server install bash-language-server
+z dwm
+ls
+nvim config.h
+doas make clean install
+z awe
+nvim rc.lua
+ls
+cd Downloads/n
+cd Downloads/
+ls
+cd
+neofetch
+ping 8.8.8.8
+nvim
+nvim
+nvim
+ytop
+z nvim
+cd lua/user
+nvim plugins.lua
+ranger
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim plugins.lua
+..
+cd
+z nvim
+nvim init.lua
+nvim
+ranger
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+ls
+z nvim
+ranger
+z nvim
+nvim init.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+ls
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+neofetch
+z doom
+nvim init.el
+nvim
+nvim
+z nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z dwm
+nvim config.h
+doas make clean install
+z dwm
+nvim config.h
+z admin
+ls
+..
+cd
+cd .config
+z admin
+..
+git add .
+git commit -m "cleaned code"
+ls
+nnn
+redshift -O 4200
+z nvim
+z lua/user
+ls
+nvim notify.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z lua
+ls
+cd user
+nvim keybinds.lua
+nvim
+nvim
+nvim
+nvim
+z 
+z java
+ls
+nvim script.js
+nvim
+nvim
+nvim
+z
+nvim
+nvim
+awesome -b
+awesome -v
+lua -v
+;s
+ls
+z awesome
+ranger
+paru
+vim
+cd
+ls
+vim .bashrc
+cd
+vim .vimrc
+vim .vimrc
+vim .vimrc
+nvim
+ls
+z nivm
+z back
+z /usr/share/backgrounds
+ls
+ranger
+sciv
+sxiv
+ranger
+nvim
+nvim
+z dwm
+nvim config.h
+notify-send -i kitty "the tile" "mess"
+notify-send -i brave "the tile" "mess"
+notify-send -i alacritty "the tile" "mess"
+notify-send -i Alacritty "the tile" "mess"
+notify-send -i "kitty" "the tile" "th ess"
+nvim
+nvim 
+ls
+cd Downloads
+ls
+nnn
+ytop
+neofetch
+nvim
+doas xampp start
+z admin
+ls
+nnn
+ranger
+doas xampp stop
+ls
+cd
+cd Documents/n
+ls
+paru
+ls
+nvim
+nvim
+z nvim
+ranger
+nvim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'\
+
+cd ~/.local/share/nvim/site
+nnn
+cd
+nvim
+nvim
+nvim
+nvim
+nvim
+nnn
+z nvim
+ranger
+nvim
+nvim
+nvim
+ls
+doom sync
+doom upgrade
+doom upgrade
+doom sync
+cd Downloads
+ls
+ranger
+z nvim
+ls
+ranger
+ytpo
+ytop
+ranger
+z nvim
+ranger
+z go
+ls
+nnn
+nnn
+ranger
+ranger
+ranger
+nnn
+nnn
+z go
+ls
+nvim arrays.go
+nvim arrays.go
+nvim arrays.go
+z nvim
+nnn
+ranger
+z nvim
+z go
+nvim arrays.go
+doom sync
+doom sync
+z nvim
+ranger
+ncdu
+nvim
+ncdu
+redshift -O 4200
+ls
+ls -l /bin/sh
+cd /bin/sh
+paru
+z ~/.config/nvim/lua/user
+nvim cmp.lua
+nvim lsp-config.lua
+nvim cmp.lua
+nvim cmp.lua
+nvim
+ls
+nvim
+neofetch
+kitty
+doas vim /etc/pulse/default.pa
+pulseaudio -k
+man 1 pulseaudio
+paru
+doas xampp start
+doas vim /etc/pulse/default.pa
+doas vim /etc/pulse/default.pa.d/noise-cancellation.pa
+doas nvim /etc/pulse/default.pa.d/noise-cancellation.pa
+nvim /etc/pulse/default.pa.d/noise-cancellation.pa
+nvim /etc/pulse/default.pa.d/noise-cancellation.pa
+cd /etc/pulse
+ranger
+pacmd
+pulseaudio -k
+pulseaudio --start
+pacmd
+doas vim /etc/pulse/default.pa.d/noise-cancellation.pa
+mkdir /etc/pulse/default.pa.d
+sudo mkdir /etc/pulse/default.pa.d
+doas vim /etc/pulse/default.pa.d/noise-cancellation.pa
+ pulseaudio -k
+pulseaudio --start
+pacmd
+z admin
+..
+nnn
+ytop
+doas vim /etc/pulse/default.pa.d/noise-cancellation.pa
+ pulseaudio -k
+pulseaudio --start
+feh
+nnn
+man feh
+feh --no-fehbg --bg-tile '/home/refat/.config/awesome/themes/copland/wall.png' \
+
+feh --no-fehbg --bg-tile '/home/refat/.config/awesome/themes/copland/wall2.png'\
+
+man sxiv
+n
+sxiv
+sxiv .
+cd Pictures/ALT
+sxiv .
+nnn
+xprop
+notify-send -i "sxiv" "the tile" "th ess"
+notify-send -i "feh" "the tile" "th ess"
+sxiv .
+cd Pictures/ALT
+sxiv .
+notify-send -i "Sxiv" "the tile" "th ess"
+notify-send -i kitty "the tile" "th ess"
+notify-send -i brave "the tile" "th ess"
+notify-send -i Brave "the tile" "th ess"
+xprop
+notify-send -i Brave-browser "the tile" "th ess"
+notify-send -i brave-browser "the tile" "th ess"
+$file
+bash
+n
+ranger
+sxiv
+sxiv .
+cp 4k-tree-alone-dark-evening-wallpaper-scaled.png /tmp/wall.png
+sxiv .
+sxiv -t *.png
+ls
+sxiv 4k-tree-alone-dark-evening-wallpaper-scaled.png
+sxiv 4k-tree-alone-dark-evening-wallpaper-scaled.png
+sxiv .
+sh ~/.fehbg
+doas pacman -Rns nitrogen
+nnn
+ranger
+cd Pictures
+sxiv -t .
+sxiv -t ALT
+sxiv -t ALT
+sxiv -t ALT
+cd
+z dwm
+nvim config.h
+mkdir -p ~/.config/sxiv/exec/
+cp /usr/share/sxiv/exec/key-handler ~/.config/sxiv/exec/key-handler
+cd .config/sxiv/exec
+ranger
+doas pacman -Rns feh
+cd Pictures
+cd ALT
+sxiv -t ALT
+sxiv -t .
+sxiv -t .
+sxiv -t .
+notify-send -i kitty "the tile" "th ess"
+notify-send -i Sxiv "the tile" "th ess"
+n
+sxiv .
+..
+ranger
+n
+sxiv -t .
+doas pacman -S unclutter
+z nvim
+z ase
+z aes
+z awe
+nvim rc.lua
+man 1 unclutter
+unclutter
+z dwm
+doas make clean install
+sh ~/.fehbg
+vim .fehbg
+z pic
+sxiv -t ALT
+z al
+cp 4k-tree-alone-dark-evening-wallpaper-scaled.png ~/.config/wall.png
+sh ~/.fehbg
+vim .fehbg
+sh ~/.fehbg
+sh ~/.fehbg
+vim .fehbg
+sh ~/.fehbg
+cd .config
+ranger
+cd .config/sxiv/execcd
+vim .fehbg
+..
+vim .fehbg
+z al
+sxiv -t .
+sh ~/.fehbg
+z dwm
+nvim config.h
+nvim
+sh ~/.fehbg
+nvim
+doas make clean install
+z dwm
+doas 
+doas make clean install
+sh ~/.fehbg
+ranger
+z Pictures
+sxiv -t ALT
+z nvim
+nvim
+z pic
+sxiv -t ALT
+nvim
+~/.fehbg
+~/.fehbg
+z dwm
+nvim config.h
+doas make clean install
+ranger
+ls
+~/.fehbg
+cd Documents
+cd 
+cd download
+cd Downloads
+nvim setwall
+nvim setwall
+chmod +x setwall
+setwall
+./setwall
+nvim
+cd Documents
+cd
+cd Downloads
+ls
+nnn
+mv setwall ~/.local/bin
+setwall
+nvim
+z dwm
+doas make clean install
+cd /usr/share/backgrounds/nordic-wallpapers
+sxiv -t .
+sxiv -t .
+z nvim
+z 
+z ~/.local/bin
+ls
+nvim setwall
+nvim
+nvim .fehbg
+setwall
+z bi
+ls
+rm setwall
+ls
+setwall
+~/.fehbg
+sh -c ~/.fehbg
+z dwm
+nvim config.h
+doas make clean install
+cd .config
+nnn
+z sls
+nvim config.h
+doas make clean install
+killall slstatus
+slstatus
+nvim config.h
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+doas make clean install
+slstatus
+nvim
+iso
+z dwm
+nvim dwm.c
+doas make clean install
+nvim dwm.c
+doas make clean install
+z dwm
+nvim config.h
+nvim drw.c
+dwm -v
+z dwm
+ranger
+z dwm
+nnn
+ranger
+ls
+patch -p1 < patches/dwm-movestack-20211115-a786211.diff
+doas make clean install
+ranger
+patch -p1 < patches/dwm-movestack-20211115-a786211.diff
+ranger
+nnn
+doas make clean install
+z dwm
+nnn
+doas make clean install
+redshift -O 4200
+z st
+z st
+z st
+cd
+cd .suckless/s
+cd .suckless/st
+ls
+nvim config.h
+doas make clean install
+nvim
+z dwm
+nvim config.h
+doas make clean install
+redshift -O 4200
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+redshift -x
+redshift -O 4200
+ls
+neofetch
+z nvim
+ranger
+nvim
+ls
+ls
+cd Documents
+ls
+nnn
+man xz
+ytop
+paru
+z dwm
+nvim config.h
+ranger
+nnn
+ranger
+patch -p1 < patches/dwm-focusonclick-20200110-61bb8b2.diff
+ranger
+z dwm
+ranger
+doas make clean install
+ranger
+doas make clean install
+ranger
+roficlip
+roficlip
+clipster -d
+z dwm
+nvim
+doas make clean install
+z dwm
+doas make clean install
+z dwm
+ranger
+doas make clean install
+nvim
+z dwm
+zdnvim
+z nvim
+ranger
+z dwm
+nvim config.h
+doas make clean install
+sxiv -t ~/Pictures/
+sxiv -t ~/Pictures/.
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+ls
+rxfetch
+cd Downloads
+cd
+neofetch
+ls
+cd Downloads
+ls
+cd
+neofetch
+neofetch
+ls
+tree
+lsd -tree
+lsd --tree
+z st
+z st
+nvim config.h
+z nvim
+z st
+z st
+nvim config.h
+cd Documents
+cd
+cd Downloads
+wget https://raw.githubusercontent.com/hamimz/Hamim-Resting-Place/master/admin/book_room.php
+nnn
+rm book_room.php
+cat /sys/class/thermal/thermal_zone0/temp
+cat /sys/class/thermal/thermal_zone0/temp
+cat /sys/class/thermal/thermal_zone0/temp
+z sls
+nvim config.h
+z dwm
+ranger
+z st
+ls
+z st
+z st
+cd ~/.suckless/st
+ranger
+nvim config.h
+doas make clean install
+nvim
+z admin
+doas xampp start
+nvim 
+nvim index.php
+nvim book_room.php
+nvim book_room.php
+ranger
+..
+cd ..
+ranger
+..
+ranger
+doas rm Hamim_Resting_Place
+doas rm -rf Hamim_Resting_Place
+ls
+ranger
+doas rm -rf royal
+ls
+git clone https://github.com/FahimAhsan01/Hamim-s-Resting-Place.git
+sudo git clone https://github.com/FahimAhsan01/Hamim-s-Resting-Place.git
+ranger
+ls
+cd Hamim-s-Resting-Place
+ranger
+nvim
+redshift -O 4200
+doas xampp stop
+doas xampp stop
+ranger
+doas xampp start
+z admin
+z
+z /opt/lampp/htdocs/Hamim-s-Resting-Place
+z admin
+ls
+ranger
+..
+..
+doas chmod -R a+rwx Hamim-s-Resting-Place
+ranger
+cd Hamim-s-Resting-Place
+ranger
+cd admin
+ranger
+ranger
+nvim unbook.php
+code
+codium
+neofetch
+cd Downloads
+ytv-best https://drive.google.com/file/d/1-J-NXRHJLAxtnnTf7XEGuznpikFJvbFA/view
+yt-dlp https://drive.google.com/file/d/1-J-NXRHJLAxtnnTf7XEGuznpikFJvbFA/view
+yt-dlp https://drive.google.com/file/d/1-J-NXRHJLAxtnnTf7XEGuznpikFJvbFA/view
+nnn
+z admin
+..
+cd /opt/lampp/htdocs/Hamim-s-Resting-Place
+z admin
+ls
+nvim user_rooms.php
+ranger
+cd Documents/n
+cd Downloads
+git clone git@github.com:arionrefat/Hamim_Resting_Place.git
+nnn
+ranger
+z admin
+z admin
+..
+..
+mv Hamim-s-Resting-Place Hamim_Resting_Place
+sudo mv Hamim-s-Resting-Place Hamim_Resting_Place
+z admin
+git add .
+git commit -m "cleaned code"
+git push
+ranger
+git add .
+//
+z admin
+..
+ls
+git add .
+git commit -m "cleaned code"
+git push
+doas xampp stop
+paru
+ranger
+ls | wc -l
+ls -l | wc -l
+ls -al | wc -l
+neofetch
+neofetch
+ls
+cd Downloads/l
+cd Downloads
+ls
+cd
+nvim
+nvim
+ls
+read
+man read
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+ls
+ls
+nvim
+cd Downloads
+ex lsp.zip
+ranger
+whereis $VIMRUNTIME
+z dwm
+nvim config.h
+vim config.h
+z nvim
+nvim
+z nvim
+ls
+cd lua/user
+ls
+mkdir lsp
+cd lsp
+ranger
+..
+ranger
+ranger
+z nvim
+nvim lua/user/lsp-installer.lua
+nvim lua/user/lsp-installer.lua
+nvim lua/user/lsp-config.lua
+redshift -x
+redshift -O 3800
+nvim
+neofetch
+z neof
+ranger
+neofetch
+cd Downloads
+  git clone https://github.com/Manas140/paradise.git && cd paradise
+ranger
+nvim
+ls
+neofetch
+ls
+ls
+nvim
+z nvim
+nnn
+z von
+z con
+ranger
+redshift -x
+doas xampp start
+z nvim
+z admin
+ranger
+doas xampp stop
+neofetch
+neofetch
+neofetch
+neofetch
+paru
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+neofetch
+ranger
+doom sync
+doom upgrade
+ru
+paru
+z ~/.config/neofetch
+ranger
+nvim
+z .emacs.d/
+ranger
+doom sync
+doom upgrade
+c d/
+cd /
+nvim $(fzf)
+ncdu
+z dwm
+dconf
+man dconf
+nvim config.h
+doas make clean install
+z dwm
+nvim config.h
+doas make clean install
+z dwm
+nvim config.h
+doas make clean install
+nvim config.h
+doas make clean install
+nvim config.h
+doas make clean install
+redshift -O 3800
+man ?ead
+man ?ead
+man head
+sed 11q .bashrc
+head .bashrc
+man read
+tldr read
+ls
+cd Workspaces
+ls
+ranger
+redshift -O 3800
+man loca
+man local
+tldr local
+tldr if
+tldr if
+tldr local
+doas pacman -Rns mpd
+man mpcd
+paru
+ncdu
+yotp
+ytop
+redshift -O 3800
+ytop
+htop
+htop
+big
+doas pacman -Rns xampp
+doas pacman -Rns php
+doas pacman -Rns composer
+ranger
+z java
+ls
+z java
+nvim SRTF.java
+nvim
+z dwm
+nvim
+nvim config.h
+ytop
+doas pacman -S firefox
+tldr if
+tldr if
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+ranger
+ls
+neofetch
+paru
+z con
+nvim picom.conf
+ranger
+ncdu
+ytop
+doas pacman -Rns nyxt
+cleanup
+doas pacman -Scc
+rm -rf .cache
+ytop
+ncdu
+cd Downloads
+git clone https://github.com/migueravila/SimpleFox.git
+ls
+ranger
+dc SimpleFox
+man dc
+cd SimpleFox
+mv chrome /home/refat/.mozilla/firefox/bkhsbmhl.default-release\
+
+ranger
+cd .mozilla/firefox/bkhsbmhl.default-release
+ls
+ranger
+pwd
+ranger
+ranger
+nvim
+ytop
+big
+cleanup
+paru
+nvim
+z dwm
+nvim config.h
+nvim
+ls
+paru
+ls
+cd 
+ls
+cd
+cd Documents/n
+neofetch
+alacritty
+nvim
+neofetch
+nvim
+nvim
+nvim
+z nivm
+neofetch
+rxfetch
+nvim
+nvim
+nvim
+nvim
+ranger
+ls
+cd Downloads
+lsl
+ls
+rm 20101482_5_G.m.Refatul_Islam.pdf
+cd
+rxfetch
+doom sync
+doom dcotor
+doom doctor
+doom upgrade
+doom upgrade
+doom sync
+ytop
+nvim
+ls
+nvim
+z ~/.config/nvim/lua/user
+ls
+ranger
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+z nvim
+z us
+nvim settings.lua
+nvim
+nvim
+nvim
+nvim
+nvim
+..
+..
+ranger
+nvim
+ranger
+paru
+doom clean
+doom
+doom purge
+doom sync
+doom doctor
+neofetch
+nvim
+nvim
+ls
+nvim
+nvim
+doas pacman -Rns firefox
+ranger
+nnn
+nnn
+fzf -e
+cd /
+fzf -r
+fzf -e
+rm -rf .cache
+ls
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+cd /usr/share/backgrounds/nordic-wallpapers
+ranger
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+ranger
+neofetch
+paru
+big
+cleanup
+yto
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+neofetch
+nvim
+nvim
+z dwm
+nvim config.h
+doas make clean install
+yt-dlp -U
+sudo yt-dlp -U
+ranger
+cd Videos
+yt-dlp https://youtu.be/AL1ypvJ5yAQ?list=PLhXZp00uXBk4np17N39WvB80zgxlZfVwj
+yt-dlp https://youtu.be/AL1ypvJ5yAQ
+yt-dlp https://youtu.be/AL1ypvJ5yAQ
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+ls /usr/share/backgrounds/nordic-wallpapers | shuf -n 1
+ls /usr/share/backgrounds/nordic-wallpapers | shuf -n 1
+ls /usr/share/backgrounds/nordic-wallpapers | shuf -n 1
+redshift -O 4200
+redshift -x
+paru
+nvim
+st
+z st
+z st
+z dwm
+z st
+z s
+z st
+nvim
+z st
+z st
+ls
+nvim config.h
+doas make clean install
+ranger
+nvim
+ranger
+nnn
+ranger
+nvim
+doas make clean install
+ls
+z st
+z st
+nvim config.h
+doas make clean install
+doas make clean install
+nnn
+ranger
+nvim
+ls
+cd Downloads
+ls
+cd
+nnn
+doom sync
+ls
+ls
+z admin
+ranger
+doas xampp start
+..
+..
+ranger
+cd Downloads
+ls
+ranger
+ex Hotel\ management\ system.zip
+ranger
+sudo mv royal /opt/lampp/htdocs
+ls
+cd
+ranger
+doas xampp stop
+rm -rf .cache
+doas xampp start
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+ranger
+z admin
+ranger
+..
+..
+doas rm -rf royal
+cd Hamim_Resting_Place
+ranger
+nvim index.html
+ranger
+nvim index.html
+ls
+ffmpeg -i input.mkv -c copy output.m4v\
+
+ffmpeg -i 2022-01-03\ 19-23-11.mkv -c copy output.mp4\
+
+ranger
+doas xampp start
+ranger
+cd Documents
+ls
+ranger
+cd
+cd Downloads
+ranger
+ex 370_project_vid.mp4
+ranger
+ex drive-download-20220103T144351Z-001.zip
+ranger
+ranger
+cd
+ranger
+ranger
+ranger
+cd Downloads
+ranger
+ranger
+doas xampp stop
+rm -rf .cache
+ranger
+doas xampp start
+ranger
+cd Downloads
+ranger
+ex 20101286.zip
+ranger
+ls
+ranger
+ranger
+rm -rf .cache
+doas xampp restart
+ranger
+ytop
+ranger
+cd Downloads
+ranger
+ex UPDATED\ HAMIM\ RESTING\ PLACED.zip
+ranger
+ls
+ex UPDATED\ HAMIM\ RESTING\ PLACED.zip
+ranger
+z admin
+..
+cd htdocs/Hamim_Resting_Place
+z php
+ls
+.
+..
+nvim index.html
+ranger
+nvim index.html
+ranger
+ranger
+ranger
+doas xampp stop
+ranger
+git add .
+git commit -m "changed a lot"
+git push
+ranger
+..
+pcmanfm
+ranger
+cd Downloads
+ex Hamim_Resting_Place-70d64370db1f127801a7412b281d29efcb0bdeb1.zip
+ranger
+ranger
+z php
+z php
+ranger
+ytop
+cleanup
+doas pacman -Rns php
+cd Downloads
+ranger
+ex 20101286.zip
+ranger
+cd
+doas pacman -Rns xampp
+xampp stop
+    sudo rm -r /opt/xampp-backups\
+
+cd /opt
+ranger
+doas nnn
+xampp
+doas pacman -Rns php
+doas pacman -Rns composer
+doas pacman -Rns php
+cleanup
+paru
+whereis xampp
+cd /
+fzf -e
+cd
+ranger
+rm -rf .cache
+ranger
+big
+ranger
+cd 
+cd /
+fzf
+redshift -O 4200
+ls
+cd
+cd Downloads
+ranger
+cd
+ncdu
+pip install subliminal
+cleanup
+nvim
+cd Downloads
+cd
+cd .config/mpv
+ls
+mkdir scripts
+ranger
+cd scripts
+wget https://raw.githubusercontent.com/davidde/mpv-autosub/master/autosub.lua
+ls
+chmod +x autosub.lua
+nvim autosub.lua
+whereis subliminal
+cd .config/mpv
+cd scripts
+wget https://raw.githubusercontent.com/davidde/mpv-autosub/master/autosub.lua
+ls
+ls
+ranger
+wget 
+wget https://gist.githubusercontent.com/Hakkin/5489e511bd6c8068a0fc09304c9c5a82/raw/7a19f7cdb6dd0b1c6878b41e13b244e2503c15fc/autosave.lua
+ranger
+chmod +x autosave.lua
+ls
+nvim
+xkill
+neofetch
+rxfetch
+ls
+cd
+cd Downloads
+cd
+cd Downloads/cd
+cd .config/mpd
+ranger
+c
+ranger
+redshift -x
+ls
+paru
+redshift -O 4200
+paru
+ytop
+redshift -O 4200
+ranger
+ranger
+nnn
+ytop
+nvim
+z s
+z st
+z st
+nvim config.h
+z
+nvim
+redshift -x
+nvim
+paru
+z .config
+nvim zathura/zathurarc
+nvim
+z nvim
+nvim init.lua
+nvim init.lua
+neofetch
+nvim
+nvim
+nvim
+z nvim
+cd lua/user
+nvim autopair.lua
+nvim autopair.lua
+nvim
+nvim autopair.lua
+nvim autopair.lua
+cd
+z nvim
+ranger
+cd lua/user
+nvim lsp/handlers.lua
+ls
+cd Downloads
+ls
+cd
+paru
+cd
+cd Downloads
+cd
+nvim
+doas pacman -Rns evince
+big
+cleanup
+awesome -k
+awesome -v
+cleanup
+nvim
+nvim
+ls
+cd Downloads
+ls
+ls
+nvim
+ranger
+nvim
+z nvim
+nvim lua/user/hand
+nvim lua/user/hand
+nvim lua/user/lsp/settings/jsonls.lua
+ls
+cd
+cd .config
+ls
+cd
+z aweom
+z awe
+ranger
+nvim
+big | fzf
+redshift -O 4200
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+ranger
+sxiv -t /usr/share/backgrounds/nordic-wallpapers
+cd .config
+ls
+cd awesome
+ranger
+cd 
+cd .config/awesome
+cd
+cd /usr/share/backgrounds/nordic-wallpapers
+ranger
+paru
+doom sync
+doom upgrade
+doom sync
+doom doctor
+doom sync
+cd .config
+cd
+cd .doom.d
+ranger
+convert emacs.png -resize 320x300 emacs.png
+z dom
+z doom
+file emacs.png
+nvim
+nvim
+doas pacman -S discord
+paru
+doas pacman -S pipewire
+doas pacman -Rns pipewire
+doas pacman -Rns pipewire
+big | fzf -e
+doas pacman -Rns evince
+paru
+clean
+cleanup
+big
+ranger
+neofetch
+ls
+nvim
+rxfetch
+cd /etc
+ranger
+cd systemd
+ranger
+ranger
+paru
+big
+big | fzf -e
+man dconf
+doom sync
+ls
+ranger
+cd .config/awesome
+nvim rc.lua
+ranger
+ranger
+ranger
+ranger
+cd .config/ranger
+ranger
+ranger
+ls
+cd
+ls
+cd
+nvim
+ranger
+cd Projects
+ls
+mkdir portsite
+cd portsite
+ls
+npx create-react-app portsite
+ranger
+cd .config/nvim
+cd lua
+cd user
+ranger
+z lua
+cd user
+nvim lsp/handlers.lua
+ls
+cd Learn\&Grep
+ls
+ranger
+cd Projects
+ls
+cd portsite
+ls
+npx create-react-app portsite
+npx create-react-app portsite
+ranger
+npx create-react-app portsite
+cd Projects
+cd ~/Projects
+cd portsite
+npx create-react-app portsite
+ranger
+doas pacman -Rns node
+doas pacman -S node
+paru -S node
+paru
+doas rm -rf .cache
+doas pacman -Scc
+ls
+doas pacman -S node
+paru -S node
+doas pacman -S nodejs
+redshift -x
+redshift -O 4200
+redshift -x
+paru -S node
+ytop
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+python sorter.py
+cd ~/Projects
+cd portsite
+npx create-react-app portsite
+npx create-react-app portsite
+paru -S create-react-app
+paru -S create-react-app
+paru -S create-react-app
+python sorter.py
+python sorter.py
+cd Documents
+cd
+cd Downloads
+nvim sorter.py
+vscodium sorter.py
+ranger
+ /usr/bin/env /bin/python /home/refat/.vscode-oss/extensions/ms-python.python-2021.12.1559732655/pythonFiles/lib/python/debugpy/launcher 35875 -- -m sorter 
+ cd /home/refat/Downloads ; /usr/bin/env /bin/python /home/refat/.vscode-oss/extensions/ms-python.python-2021.12.1559732655/pythonFiles/lib/python/debugpy/launcher 37981 -- -m sorter 
+ cd /home/refat/Downloads ; /usr/bin/env /bin/python /home/refat/.vscode-oss/extensions/ms-python.python-2021.12.1559732655/pythonFiles/lib/python/debugpy/launcher 37077 -- -m sorter 
+ cd /home/refat/Downloads ; /usr/bin/env /bin/python /home/refat/.vscode-oss/extensions/ms-python.python-2021.12.1559732655/pythonFiles/lib/python/debugpy/launcher 38297 -- -m sorter 
+python sorter.py
+ranger
+ls
+cd
+nvim
+ls
+ranger
+neofetch
+neofetch
+alacritty
+ranger
+big
+paru
+yotp
+yotp
+ytop
+ranger
+ranger
+where is npx
+whereis npx
+whereis npm
+man fd
+cd /
+fzf -e
+paru -S radontop
+paru -S radeonotop
+paru -S radeontop
+radeontop
+man 1 radeontop
+radeontop -c
+radeontop -c
+radeontop -c
+npx
+doas pacman -Rns nodejs
+cd Projects/portsite
+npm install -g create-react-app
+npm cache clean --force
+ranger
+npx create-react-app portsite
+ranger
+cd Projects/portsite
+ls
+ranger
+npx create-react-app portsite
+ranger
+paru -Rns create-react-app
+ls
+npx create-react-app portsite
+radeontop -c
+cd Projects/portsite
+npx create-react-app portsite
+ranger
+ranger
+ls
+cd Downloads
+ranger
+python __pycache__
+ranger
+python sorter.py
+ranger
+cd Projects/portsite
+npx create-react-app portsite
+npm start
+ranger
+ranger
+ranger
+..
+ranger
+cd portsite
+npm start
+cd Projects/portsite
+cd src
+ls
+rm -f *
+ls
+touch index.css index.js
+nvim index.js
+..
+cd Projects/portsite
+ranger
+.
+..
+cd ..
+ls
+npx create-react-app portsite
+npm cache clean --force
+cd Projects/cryptogopher
+..
+npx create-react-app portsite
+npx create-react-app portsite
+ls
+ranger
+npx create-react-app portsite
+ranger
+dmenu_run $dmenu_bottom -fn $bar_font -nb $bar_color -nf $bar_font_color -sb $bar_color_selected -sf $bar_font_color_selected\
+
+doas pacman -S spectrwm
+cd /etc/spectrwm
+ls
+ranger
+ls
+cp spectrwm_us.conf ~/.spectrwm.conf
+cd
+nvim .spectrwm.conf
+ranger
+wget https://raw.githubusercontent.com/conformal/spectrwm/master/spectrwm.conf
+ranger
+nvim .spectrwm.conf
+cd .config
+ranger
+cd .config
+cd
+nvim .spectrwm.conf
+doas pacman -Rns spectrwm
+ranger
+cd /etc/spectrwm
+doas pacman -Scc
+doas pacman -S qtile
+cd .config/qtile
+mkdir .config/qtile
+cd .config/qtile
+nvim config.py
+nvim autostart.sh
+nvim config.py
+nvim
+z dwm
+nvim config.h
+z dwm
+nvim config.h
+neofetch
+ls
+cd .config
+nvim qtile/config.py
+nvim qtile/config.py
+nvim qtile/config.py
+cd .config/qtile
+nvim config.py
+nvim config.py
+picom -b
+nvim
+z qtil
+nvim autostart.sh
+ls
+chmod +x autostart.sh
+\:w
+ls
+ranger
+nvim
+ranger
+flameshot full -c -p ~/Pictures/screenshots
+nvim
+z dwm
+nvim config.h
+ranger
+paru
+doas pacman -Rns qtile
+ranger
+doas pacman -Scc
+ranger
+cd /
+fzf -e
+cd proc
+cd
+cd .local
+ranger
+cleanup
+paru
+redshift -O 4200
+cd Projects
+cd cryptogopher
+ls
+..
+ls
+npx create-react-app portsite
+cd portsite
+npm start
+redshift -O 4200
+nvim
+nvim
+nvim
+nvim
+redshift -x
+paru
+ytop
+radeontop
+npm start
+z nvim
+ranger
+nvim
+nvim
+z admin
+cd ~/Projects/portsite
+nvim src/index.css
+cd src
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+nvim
+cd .config/nvim
+ranger
+z nvim
+nvim
+nvim
+z port
+cd src
+nvim index.js
+..
+nvim
+cd
+cd Projects/portsite
+nvim
+nvim
+npm start
+z port
+cd src
+ls
+ranger
+ls
+nvim App.jsx
+..
+nvim
+nvim
+z port
+npm start
+nvim
+ls
+cd
+neofetch
+ls
+z nvim
+nvim
+cd lua/user
+nvim toggleterm.lua
+nvim
+nvim
+nvim
+nvim
+ranger
+npm start
+z port
+nvim
+nvim
+nvim
+nvim
+yotp
+ytop
+doas pacman -S linux-lts nvidia-lts
+doas pacman -S ffmpeg
+neofetch
+cd Videos
+ls
+ranger
+ranger
+ranger
+cd Videos
+ls
+ranger
+cd 
+cd Downloads
+ls
+ls
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].webm One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4
+ranger
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].webm One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].amv
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].amv
+ranger
+ranger
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 -ac 1 -ar 22050 -r 25 -block_size 882 output.amv
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 -ac 1 -ar 22050 -block_size 882 output.amv
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 -ac 1 -ar 22050 -r 25 -block_size 882 output.amv
+ffmpeg -r 25 -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 -c:v amv -vf scale=160:128 output.amv
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 -s 160x128 -y convertedToAVI.avi
+ranger
+ffmpeg -i convertedToAVI.avi -r 16 -ac 1 -ar 22050 -qmin 3 -qmax 3 convertedToAMV.amv
+ranger
+cd Downloads
+ls
+ffmpeg -i One\ video\ and\ you\ will\ get\ sed\ \[DjO_UTYyM1I\].mp4 output.amv
+ranger
+z ~/Projects/portsite
+nvim
+nvim
+z por
+nvim
+z dwm
+nvim config.h
+nvim
+nvim
+nvim
+ranger
+radeontop
+subliminal
+cd .config/mpv
+ranger
+ls
+cd .config/mpv
+ranger
+cd Downloads
+subliminal download -l en Southpark S06E02
+subliminal download -l en The.Big.Bang.Theory.S05E18.HDTV.x264-LOL.mp4
+ranger
+subliminal --debug --opensubtitles "arionrefat" "Pantho000 download -p opensubtitles -l en
+subliminal --debug --opensubtitles "arionrefat" "Pantho000 download -p opensubtitles -l en.
+subliminal --debug --opensubtitles "arionrefat" "Pantho000 download -p opensubtitles -l en
+subliminal --debug --opensubtitles "arionrefat" "Pantho000\!" download -p opensubtitles -l en
+subliminal --debug --opensubtitles "arionrefat" "Pantho000\!" download -p opensubtitles -l en .
+ranger
+subliminal download -l en The.Big.Bang.Theory.S05E18.HDTV.x264-LOL.mp4
+subliminal cache --clear-subliminal
+subliminal download -l en The.Big.Bang.Theory.S05E18.HDTV.x264-LOL.mp4
+ranger
+pip uninstall subliminal
+subliminal
+ls
+npm start
+z ~/Projects/portsite
+nvim
+ranger
+cd .config/mpv
+ranger
+npm start
+z st
+z s
+z st
+z st
+nvim config.h
+doas make clean install
+nvim
+z ~/Projects/portsite
+nvim
+nvim
+z ~/Projects/portsite
+nvim
+nvim
+ranger
+ranger
+nvim
+z st
+z st
+nvim config.h
+nvim
+nvim
+ranger
+nvim config.h
+nvim
+nvim
+nvim
+doas make clean install
+z por
+nvim 
+z zsh
+ls
+nvim zsh-exports
+z port
+nvim
+npm start
+z port
+nvim
+npm start
+z port
+nvim
+paru
+npm start
+nvim
+nvim
+nvim
+doas pacman -Rns linux-lts nvidia-lts
+ls
+cd
+z st
+ls
+nvim nerdcommenter
+z st
+z st
+z st
+nvim config.h
+doas make clean install
+nvim config.h
+doas make clean install
+neofetch
+paru
+redshift -O 4200
+redshift -x
+radeontop
+ls
+cd download
+paru
+sh
+cd .dotfiles
+mkdir systemd
+cd systemd
+ranger
+cd
+cd Downloads
+ls
+npm start
+ls
+z port
+nvim
+ranger
+ranger

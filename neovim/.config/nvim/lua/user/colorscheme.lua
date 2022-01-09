@@ -1,11 +1,13 @@
-vim.g.nvcode_termcolors = 256
 -- vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
-vim.cmd("colorscheme catppuccin")
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_sidebars = { "terminal", "packer" }
+vim.g.tokyonight_transparent = false
+vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
 
-local catppuccin = require("catppuccin")
-catppuccin.setup({
-	transparent_background = true,
-	term_colors = false,
+require("catppuccin").setup({
+	transparent_background = false,
+	term_colors = true,
 	styles = {
 		comments = "italic",
 		functions = "italic",
@@ -33,7 +35,7 @@ catppuccin.setup({
 			telescope = true,
 			nvimtree = {
 				enabled = true,
-				show_root = true,
+				show_root = false,
 			},
 			dashboard = true,
 			bufferline = true,
@@ -41,3 +43,26 @@ catppuccin.setup({
 		},
 	},
 })
+
+require("kanagawa").setup({
+	undercurl = true, -- enable undercurls
+	commentStyle = "italic",
+	functionStyle = "NONE",
+	keywordStyle = "italic",
+	statementStyle = "bold",
+	typeStyle = "NONE",
+	variablebuiltinStyle = "italic",
+	specialReturn = true, -- special highlight for the return keyword
+	specialException = true, -- special highlight for exception handling keywords
+	transparent = false, -- do not set background color
+	colors = {},
+	overrides = {},
+})
+
+local colorscheme = "kanagawa"
+
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
+end

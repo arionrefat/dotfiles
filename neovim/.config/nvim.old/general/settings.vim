@@ -24,20 +24,4 @@ set smartindent                         " Makes indenting smart
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set incsearch
 set scrolloff=8
-
-let g:nvcode_termcolors=256
-" Example config in VimScript
-let g:tokyonight_style = "strom"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-let g:tokyonight_transparent = 1
-let g:tokyonight_transparent_sidebar = 1
-
-
-" Change the "hint" color to the "orange" color, and make the "error" color bright red
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-
-colorscheme tokyonight
+colorscheme kanagawa

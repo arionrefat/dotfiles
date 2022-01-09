@@ -1,47 +1,22 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-;; Place your private configuration here! Remember, you do not need to run 'doom
-;; sync' after modifying this file!
+(setq doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 18)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 17)
+      doom-big-font (font-spec :family "FantasqueSansMono Nerd Font" :size 22))
 
-
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets.
-(setq user-full-name "Refatul Islam"
-      user-mail-address "gazirefatul@gmail.com")
-
-;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
-;; are the three important ones:
-;;
-;; + `doom-font'
-;; + `doom-variable-pitch-font'
-;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
-;;   presentations or streaming.
-;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
-;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Iosevka" :size 19)
-      doom-variable-pitch-font (font-spec :family "SauceCodePro Nerd Font" :size 19)
-      doom-big-font (font-spec :family "Iosevka" :size 22))
-
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-one)
+(setq fancy-splash-image "~/.doom.d/emacs.png")
 
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
+
 (custom-set-faces!
   '(font-lock-comment-face :slant italic)
   '(font-lock-keyword-face :slant italic))
 
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Workspaces/Org-mode")
 
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
 ;; for company mode
@@ -54,6 +29,48 @@
 ;; For wakatime
 (global-wakatime-mode)
 
+(use-package! tree-sitter
+  :config
+  (require 'tree-sitter-langs)
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(setq which-key-idle-delay 0.5)
+
+(setq elfeed-feeds '(
+    "https://www.reddit.com/r/archlinux.rss"
+    "https://www.reddit.com/r/linux.rss"
+    "https://www.reddit.com/r/commandline.rss"
+    "https://www.reddit.com/r/DoomEmacs.rss"
+    "https://www.reddit.com/r/emacs.rss"
+    "https://www.reddit.com/r/vim.rss"
+    "https://www.reddit.com/r/awesomewm.rss"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCAiiOTio8Yu69c3XnR7nQBQ"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA"
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw"
+    "https://news.ycombinator.com/rss"
+    "https://lukesmith.xyz/rss.xml"
+    "https://notrelated.libsyn.com/rss"
+    "https://stallman.org/rss/rss.xml"))
+
+;; if you omit =:host=, ~SERVER~ will be used instead.
+(after! circe
+  (set-irc-server! "irc.libera.chat"
+    `(:tls t
+      :port 6697
+      :nick "arion6969"
+      :sasl-username "arion69"
+      :sasl-password "refatcse000!"
+      :channels ("#emacs", "#linux", "#archlinux", "#systemcrafters", "#neovim"))))
+
+(setq dired-kill-when-opening-new-dired-buffer t) ; added in emacs 28
+(setq dired-clean-confirm-killing-deleted-buffers nil)
+(setq dired-recursive-copies 'always)
+(setq dired-recursive-deletes 'always)
+(setq dired-dwim-target t)
+(setq dired-listing-switches "-AGhlv --group-directories-first --time-style=long-iso")
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -63,10 +80,6 @@
 ;;   this file. Emacs searches the `load-path' when you load packages with
 ;;   `require' or `use-package'.
 ;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.

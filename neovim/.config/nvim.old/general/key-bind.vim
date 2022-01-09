@@ -3,6 +3,7 @@ nnoremap <leader>gy :Goyo<CR>
 
 nnoremap <M-TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
+nnoremap <M-q> :bdelete<CR>
 
 " Disable Arrow keys in Normal mode
 map <up> <nop>

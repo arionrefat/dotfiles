@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-#
+#!/usr/bin/env sh
+
 # Script name: dmlogout
 # Description: Logout, shutdown, reboot or lock screen.
 # Dependencies: dmenu, systemd, slock, notify-send
@@ -18,7 +18,6 @@ if [[ ${TERM} == 'dumb' ]]; then
 fi
 export OUTPUT
 
-
 # look up what managers are used (makes it more dynamic)
 declare -a MANAGERS
 while IFS= read -r manager
@@ -27,27 +26,22 @@ do
 done < <(grep 'Name' /usr/share/xsessions/*.desktop | awk -F"=" '{print $2}')
 
 
-
-# An array of options to choose.
 declare -a options=(
 "Shutdown"
 "Reboot"
-"Lock screen"
 "Logout"
+"Lock screen"
 "Suspend"
 "Quit"
 )
-
 
 output(){
     ${OUTPUT} "dmlogout" "$@"
 }
 
-
 # Piping the above array into dmenu.
 # We use "printf '%s\n'" to format the array one item to a line.
 choice=$(printf '%s\n' "${options[@]}" | dmenu -i -p 'Shutdown menu:' "${@}")
-
 
 # What to do when/if we choose one of the options.
 case $choice in
@@ -55,16 +49,16 @@ case $choice in
         if [[ "$(echo -e "Yes\nNo" | dmenu -i -p "${choice}?" "${@}" )" == "Yes" ]]; then
             shutdown now
         else
-            output "User chose not to shutdown." && exit 0
+            output "Shutdown Failed" && exit 0
         fi
         ;;
     'Logout')
-        if [[ "$(echo -e "No\nYes" | dmenu -i -p "${choice}?" "${@}" )" == "Yes" ]]; then
+        if [[ "$(echo -e "Yes\nNo" | dmenu -i -p "${choice}?" "${@}" )" == "Yes" ]]; then
             for manager in "${MANAGERS[@]}"; do
                 killall "${manager}" || output "Process ${manager} was not running."
             done
         else
-            output "User chose not to logout." && exit 1
+            output "Logout Failed" && exit 1
         fi
         ;;
     'Lock screen')
@@ -74,14 +68,14 @@ case $choice in
         if [[ "$(echo -e "Yes\nNo" | dmenu -i -p "${choice}?" "${@}" )" == "Yes" ]]; then
             reboot
         else
-            output "User chose not to reboot." && exit 0
+            output "Reboot Failed" && exit 0
         fi
         ;;
     'Suspend')
-        if [[ "$(echo -e "No\nYes" | dmenu -i -p "${choice}?" "${@}" )" == "Yes" ]]; then
+        if [[ "$(echo -e "Yes\nNo" | dmenu -i -p "${choice}?" "${@}" )" == "Yes" ]]; then
             systemctl suspend
         else
-            output "User chose not to suspend." && exit 0
+            output "Suspend Failed" && exit 0
         fi
         ;;
     'Quit')

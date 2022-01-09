@@ -39,6 +39,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 colo sonokai
 set background=dark
+
 " transparent bg
 autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " For Vim<8, replace EndOfBuffer by NonText

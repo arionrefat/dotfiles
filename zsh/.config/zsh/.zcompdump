@@ -131,7 +131,6 @@ _comps=(
 'bunzip2' '_bzip2'
 'burst' '_mh'
 'busctl' '_busctl'
-'bwrap' '_bwrap'
 'bzcat' '_bzip2'
 'bzegrep' '_grep'
 'bzfgrep' '_grep'
@@ -336,6 +335,7 @@ _comps=(
 'eview' '_vim'
 'evim' '_vim'
 'evince' '_evince'
+'exa' '_exa'
 'exec' '_exec'
 'expand' '_unexpand'
 'export' '_typeset'
@@ -1797,12 +1797,12 @@ autoload -Uz _autocomplete.all_matches _autocomplete.ancestor_dirs _autocomplete
             _afew _alacritty _android _archinstallscripts _archlinux-java \
             _artisan _atach _autorandr _bat _bitcoin-cli \
             _bluetoothctl _bootctl _bower _bundle _busctl \
-            _bwrap _caffeinate _cap _cargo _cask \
-            _ccache _cf _cheat _choc _chromium \
-            _cmake _coffee _composer _conan _concourse \
-            _console _coredumpctl _cppcheck _curl _dad \
-            _debuild _dget _dhcpcd _diana _docpad \
-            _drush _ecdsautil _emulator _envdir _exportfs \
+            _caffeinate _cap _cargo _cask _ccache \
+            _cf _cheat _choc _chromium _cmake \
+            _coffee _composer _conan _concourse _console \
+            _coredumpctl _cppcheck _curl _dad _debuild \
+            _dget _dhcpcd _diana _docpad _drush \
+            _ecdsautil _emulator _envdir _exa _exportfs \
             _fab _fail2ban-client _fd _ffind _fleetctl \
             _flutter _force _fwupdmgr _gas _ghc \
             _gist _git-flow _git-journal _git-pulls _git-revise \

@@ -739,4 +739,6 @@ run_once({
 	"picom -b",
 	"optimus-manager-qt",
 	"numlockx on",
+	"unclutter",
+    -- "clipster -d"
 }) -- comma-separated entries

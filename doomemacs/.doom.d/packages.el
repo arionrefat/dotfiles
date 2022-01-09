@@ -49,5 +49,7 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! elcord)
+(package! tree-sitter)
+(package! tree-sitter-langs)
 (package! wakatime-mode)
+(package! dirvish)
