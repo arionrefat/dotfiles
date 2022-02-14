@@ -15,6 +15,10 @@
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
 [[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss3.png]]
 
+#+CAPTION: Screenshots
+#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
+[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss1.png]]
+
 * Softwares I use:
 | Terminal      | st        |
 |               | alacritty |
