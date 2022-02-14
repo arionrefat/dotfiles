@@ -1,4 +1,3 @@
--- vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_sidebars = { "terminal", "packer" }
@@ -59,7 +58,7 @@ require("kanagawa").setup({
 	overrides = {},
 })
 
-local colorscheme = "kanagawa"
+local colorscheme = "catppuccin"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

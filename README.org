@@ -5,25 +5,30 @@
 
 #+CAPTION: Screenshots
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/.screenshots/ss3.png]]
+https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss4.png
 
 #+CAPTION: Screenshots
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/.screenshots/ss1.png]]
+https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss2.png
+
+#+CAPTION: Screenshots
+#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
+https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss3.png
 
 * Softwares I use:
-| Terminal      | st         |
-|               | alacritty  |
-|               | kitty      |
-| Window Manger | awesomeWM  |
-|               | dwm        |
-|               | qtile      |
-|               | i3wm       |
-| Browser       | brave      |
-| Editor        | Vim        |
-|               | NeoVim     |
-|               | DOOM Emacs |
-|               | VSCodium   |
-| Filemanager   | Ranger     |
+| Terminal      | st        |
+|               | alacritty |
+|               | kitty     |
+| Window Manger | awesomeWM |
+|               | dWM       |
+| Browser       | brave     |
+| Editor        | NeoVim    |
+|               | Emacs     |
+|               | VSCodium  |
+| Filemanager   | Ranger    |
+|               | nnn       |
+|               | Pcmanfm   |
 
+* For suckless builds Here is the repo link
+[[https://github.com/arionrefat/suckless-builds][suckless-build repo link]]
 I use *GNU Stow* That's why it looks like this

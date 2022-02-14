@@ -24,12 +24,6 @@ map("n", "<M-TAB>", ":bnext<CR>", { noremap = true })
 map("n", "<S-TAB>", ":bprevious<CR>", { noremap = true })
 map("n", "<M-q>", ":bdelete<CR>", { noremap = true })
 
---Easy motion between splits
-map("n", "<leader>h", ":wincmd h<CR>", { noremap = true })
-map("n", "<leader>j", ":wincmd j<CR>", { noremap = true })
-map("n", "<leader>k", ":wincmd k<CR>", { noremap = true })
-map("n", "<leader>l", ":wincmd l<CR>", { noremap = true })
-
 -- Resize with arrows
 map("n", "<C-Up>", ":resize +2<CR>", { noremap = true })
 map("n", "<C-Down>", ":resize -2<CR>", { noremap = true })

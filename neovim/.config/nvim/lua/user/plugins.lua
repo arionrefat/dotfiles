@@ -61,7 +61,9 @@ return packer.startup(function(use)
 	use("norcalli/nvim-colorizer.lua")
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("p00f/nvim-ts-rainbow")
+	use("jose-elias-alvarez/null-ls.nvim")
 	use("nvim-treesitter/playground")
+	use("nvim-treesitter/nvim-treesitter-refactor")
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("lewis6991/gitsigns.nvim")
@@ -78,7 +80,6 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
-	use("jose-elias-alvarez/null-ls.nvim")
 	use("williamboman/nvim-lsp-installer")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
@@ -88,21 +89,18 @@ return packer.startup(function(use)
 	use("nvim-lualine/lualine.nvim")
 	use({
 		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
+		requires = { "JoosepAlviste/nvim-ts-context-commentstring", opt = true },
 	})
 	use("windwp/nvim-autopairs")
 	use("onsails/lspkind-nvim")
-	use("rcarriga/nvim-notify")
+	use("akinsho/toggleterm.nvim")
 
 	-- coLorscheme
 	use("catppuccin/nvim")
 	use("rebelot/kanagawa.nvim")
 	use("folke/tokyonight.nvim")
 	use("LunarVim/onedarker.nvim")
-	use("LunarVim/darkplus.nvim")
-	use("akinsho/toggleterm.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

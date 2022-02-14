@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-vim.cmd("let g:indent_blankline_filetype_exclude = ['alpha','packer']")
+vim.cmd("let g:indent_blankline_filetype_exclude = ['alpha','packer', 'toggleterm']")
 
 vim.opt.listchars:append("space:⋅")
 

@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 18)
-      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font" :size 17)
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 18)
+      doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font" :size 19)
       doom-big-font (font-spec :family "FantasqueSansMono Nerd Font" :size 22))
 
 (setq doom-theme 'doom-one)

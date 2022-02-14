@@ -7,11 +7,8 @@ vim.notify = require("notify")
 
 notify.setup({
 	stages = "fade_in_slide_out",
-	-- Render function for notifications. See notify-render()
 	render = "default",
-	-- Minimum width for notification windows
 	minimum_width = 15,
-	-- Icons for the different levels
 	icons = {
 		ERROR = "",
 		WARN = "",

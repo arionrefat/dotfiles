@@ -12,10 +12,23 @@ configs.setup({
 		additional_vim_regex_highlighting = true,
 	},
 	indent = { enable = true, disable = { "yaml" } },
+	context_commentstring = {
+		enable = true,
+		enable_autocmd = false,
+	},
+	matchup = { enable = true },
 	rainbow = {
 		enable = true,
 		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
 		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+		max_file_lines = 1000,
+	},
+	refactor = {
+		smart_rename = { enable = true, keymaps = { smart_rename = "grr" } },
+		highlight_definitions = { enable = true },
+		navigation = {
+			enable = true,
+		},
 	},
 	playground = {
 		enable = true,
