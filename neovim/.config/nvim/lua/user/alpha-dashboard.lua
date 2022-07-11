@@ -28,7 +28,7 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Files<CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
+	dashboard.button("r", "  Recently used files", ":lua require'telescope.builtin'.oldfiles(require('telescope.themes').get_dropdown({ previewer = false }))<CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }

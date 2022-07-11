@@ -11,16 +11,16 @@
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Set default font
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 140)
+(set-face-attribute 'default nil :font "VictorMono Nerd Font" :height 145)
 ;; Set the fixed pitch face
-(set-face-attribute 'fixed-pitch nil :font "CaskaydiaCove Nerd Font" :height 140)
+(set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 140)
 ;; Set the variable pitch face
 (set-face-attribute 'variable-pitch nil :font "JetBrainsMono Nerd Font" :height 140 :weight 'regular)
 
 ;;Disable stuffs
 (scroll-bar-mode -1)        ; Disable the scroll bar
-;;(tool-bar-mode -1)          ; Disable the toolbar
-;;(menu-bar-mode -1)          ; Disable the menu bar
+(tool-bar-mode -1)          ; Disable the toolbar
+(menu-bar-mode -1)          ; Disable the menu bar
 
 ;;shows line, column numbers, highlight current line and auto pairs parenthesis
 (column-number-mode)
@@ -29,8 +29,6 @@
 (global-display-line-numbers-mode t)
 (setq-default indent-tabs-mode nil
               tab-width 4)
-
-(setq desktop-path '("~/.emacs.d/.cache/sessions"))
 
 ;;Ignore useless warnings
 (setq ad-redefinition-action 'accept)
@@ -85,14 +83,21 @@
   :ensure t)
 
 (use-package which-key
+  :ensure t
   :defer 0
   :diminish which-key-mode
   :config
   (which-key-mode)
   (setq which-key-idle-delay 1))
 
+(use-package no-littering
+  :ensure t
+  :config
+  (require 'no-littering))
+
 ;; Vim emulation
 (use-package evil
+  :ensure t
   :init
   (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
@@ -128,6 +133,7 @@
 
 ;; Completion engine
 (use-package ivy
+  :ensure t
   :diminish
   :bind (("C-s" . swiper)
          :map ivy-minibuffer-map
@@ -145,12 +151,18 @@
   :config
   (ivy-mode 1))
 
+(use-package all-the-icons-ivy-rich
+  :after ivy
+  :ensure t
+  :init (all-the-icons-ivy-rich-mode 1))
+
 (use-package ivy-rich
   :after ivy
   :init
   (ivy-rich-mode 1))
 
 (use-package counsel
+  :ensure t
   :custom
   (counsel-linux-app-format-function #'counsel-linux-app-format-function-name-only)
   :config
@@ -166,6 +178,7 @@
 
 ;; Helpfull for learing emacs
 (use-package helpful
+  :ensure t
   :commands (helpful-callable helpful-variable helpful-command helpful-key)
   :custom
   (counsel-describe-function-function #'helpful-callable)
@@ -183,8 +196,32 @@
   :ensure t
   :hook (after-init . global-emojify-mode))
 
+(use-package centaur-tabs
+  :after dashboard
+  :config
+  (centaur-tabs-mode t)
+  (setq centaur-tabs-style "rounded")
+  (setq centaur-tabs-gray-out-icons 'buffer)
+  (setq centaur-tabs-set-bar 'left)
+  (setq centaur-tabs-set-icons t)
+  :bind
+  (:map evil-normal-state-map
+	    ("g t" . centaur-tabs-forward)
+	    ("g T" . centaur-tabs-backward))
+  :hook
+  (dashboard-mode . centaur-tabs-local-mode)
+  (dired-mode . centaur-tabs-local-mode))
+
 (use-package doom-themes
-  :init (load-theme 'doom-oceanic-next t))
+  :ensure t
+  :config
+  (setq doom-themes-enable-bold t
+        doom-themes-padded-modeline t
+        doom-themes-enable-italic t)
+  (load-theme 'doom-one t)
+  (setq doom-themes-treemacs-theme "doom-vibrant")
+  (doom-themes-treemacs-config)
+  (doom-themes-org-config))
 
 (use-package doom-modeline
   :ensure t
@@ -192,6 +229,7 @@
   :custom ((doom-modeline-height 15)))
 
 (use-package rainbow-delimiters
+  :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package general
@@ -205,15 +243,15 @@
   (reft/leader-keys
     "." '(find-file :which-key "Find File")
     "," '(switch-to-buffer :which-key "Switch Buffers")
-    "h"  '(:ignore h :which-key "toggles")
+    "h"  '(:ignore h :which-key "UI")
     "ht" '(counsel-load-theme :which-key "choose theme")
-    "f"  '(:ignore f :which-key "toggles")
+    "f"  '(:ignore f :which-key "File/buffer")
     "fr" '(counsel-recentf :which-key "Open Recent Files")
     "fb" '(format-all-buffer :which-key "Format whole buffer")
-    "t"  '(:ignore t :which-key "toggle Treesitter")
+    "t"  '(:ignore t :which-key "Programming")
     "ts" '(global-tree-sitter-mode :which-key "Enable tree-sitter")
     "tl" '(lsp :which-key "Enable Lsp")
-    "c"  '(:ignore c :which-key "toggle Comment")
+    "c"  '(:ignore c :which-key "Comment")
     "cc" '(evilnc-comment-or-uncomment-lines :which-key "Toggle Comment")
     "ct" '(evilnc-quick-comment-or-uncomment-to-the-line :which-key "Toggle quick comment line")
     "ci" '(evilnc-copy-and-comment-lines :which-key "Copy and comment")
@@ -222,11 +260,16 @@
     "cv" '(evilnc-toggle-invert-comment-line-by-line :which-key "Toggle inverted comment line/line")
     "cl" '(evilnc-quick-comment-or-uncomment-to-the-line :which-key "Toggle quick comment line/line")))
 
+(add-to-list 'recentf-exclude no-littering-var-directory)
+(add-to-list 'recentf-exclude no-littering-etc-directory)
+(add-to-list 'recentf-exclude (format "%s/\\.emacs\\.d/elpa/.*" (getenv "HOME")))
+(setq auto-save-file-name-transforms
+      `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+
 (use-package hydra
   :defer t)
 
 (defhydra hydra-text-scale (:timeout 4)
-  "scale text"
   ("j" text-scale-increase "in")
   ("k" text-scale-decrease "out")
   ("f" nil "finished" :exit t))
@@ -328,9 +371,6 @@
   :config
   (setq typescript-indent-level 4))
 
-(use-package format-all
-  :ensure t)
-
 (defun reft/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
@@ -368,6 +408,14 @@
   (setq org-ellipsis " ▾")
   (reft/org-font-setup))
 
+(use-package org-fancy-priorities
+  :after org
+  :ensure t
+  :hook
+  (org-mode . org-fancy-priorities-mode)
+  :config
+  (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
+
 (use-package org-superstar
   :after org
   :hook (org-mode . org-superstar-mode)
@@ -378,11 +426,12 @@
   (org-superstar-leading-bullet ""))
 
 (defun reft/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100
+  (setq visual-fill-column-width 45
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
 (use-package visual-fill-column
+  :after org
   :hook (org-mode . reft/org-mode-visual-fill))
 
 (use-package term
@@ -392,6 +441,7 @@
   :hook (term-mode . eterm-256color-mode))
 
 (use-package vterm
+  :ensure t
   :commands vterm
   :config
   (setq vterm-max-scrollback 10000))
@@ -427,7 +477,7 @@
  '(custom-safe-themes
    '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" default))
  '(package-selected-packages
-   '(dirvish dashboard format-all emojify company-box company shell-pop typescript-mode lsp-ivy lsp-treemacs lsp-ui lsp-mode evil-nerd-commenter evil-magit magit wakatime-mode hydra evil-collection general counsel ivy-rich which-key rainbow-delimiters doom-themes swiper doom-modeline ivy use-package)))
+   '(2048-game ob-fricas no-littering dirvish dashboard format-all emojify company-box company shell-pop typescript-mode lsp-ivy lsp-treemacs lsp-ui lsp-mode evil-nerd-commenter evil-magit magit wakatime-mode hydra evil-collection general counsel ivy-rich which-key rainbow-delimiters doom-themes swiper doom-modeline ivy use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

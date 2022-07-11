@@ -16,15 +16,16 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/copland"
-theme.wallpaper = theme.dir .. "/wall.png"
-theme.font = "CaskaydiaCove Nerd Font 10"
+theme.wallpaper = os.getenv("HOME") .. "/.config/wall.png"
+-- theme.font = "Iosevka SS08 Bold 10"
+theme.font = "VictorMono Nerd Font Bold 11"
 theme.fg_normal = "#BBBBBB"
 theme.fg_focus = "#78A4FF"
 theme.bg_normal = "#111111"
 theme.bg_focus = "#111111"
 theme.fg_urgent = "#000000"
 theme.bg_urgent = "#FFFFFF"
-theme.border_width = dpi(2)
+theme.border_width = dpi(0)
 theme.border_normal = "#141414"
 theme.border_focus = "#93B6FF"
 theme.taglist_fg_focus = "#FFFFFF"
@@ -34,6 +35,7 @@ theme.titlebar_bg_normal = "#191919"
 theme.titlebar_bg_focus = "#262626"
 theme.menu_height = dpi(16)
 theme.menu_width = dpi(130)
+theme.useless_gap = 15
 theme.tasklist_disable_icon = false
 theme.awesome_icon = theme.dir .. "/icons/awesome.png"
 theme.menu_submenu_icon = theme.dir .. "/icons/submenu.png"
@@ -66,7 +68,6 @@ theme.layout_max = theme.dir .. "/icons/max.png"
 theme.layout_fullscreen = theme.dir .. "/icons/fullscreen.png"
 theme.layout_magnifier = theme.dir .. "/icons/magnifier.png"
 theme.layout_floating = theme.dir .. "/icons/floating.png"
-theme.useless_gap = 8
 theme.titlebar_close_button_focus = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -389,7 +390,6 @@ function theme.at_screen_connect(s)
 		s.mytasklist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
-			-- wibox.widget.systray(),
 			spr,
 			cpuicon,
 			cpu,
@@ -403,13 +403,14 @@ function theme.at_screen_connect(s)
 			baticon,
 			batwidget,
 			bar_spr,
-			fsicon,
-			fswidget,
-			bar_spr,
+			-- fsicon,
+			-- fswidget,
+			-- bar_spr,
 			volicon,
 			volumewidget,
 			bar_spr,
 			mytextclock,
+			wibox.widget.systray(),
 			s.mylayoutbox,
 		},
 	})

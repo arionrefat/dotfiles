@@ -5,13 +5,13 @@ pcall(require, "luarocks.loader")
 
 local gears = require("gears")
 local awful = require("awful")
-require("awful.autofocus")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
 local lain = require("lain")
 local freedesktop = require("freedesktop")
 local hotkeys_popup = require("awful.hotkeys_popup")
+require("awful.autofocus")
 require("awful.hotkeys_popup.keys")
 local mytable = awful.util.table or gears.table -- 4.{0,1} compatibility
 
@@ -59,19 +59,19 @@ awful.spawn.with_shell(
 local chosen_theme = "copland"
 local modkey = "Mod4"
 local altkey = "Mod1"
-local terminal = "alacritty"
-local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
+local terminal = "wezterm"
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = os.getenv("EDITOR") or "vim"
 local gui_editor = os.getenv("GUI_EDITOR") or "emacsclient -c -a 'emacs'"
 local browser = os.getenv("BROWSER") or "firefox"
 local scrlocker = "slock"
 
+-- awful.util.shell = "sh"
 awful.util.terminal = terminal
 awful.util.tagnames = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }
 awful.layout.layouts = {
-	awful.layout.suit.tile,
 	awful.layout.suit.tile.left,
+	awful.layout.suit.tile,
 	awful.layout.suit.tile.bottom,
 	awful.layout.suit.tile.top,
 	awful.layout.suit.fair,
@@ -387,8 +387,10 @@ globalkeys = mytable.join(
 
 	-- Dropdown application
 	awful.key({ modkey }, "z", function()
-		awful.screen.focused().quake:toggle()
-	end, { description = "dropdown application", group = "launcher" }),
+		awful.spawn.with_shell(
+			"greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'"
+		)
+	end, { description = "Dropdown Clipboard", group = "launcher" }),
 
 	-- Widgets popups
 	awful.key({ altkey }, "l", function()
@@ -404,11 +406,11 @@ globalkeys = mytable.join(
 
 	-- ALSA volume control
 	awful.key({}, "XF86AudioRaiseVolume", function()
-		os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+		os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
 		beautiful.volume.update()
 	end, { description = "volume up", group = "hotkeys" }),
 	awful.key({}, "XF86AudioLowerVolume", function()
-		os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+		os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
 		beautiful.volume.update()
 	end, { description = "volume down", group = "hotkeys" }),
 	awful.key({}, "XF86AudioMute", function()
@@ -437,25 +439,21 @@ globalkeys = mytable.join(
 	end, { description = "Open Pcmanfm", group = "My_Binds" }),
 
 	awful.key({ "Mod4" }, "F1", function()
-		awful.util.spawn("kitty -e nnn")
-	end, { description = "Open nnn via alacritty", group = "My_Binds" }),
-
-	awful.key({ "Mod4" }, "F4", function()
 		awful.util.spawn("kitty -e ranger")
-	end, { description = "Open ranger via alacritty", group = "My_Binds" }),
+	end, { description = "Open ranger via Kitty", group = "My_Binds" }),
 
 	awful.key({ "Mod4" }, "F10", function()
-		awful.spawn.with_shell("~/.scripts/touchpadOff.sh")
+		awful.spawn.with_shell("~/.scripts/touchpadoff")
 		naughty.notify({ title = "Trackpad Disabled", timeout = 3 })
 	end, { description = "Disable Trackpad", group = "My_Binds" }),
 
 	awful.key({ "Mod4" }, "F8", function()
-		awful.spawn.with_shell("~/.scripts/touchpadOn.sh")
+		awful.spawn.with_shell("~/.scripts/touchpadon")
 		naughty.notify({ title = "Trackpad Enabled", timeout = 3 })
 	end, { description = "Enable Trackpad", group = "My_Binds" }),
 
 	awful.key({ altkey, "Ctrl" }, "k", function()
-		awful.spawn.with_shell("~/.scripts/dmlogout")
+		awful.spawn.with_shell("~/.scripts/power")
 	end, { description = "Power Options", group = "My_Binds" }),
 
 	-- Rofi
@@ -612,6 +610,7 @@ awful.rules.rules = {
 		properties = {
 			border_width = beautiful.border_width,
 			border_color = beautiful.border_normal,
+			callback = awful.client.setslave,
 			focus = awful.client.focus.filter,
 			raise = true,
 			keys = clientkeys,
@@ -629,7 +628,7 @@ awful.rules.rules = {
 			class = {
 				"Arandr",
 				"Sxiv",
-				"Nitrogen",
+				"Blueberry.py",
 			},
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
 			-- and the name shown there might not match defined rules here.
@@ -651,7 +650,7 @@ awful.rules.rules = {
 
 	{ rule = { class = "mpv" }, properties = { screen = 1, tag = "VI" } },
 
-	{ rule = { class = "Emacs" }, properties = { screen = 1, tag = "III" } },
+	{ rule = { class = "Emacs" }, properties = { screen = 1, tag = "IV" } },
 
 	{ rule = { class = "Pcmanfm" }, properties = { screen = 1, tag = "V" } },
 
@@ -736,9 +735,8 @@ end
 run_once({
 	"xfce4-power-manager",
 	"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
-	"picom -b",
-	"optimus-manager-qt",
+	"picom -b --experimental-backend",
 	"numlockx on",
 	"unclutter",
-    -- "clipster -d"
-}) -- comma-separated entries
+	"greenclip daemon",
+})

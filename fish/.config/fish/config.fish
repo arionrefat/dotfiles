@@ -10,3 +10,4 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 #KeyBinds
 bind \co 'nnn'
 bind \cb 'ranger'
+bind \cy 'ytop'

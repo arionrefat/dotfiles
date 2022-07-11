@@ -88,8 +88,10 @@ cmp.setup({
 			},
 		}),
 	},
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	window = {
+		documentation = {
+			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		},
 	},
 	experimental = {
 		ghost_text = true,
@@ -100,15 +102,19 @@ cmp.setup({
 cmp.setup.cmdline(
 	"/",
 	{
+		mapping = cmp.mapping.preset.cmdline(),
 		sources = {
 			{ name = "buffer" },
 		},
 	},
 	":",
 	{
-		sources = {
+		mapping = cmp.mapping.preset.cmdline(),
+		sources = cmp.config.sources({
+			{ name = "path" },
+		}, {
 			{ name = "cmdline" },
-		},
+		}),
 	}
 )
 

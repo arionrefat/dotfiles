@@ -1,7 +1,0 @@
-# Inserts a blank line between shell prompts
-add_newline = false
-
-[character]
-success_symbol = "[ἄλφα](bold green)"
-error_symbol = "[✗](bold red) "
-vicmd_symbol = "[](bold green) "

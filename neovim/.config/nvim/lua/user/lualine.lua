@@ -6,7 +6,7 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "kanagawa",
+		theme = "catppuccin",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "alpha"},
@@ -16,7 +16,8 @@ lualine.setup({
 			{
 				"mode",
 				fmt = function()
-					return "ἄλφα"
+					-- return "ἄλφα"
+					return "λφα"
 				end,
 			},
 		},
