@@ -1,8 +1,8 @@
-vim.g.fzf_history_dir = '~/.local/share/fzf-history'
-vim.g.fzf_tags_command = 'ctags -R'
+vim.g.fzf_history_dir = "~/.local/share/fzf-history"
+vim.g.fzf_tags_command = "ctags -R"
 
-vim.env.FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
-vim.env.FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+vim.env.FZF_DEFAULT_OPTS = "--layout=reverse --info=inline"
+vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden"
 
 vim.cmd([[
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' }}

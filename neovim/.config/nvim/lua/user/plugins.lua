@@ -42,36 +42,44 @@ packer.init({
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nlknguyen/copy-cut-paste.vim")
-	use("godlygeek/tabular")
 	use("plasticboy/vim-markdown")
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" })
 	use("wakatime/vim-wakatime")
-	use({ "turbio/bracey.vim", cmd = "Bracey" })
-	use("tpope/vim-surround")
 	use({ "mbbill/undotree", cmd = "UndotreeShow" })
-	use({ "junegunn/goyo.vim", cmd = "Goyo" })
 	use("junegunn/fzf", {
 		run = function()
 			vim.fn["fzf#install"](0)
 		end,
 	})
 	use("junegunn/fzf.vim")
-	use("airblade/vim-rooter")
 	use({ "lambdalisue/suda.vim", cmd = "SudaWrite" })
+	-- Lua plugins
+	use("neovim/nvim-lspconfig")
+	use("folke/zen-mode.nvim")
 	use("norcalli/nvim-colorizer.lua")
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("p00f/nvim-ts-rainbow")
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("nvim-treesitter/playground")
-	use("nvim-treesitter/nvim-treesitter-refactor")
+	use("lewis6991/impatient.nvim")
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("lewis6991/gitsigns.nvim")
+    use("RRethy/vim-illuminate")
+
+	-- Treesitter
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("nvim-treesitter/playground")
+	use("nvim-treesitter/nvim-treesitter-refactor")
+	use("windwp/nvim-ts-autotag")
+	use("p00f/nvim-ts-rainbow")
+
+	use("jose-elias-alvarez/null-ls.nvim")
+
+	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-fzy-native.nvim")
-	use("jvgrootveld/telescope-zoxide")
+	use("nvim-telescope/telescope-ui-select.nvim")
 	use("nvim-telescope/telescope-media-files.nvim")
-	use("neovim/nvim-lspconfig")
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
+	use("jvgrootveld/telescope-zoxide")
+
+	-- Auto Completion
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lua")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -81,29 +89,33 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
 	use("rafamadriz/friendly-snippets")
-	use("williamboman/nvim-lsp-installer")
+	use("onsails/lspkind-nvim")
+
+    use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
-	use("folke/trouble.nvim")
 	use("akinsho/bufferline.nvim")
-	-- use("rcarriga/nvim-notify")
 	use("akinsho/toggleterm.nvim")
+	use("akinsho/org-bullets.nvim")
+	use("rmagatti/auto-session")
+	use("rmagatti/session-lens")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
 	use("nvim-lualine/lualine.nvim")
+	use("ahmedkhalf/project.nvim")
 	use({
 		"numToStr/Comment.nvim",
 		requires = { "JoosepAlviste/nvim-ts-context-commentstring", opt = true },
 	})
 	use("windwp/nvim-autopairs")
-	use("onsails/lspkind-nvim")
 	use("kylechui/nvim-surround")
+	use("nvim-orgmode/orgmode")
 
 	-- coLorscheme
 	use("catppuccin/nvim")
 	use("EdenEast/nightfox.nvim")
 	use("rebelot/kanagawa.nvim")
-	use("folke/tokyonight.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

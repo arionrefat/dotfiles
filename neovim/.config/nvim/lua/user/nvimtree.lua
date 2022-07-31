@@ -19,6 +19,7 @@ nvim_tree.setup({
 	open_on_setup = false,
 	ignore_ft_on_setup = { "alpha" },
 	open_on_tab = false,
+	respect_buf_cwd = true,
 	hijack_cursor = false,
 	update_cwd = true,
 	diagnostics = {

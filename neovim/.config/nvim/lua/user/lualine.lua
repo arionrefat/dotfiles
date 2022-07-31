@@ -5,19 +5,19 @@ end
 
 lualine.setup({
 	options = {
+        disabled_filetypes = { "alpha"},
 		icons_enabled = true,
 		theme = "catppuccin",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = { "alpha"},
 	},
 	sections = {
 		lualine_a = {
 			{
 				"mode",
 				fmt = function()
-					-- return "ἄλφα"
-					return "λφα"
+					return "ἄλφα"
+					-- return "λφα"
 				end,
 			},
 		},

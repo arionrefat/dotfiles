@@ -1,68 +1,67 @@
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_sidebars = { "terminal", "packer" }
-vim.g.tokyonight_transparent = false
-vim.g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
-vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-
 require("catppuccin").setup({
+	dim_inactive = {
+		enabled = true,
+		shade = "dark",
+		percentage = 0.15,
+	},
 	transparent_background = false,
 	term_colors = true,
+	compile = {
+		enabled = true,
+		path = vim.fn.stdpath("cache") .. "/catppuccin",
+	},
 	styles = {
-		comments = "italic",
-		conditionals = "italic",
-		loops = "NONE",
-		functions = "NONE",
-		keywords = "NONE",
-		strings = "NONE",
-		variables = "NONE",
-		numbers = "NONE",
-		booleans = "NONE",
-		properties = "NONE",
-		types = "NONE",
-		operators = "NONE",
+		comments = { "italic" },
+		conditionals = { "italic" },
 	},
 	integrations = {
 		treesitter = true,
 		native_lsp = {
 			enabled = true,
 			virtual_text = {
-				errors = "italic",
-				hints = "italic",
-				warnings = "italic",
-				information = "italic",
+				errors = { "italic" },
+				hints = { "italic" },
+				warnings = { "italic" },
+				information = { "italic" },
 			},
 			underlines = {
-				errors = "underline",
-				hints = "underline",
-				warnings = "underline",
-				information = "underline",
+				errors = { "underline" },
+				hints = { "underline" },
+				warnings = { "underline" },
+				information = { "underline" },
 			},
 		},
-		lsp_trouble = true,
 		cmp = true,
 		gitsigns = true,
 		telescope = true,
 		nvimtree = {
 			enabled = true,
 			show_root = true,
-			transparent_panel = true,
+			transparent_panel = false,
+		},
+		dap = {
+			enabled = false,
+			enable_ui = false,
 		},
 		indent_blankline = {
 			enabled = true,
 			colored_indent_levels = false,
 		},
-		bufferline = false,
-		markdown = false,
-		ts_rainbow = true,
-		hop = false,
+		dashboard = false,
+		bufferline = true,
+		markdown = true,
+		ts_rainbow = false,
+		telekasten = false,
+		symbols_outline = true,
 	},
 })
+
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
 require("kanagawa").setup({
 	undercurl = true, -- enable undercurls
 	commentStyle = { italic = true },
-	functionStyle = {},
+	functionStyle = { italic = true, bold = true },
 	keywordStyle = { italic = true },
 	statementStyle = { bold = true },
 	typeStyle = {},
@@ -72,8 +71,6 @@ require("kanagawa").setup({
 	transparent = false, -- do not set background color
 	dimInactive = true, -- dim inactive window `:h hl-NormalNC`
 	globalStatus = false, -- adjust window separators highlight for laststatus=3
-	colors = {},
-	overrides = {},
 })
 
 require("nightfox").setup({

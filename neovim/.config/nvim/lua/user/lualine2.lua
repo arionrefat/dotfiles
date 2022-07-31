@@ -5,15 +5,22 @@ end
 
 lualine.setup({
 	options = {
+        disabled_filetypes = { "alpha", "toggleterm" },
 		icons_enabled = true,
-		theme = "kanagawa",
+		theme = "nightfox",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = { "alpha", "toggleterm" },
 		-- always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { "mode" },
+		lualine_a = {
+			{
+				"mode",
+				fmt = function()
+					return "ἄλφα"
+				end,
+			},
+		},
 		lualine_b = {
 			{ "filetype", colored = false },
 			{ "branch" },

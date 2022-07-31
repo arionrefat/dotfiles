@@ -4,7 +4,38 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = "all",
+	ensure_installed = {
+		"c",
+		"lua",
+		"go",
+		"bash",
+		"comment",
+		"cpp",
+		"python",
+		"css",
+		"gomod",
+		"html",
+		"java",
+		"javascript",
+		"json",
+		"json5",
+		"latex",
+		"markdown",
+		"markdown_inline",
+		"regex",
+		"scss",
+		"sql",
+		"svelte",
+		"toml",
+		"tsx",
+		"typescript",
+		"vim",
+		"yaml",
+		"org",
+		"rasi",
+		"prisma",
+		"query",
+	},
 	sync_install = false,
 	highlight = {
 		enable = true, -- false will disable the whole extension
@@ -45,5 +76,8 @@ configs.setup({
 			goto_node = "<cr>",
 			show_help = "?",
 		},
+	},
+	autotag = {
+		enable = true,
 	},
 })

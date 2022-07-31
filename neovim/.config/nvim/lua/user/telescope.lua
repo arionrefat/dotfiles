@@ -4,6 +4,9 @@ if not status_ok then
 end
 
 telescope.load_extension("media_files")
+telescope.load_extension("file_browser")
+telescope.load_extension('projects')
+telescope.load_extension("session-lens")
 
 local actions = require("telescope.actions")
 
@@ -87,6 +90,19 @@ telescope.setup({
 	extensions = {
 		media_files = {
 			find_cmd = "rg", -- find command (defaults to `fd`)
+		},
+		file_browser = {
+			theme = "ivy",
+			-- disables netrw and use telescope-file-browser in its place
+			hijack_netrw = true,
+			mappings = {
+				["i"] = {
+					-- your custom insert mode mappings
+				},
+				["n"] = {
+					-- your custom normal mode mappings
+				},
+			},
 		},
 	},
 })
