@@ -50,4 +50,3 @@
 ;(unpin! t)
 
 (package! wakatime-mode)
-(package! dirvish)
