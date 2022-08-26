@@ -1,6 +1,6 @@
-                           * Welcome to my dotfiles!
+* Welcome to my dotfiles!
 
-                                  * Showcase:
+* Showcase:
 
 #+CAPTION: Screenshots
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
@@ -18,7 +18,7 @@
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
 [[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss1.png]]
 
-                                    * Fetch:
+* Fetch:
 
 #+CAPTION: Screenshots
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
@@ -46,8 +46,10 @@
 * For suckless builds Here is the repo link
 [[https://github.com/arionrefat/suckless-builds][suckless-build]]
 
-I use *GNU Stow* for managing my dotfiles, if you want to use my use my dots, run
+I use *GNU Stow* for managing my dotfiles, if you want to use my use my dots, run the root folder name
+
+For example you want to get neovim folder on your ~/.config file, first delete(or backup your previous config) the neovim folder then run:
 
 #+begin_src sh
-    stow `rootfile-name`
+    stow neovim
 #+end_src
