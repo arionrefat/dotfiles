@@ -1,7 +1,6 @@
-* Welcome to my dotfiles!
+                           * Welcome to my dotfiles!
 
-
-* Screenshots:
+                                  * Showcase:
 
 #+CAPTION: Screenshots
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
@@ -19,22 +18,36 @@
 #+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
 [[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss1.png]]
 
-* Softwares I use:
-| Terminal      | st        |
-|               | alacritty |
-|               | kitty     |
-| Window Manger | awesomewm |
-|               | dwm       |
-| Browser       | brave     |
-| Editor        | NeoVim    |
-|               | Emacs     |
-|               | VSCodium  |
-| Filemanager   | Ranger    |
-|               | nnn       |
-|               | Pcmanfm   |
+                                    * Fetch:
+
+#+CAPTION: Screenshots
+#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
+[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss5.png]]
+
+* Free(libre) Softwares I use:
+| Terminal      |           |
+|               | [[https://github.com/kovidgoyal/kitty][kitty]]     |
+|               | [[https://st.suckless.org/][st]]        |
+| Window Manger |           |
+|               | [[https://awesomewm.org/][awesomewm]] |
+|               | [[https://dwm.suckless.org/][dwm]]       |
+| Browser       |           |
+|               | [[https://brave.com/][brave]]     |
+|               | [[https://luakit.github.io/][Luakit]]    |
+| Editor        |           |
+|               | [[https://neovim.io/][Neovim]]    |
+|               | [[https://www.gnu.org/software/emacs/][Emacs]]     |
+|               | [[https://vscodium.com/][VSCodium]]  |
+| Filemanager   |           |
+|               | [[https://github.com/ranger/ranger][Ranger]]    |
+|               | [[https://github.com/gokcehan/lf][lf]]        |
+|               | [[https://wiki.archlinux.org/title/PCManFM][Pcmanfm]]   |
 
 * For suckless builds Here is the repo link
 [[https://github.com/arionrefat/suckless-builds][suckless-build]]
 
+I use *GNU Stow* for managing my dotfiles, if you want to use my use my dots, run
 
-I use *GNU Stow* That's why it looks like this
+#+begin_src sh
+    stow `rootfile-name`
+#+end_src

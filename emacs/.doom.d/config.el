@@ -1,6 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 19)
+(setq doom-font (font-spec :family "VictorMono Nerd Font" :size 20)
       doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font" :size 19)
       doom-big-font (font-spec :family "Fira Code Retina" :size 22))
 
@@ -54,9 +54,9 @@
   (set-irc-server! "irc.libera.chat"
     `(:tls t
       :port 6697
-      :nick "XXXXXXX"
-      :sasl-username "XXXX"
-      :sasl-password "XXXX"
+      :nick "arion6969"
+      :sasl-username "arion69"
+      :sasl-password "refatcse000!"
       :channels ("#emacs", "#linux", "#archlinux", "#systemcrafters", "#neovim"))))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
