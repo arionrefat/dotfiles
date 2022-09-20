@@ -11,7 +11,7 @@
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Set default font
-(set-face-attribute 'default nil :font "VictorMono Nerd Font" :height 145)
+(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono" :height 150)
 ;; Set the fixed pitch face
 (set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 140)
 ;; Set the variable pitch face
@@ -20,7 +20,7 @@
 ;;Disable stuffs
 (scroll-bar-mode -1)        ; Disable the scroll bar
 (tool-bar-mode -1)          ; Disable the toolbar
-(menu-bar-mode -1)          ; Disable the menu bar
+;;(menu-bar-mode -1)          ; Disable the menu bar
 
 ;;shows line, column numbers, highlight current line and auto pairs parenthesis
 (column-number-mode)
@@ -41,7 +41,6 @@
 (dolist (mode '(org-mode-hook
                 term-mode-hook
                 shell-mode-hook
-                treemacs-mode-hook
 				dashboard-mode-hook
                 eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
@@ -192,25 +191,12 @@
 (use-package all-the-icons
   :ensure t)
 
+(use-package format-all
+  :ensure t)
+
 (use-package emojify
   :ensure t
   :hook (after-init . global-emojify-mode))
-
-(use-package centaur-tabs
-  :after dashboard
-  :config
-  (centaur-tabs-mode t)
-  (setq centaur-tabs-style "rounded")
-  (setq centaur-tabs-gray-out-icons 'buffer)
-  (setq centaur-tabs-set-bar 'left)
-  (setq centaur-tabs-set-icons t)
-  :bind
-  (:map evil-normal-state-map
-	    ("g t" . centaur-tabs-forward)
-	    ("g T" . centaur-tabs-backward))
-  :hook
-  (dashboard-mode . centaur-tabs-local-mode)
-  (dired-mode . centaur-tabs-local-mode))
 
 (use-package doom-themes
   :ensure t
@@ -218,9 +204,7 @@
   (setq doom-themes-enable-bold t
         doom-themes-padded-modeline t
         doom-themes-enable-italic t)
-  (load-theme 'doom-one t)
-  (setq doom-themes-treemacs-theme "doom-vibrant")
-  (doom-themes-treemacs-config)
+  (load-theme 'doom-vibrant t)
   (doom-themes-org-config))
 
 (use-package doom-modeline
@@ -248,9 +232,6 @@
     "f"  '(:ignore f :which-key "File/buffer")
     "fr" '(counsel-recentf :which-key "Open Recent Files")
     "fb" '(format-all-buffer :which-key "Format whole buffer")
-    "t"  '(:ignore t :which-key "Programming")
-    "ts" '(global-tree-sitter-mode :which-key "Enable tree-sitter")
-    "tl" '(lsp :which-key "Enable Lsp")
     "c"  '(:ignore c :which-key "Comment")
     "cc" '(evilnc-comment-or-uncomment-lines :which-key "Toggle Comment")
     "ct" '(evilnc-quick-comment-or-uncomment-to-the-line :which-key "Toggle quick comment line")
@@ -266,36 +247,16 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
-(use-package hydra
-  :defer t)
-
-(defhydra hydra-text-scale (:timeout 4)
-  ("j" text-scale-increase "in")
-  ("k" text-scale-decrease "out")
-  ("f" nil "finished" :exit t))
-
-(reft/leader-keys
-  "tt" '(hydra-text-scale/body :which-key "scale text"))
-
 (use-package wakatime-mode
   :diminish 'wakatime-mode
   :init
   :config (progn (setq wakatime-cli-path "/home/refat/.local/bin/wakatime-cli")
                  (global-wakatime-mode)))
 
-(use-package dirvish
-  :commands dirvish
-  :config
-  (setq dired-clean-confirm-killing-deleted-buffers nil)
-  (setq dired-recursive-copies 'always)
-  (setq dired-recursive-deletes 'always)
-  (setq dired-dwim-target t)
-  (setq dired-listing-switches "-AGhlv --group-directories-first --time-style=long-iso"))
-
 (use-package tree-sitter
-  :commands global-tree-sitter-mode
   :ensure tree-sitter-langs
   :config
+  (global-tree-sitter-mode)
   (require 'tree-sitter-langs)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
@@ -340,9 +301,6 @@
   :hook (lsp-mode . lsp-ui-mode)
   :custom
   (lsp-ui-doc-position 'bottom))
-
-(use-package lsp-treemacs
-  :after lsp)
 
 (use-package lsp-ivy
   :after lsp)
@@ -412,9 +370,7 @@
   :after org
   :ensure t
   :hook
-  (org-mode . org-fancy-priorities-mode)
-  :config
-  (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
+  (org-mode . org-fancy-priorities-mode))
 
 (use-package org-superstar
   :after org
@@ -425,14 +381,9 @@
   (org-superstar-special-todo-items t)
   (org-superstar-leading-bullet ""))
 
-(defun reft/org-mode-visual-fill ()
-  (setq visual-fill-column-width 45
-        visual-fill-column-center-text t)
-  (visual-fill-column-mode 1))
-
 (use-package visual-fill-column
-  :after org
-  :hook (org-mode . reft/org-mode-visual-fill))
+  :ensure t
+  :commands visual-fill-column-mode)
 
 (use-package term
   :commands term)
@@ -468,3 +419,16 @@
     (setq eshell-destroy-buffer-when-process-dies t)
     (setq eshell-visual-commands '("htop" "ytop")))
   (eshell-git-prompt-use-theme 'powerline))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(eshell-git-prompt vterm eterm-256color visual-fill-column org-superstar org-fancy-priorities typescript-mode js2-mode company-box company lsp-ivy lsp-ui lsp-mode drag-stuff magit counsel-projectile projectile tree-sitter-langs wakatime-mode general rainbow-delimiters doom-modeline doom-themes emojify format-all helpful ivy-prescient counsel all-the-icons-ivy-rich evil-collection undo-tree evil-nerd-commenter evil no-littering which-key swiper dashboard use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

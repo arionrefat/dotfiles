@@ -1,3 +1,5 @@
+;; For org mode
+
 (defun reft/org-mode-setup ()
   (org-indent-mode)
   (variable-pitch-mode 1)
@@ -36,11 +38,10 @@
   (reft/org-font-setup))
 
 (use-package org-fancy-priorities
+  :after org
   :ensure t
   :hook
-  (org-mode . org-fancy-priorities-mode)
-  :config
-  (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
+  (org-mode . org-fancy-priorities-mode))
 
 (use-package org-superstar
   :after org
@@ -50,11 +51,3 @@
                                      ("TODO" . ?⌖)))
   (org-superstar-special-todo-items t)
   (org-superstar-leading-bullet ""))
-
-(defun reft/org-mode-visual-fill ()
-  (setq visual-fill-column-width 35
-        visual-fill-column-center-text t)
-  (visual-fill-column-mode 1))
-
-(use-package visual-fill-column
-  :hook (org-mode . reft/org-mode-visual-fill))

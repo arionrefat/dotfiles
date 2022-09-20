@@ -11,7 +11,7 @@
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 ;; Set default font
-(set-face-attribute 'default nil :font "CaskaydiaCove Nerd Font" :height 145)
+(set-face-attribute 'default nil :font "JetBrainsMono Nerd Font Mono" :height 150)
 ;; Set the fixed pitch face
 (set-face-attribute 'fixed-pitch nil :font "Fira Code Retina" :height 140)
 ;; Set the variable pitch face
@@ -20,7 +20,7 @@
 ;;Disable stuffs
 (scroll-bar-mode -1)        ; Disable the scroll bar
 (tool-bar-mode -1)          ; Disable the toolbar
-(menu-bar-mode -1)          ; Disable the menu bar
+;;(menu-bar-mode -1)          ; Disable the menu bar
 
 ;;shows line, column numbers, highlight current line and auto pairs parenthesis
 (column-number-mode)
@@ -41,7 +41,6 @@
 (dolist (mode '(org-mode-hook
                 term-mode-hook
                 shell-mode-hook
-                treemacs-mode-hook
 				dashboard-mode-hook
                 eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
