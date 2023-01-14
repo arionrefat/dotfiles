@@ -1,18 +1,5 @@
--- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
-
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local nvim_lsp = require("lspconfig")
-local servers = { "clangd", "rust_analyzer", "pyright", "tsserver" }
-for _, lsp in ipairs(servers) do
-	nvim_lsp[lsp].setup({
-		-- on_attach = my_custom_on_attach,
-		capabilities = capabilities,
-	})
-end
-
 local has_words_before = function()
+	unpack = unpack or table.unpack
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
@@ -26,6 +13,8 @@ local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
 	return
 end
+
+require("luasnip/loaders/from_vscode").lazy_load()
 
 -- nvim-cmp setup
 cmp.setup({
@@ -75,11 +64,18 @@ cmp.setup({
 		{ name = "path" },
 		{ name = "luasnip" },
 		{ name = "orgmode" },
-		{ name = "buffer", keyword_length = 3 },
+		{
+			name = "buffer",
+			option = {
+				keyword_length = 5,
+			},
+		},
 	},
 	formatting = {
 		format = require("lspkind").cmp_format({
-			with_text = true,
+			mode = "symbol_text",
+			maxwidth = 50,
+			ellipsis_char = "...",
 			menu = {
 				buffer = "[buf]",
 				nvim_lsp = "[LSP]",
@@ -96,27 +92,21 @@ cmp.setup({
 	},
 	experimental = {
 		ghost_text = true,
-		native_menu = false,
 	},
 })
 
-cmp.setup.cmdline(
-	"/",
-	{
-		mapping = cmp.mapping.preset.cmdline(),
-		sources = {
-			{ name = "buffer" },
-		},
+cmp.setup.cmdline({ "/", "?" }, {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = {
+		{ name = "buffer" },
 	},
-	":",
-	{
-		mapping = cmp.mapping.preset.cmdline(),
-		sources = cmp.config.sources({
-			{ name = "path" },
-		}, {
-			{ name = "cmdline" },
-		}),
-	}
-)
+})
 
-require("luasnip/loaders/from_vscode").lazy_load()
+cmp.setup.cmdline(":", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "path" },
+	}, {
+		{ name = "cmdline" },
+	}),
+})

@@ -4,7 +4,9 @@
       doom-variable-pitch-font (font-spec :family "VictorMono Nerd Font" :size 19)
       doom-big-font (font-spec :family "JetBrains Mono" :size 24))
 
-(setq doom-theme 'doom-one)
+; Theme
+(setq doom-theme 'doom-vibrant)
+
 (setq fancy-splash-image "~/.doom.d/emacs.png")
 
 (setq org-directory "~/Workspaces/Org-mode")

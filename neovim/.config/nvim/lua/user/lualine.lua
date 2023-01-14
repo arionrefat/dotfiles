@@ -5,11 +5,12 @@ end
 
 lualine.setup({
 	options = {
-        disabled_filetypes = { "alpha"},
+		disabled_filetypes = { "alpha", "toggleterm" },
 		icons_enabled = true,
-		theme = "catppuccin",
+		theme = "nightfox",
 		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		--[[ section_separators = { left = "", right = "" }, ]]
+		section_separators = { left = "", right = "" },
 	},
 	sections = {
 		lualine_a = {
@@ -17,7 +18,6 @@ lualine.setup({
 				"mode",
 				fmt = function()
 					return "ἄλφα"
-					-- return "λφα"
 				end,
 			},
 		},
@@ -46,9 +46,8 @@ lualine.setup({
 				sections = { "error", "warn", "info", "hint" },
 			},
 			{
-				-- Lsp server name .
 				function()
-					local msg = "No Active Lsp"
+					local msg = "! Lsp Server"
 					local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
 					local clients = vim.lsp.get_active_clients()
 					if next(clients) == nil then
@@ -62,7 +61,7 @@ lualine.setup({
 					end
 					return msg
 				end,
-				icon = "⚙️",
+				icon = "",
 				color = { fg = "#ffffff", gui = "bold" },
 			},
 			{
@@ -72,8 +71,32 @@ lualine.setup({
 				color = { gui = "bold" },
 			},
 		},
-		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_y = { "location" },
+		lualine_z = {
+			{
+				function()
+					local current_line = vim.fn.line(".")
+					local total_lines = vim.fn.line("$")
+					local chars = {
+						"__",
+						"▁▁",
+						"▂▂",
+						"▃▃",
+						"▄▄",
+						"▅▅",
+						"▆▆",
+						"▇▇",
+						"██",
+					}
+					local line_ratio = current_line / total_lines
+					local index = math.ceil(line_ratio * #chars)
+					return chars[index]
+				end,
+				padding = { left = 0, right = 0 },
+				color = { fg = "#ECBE7B", bg = "#202328" },
+				cond = nil,
+			},
+		},
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -83,5 +106,5 @@ lualine.setup({
 		lualine_y = {},
 		lualine_z = {},
 	},
-	extensions = { "nvim-tree", "fzf" },
+	extensions = { "nvim-tree" },
 })

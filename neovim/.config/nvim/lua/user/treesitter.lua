@@ -20,12 +20,12 @@ configs.setup({
 		"json",
 		"json5",
 		"latex",
+		"astro",
 		"markdown",
 		"markdown_inline",
 		"regex",
 		"scss",
 		"sql",
-		"svelte",
 		"toml",
 		"tsx",
 		"typescript",
@@ -45,12 +45,10 @@ configs.setup({
 	indent = { enable = true, disable = { "yaml" } },
 	context_commentstring = {
 		enable = true,
-		enable_autocmd = false,
 	},
 	matchup = { enable = true },
 	rainbow = {
 		enable = true,
-		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
 		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
 		max_file_lines = 1000,
 	},
@@ -61,23 +59,11 @@ configs.setup({
 			enable = true,
 		},
 	},
-	playground = {
-		enable = true,
-		persist_queries = false, -- Whether the query persists across vim sessions
-		keybindings = {
-			toggle_query_editor = "o",
-			toggle_hl_groups = "i",
-			toggle_injected_languages = "t",
-			toggle_anonymous_nodes = "a",
-			toggle_language_display = "I",
-			focus_language = "f",
-			unfocus_language = "F",
-			update = "R",
-			goto_node = "<cr>",
-			show_help = "?",
-		},
-	},
 	autotag = {
 		enable = true,
 	},
+})
+
+require("treesitter-context").setup({
+	enable = true,
 })

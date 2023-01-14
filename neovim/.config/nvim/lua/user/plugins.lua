@@ -40,61 +40,20 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	use("wbthomason/packer.nvim")
 	use("nlknguyen/copy-cut-paste.vim")
-	use("plasticboy/vim-markdown")
 	use("wakatime/vim-wakatime")
-	use({ "mbbill/undotree", cmd = "UndotreeShow" })
-	use("junegunn/fzf", {
-		run = function()
-			vim.fn["fzf#install"](0)
-		end,
-	})
-	use("junegunn/fzf.vim")
 	use({ "lambdalisue/suda.vim", cmd = "SudaWrite" })
+
 	-- Lua plugins
-	use("neovim/nvim-lspconfig")
+	use("wbthomason/packer.nvim")
 	use("folke/zen-mode.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use("lewis6991/impatient.nvim")
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("lewis6991/gitsigns.nvim")
-    use("RRethy/vim-illuminate")
-
-	-- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("nvim-treesitter/playground")
-	use("nvim-treesitter/nvim-treesitter-refactor")
-	use("windwp/nvim-ts-autotag")
-	use("p00f/nvim-ts-rainbow")
-
-	use("jose-elias-alvarez/null-ls.nvim")
-
-	-- Telescope
-	use("nvim-telescope/telescope.nvim")
-	use("nvim-telescope/telescope-fzy-native.nvim")
-	use("nvim-telescope/telescope-ui-select.nvim")
-	use("nvim-telescope/telescope-media-files.nvim")
-	use({ "nvim-telescope/telescope-file-browser.nvim" })
-	use("jvgrootveld/telescope-zoxide")
-
-	-- Auto Completion
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lua")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("L3MON4D3/LuaSnip")
-	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
-	use("onsails/lspkind-nvim")
-
-    use("williamboman/mason.nvim")
-	use("williamboman/mason-lspconfig.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	use("nvim-tree/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("akinsho/toggleterm.nvim")
 	use("akinsho/org-bullets.nvim")
@@ -104,16 +63,54 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("nvim-lualine/lualine.nvim")
 	use("ahmedkhalf/project.nvim")
-	use({
-		"numToStr/Comment.nvim",
-		requires = { "JoosepAlviste/nvim-ts-context-commentstring", opt = true },
-	})
+	use("numToStr/Comment.nvim")
 	use("windwp/nvim-autopairs")
+	use("onsails/lspkind-nvim")
 	use("kylechui/nvim-surround")
 	use("nvim-orgmode/orgmode")
+	use("folke/which-key.nvim")
+	use("ggandor/leap.nvim")
+	use("simrat39/symbols-outline.nvim")
+	use("sindrets/diffview.nvim")
+	use("windwp/nvim-spectre")
+
+	-- LSP stuffs
+	use("neovim/nvim-lspconfig")
+	use("RRethy/vim-illuminate")
+	use("jose-elias-alvarez/null-ls.nvim")
+
+	-- Lsp server Installer
+	use("williamboman/mason.nvim")
+	use("williamboman/mason-lspconfig.nvim")
+
+	-- Treesitter
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use("nvim-treesitter/nvim-treesitter-refactor")
+	use("nvim-treesitter/nvim-treesitter-context")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("windwp/nvim-ts-autotag")
+	use("mrjones2014/nvim-ts-rainbow")
+
+	-- Telescope
+	use("nvim-telescope/telescope.nvim")
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use("nvim-telescope/telescope-ui-select.nvim")
+	use("nvim-telescope/telescope-file-browser.nvim")
+	use("jvgrootveld/telescope-zoxide")
+	use("debugloop/telescope-undo.nvim")
+
+	-- Auto Completion
+	use("hrsh7th/nvim-cmp")
+	use("hrsh7th/cmp-nvim-lua")
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
+	use("saadparwaiz1/cmp_luasnip")
+	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
 
 	-- coLorscheme
-	use("catppuccin/nvim")
 	use("EdenEast/nightfox.nvim")
 	use("rebelot/kanagawa.nvim")
 

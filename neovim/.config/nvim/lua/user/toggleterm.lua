@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 55,
+	size = 60,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
@@ -25,24 +25,3 @@ toggleterm.setup({
 		},
 	},
 })
-
-function _G.set_terminal_keymaps()
-	local opts = { noremap = true }
-	vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
-end
-
-vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
-
-local Terminal = require("toggleterm.terminal").Terminal
-
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
-
-function _LAGT()
-	lazygit:toggle()
-end
-
-local ytop = Terminal:new({ cmd = "ytop", hidden = true })
-
-function _YTOP()
-	ytop:toggle()
-end
