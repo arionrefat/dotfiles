@@ -14,6 +14,5 @@ sm.setup({
 
 require("session-lens").setup({
 	path_display = { "shorten" },
-	previewer = true,
-	prompt_title = "Saved Sessions",
+	prompt_title = "Saved Sessions"
 })

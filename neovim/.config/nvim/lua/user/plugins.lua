@@ -44,15 +44,17 @@ return packer.startup(function(use)
 	use("wakatime/vim-wakatime")
 	use({ "lambdalisue/suda.vim", cmd = "SudaWrite" })
 
-	-- Lua plugins
+	-- Prereq plugins
 	use("wbthomason/packer.nvim")
+	use("nvim-lua/popup.nvim")
+	use("nvim-lua/plenary.nvim")
+	use("kyazdani42/nvim-web-devicons")
+
+	-- Lua plugins
 	use("folke/zen-mode.nvim")
 	use("norcalli/nvim-colorizer.lua")
 	use("lewis6991/impatient.nvim")
-	use("nvim-lua/popup.nvim")
-	use("nvim-lua/plenary.nvim")
 	use("lewis6991/gitsigns.nvim")
-	use("kyazdani42/nvim-web-devicons")
 	use("nvim-tree/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("akinsho/toggleterm.nvim")
@@ -71,7 +73,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 	use("ggandor/leap.nvim")
 	use("simrat39/symbols-outline.nvim")
-	use("sindrets/diffview.nvim")
+	use({ "sindrets/diffview.nvim", cmd = "DiffviewOpen" })
 	use("windwp/nvim-spectre")
 
 	-- LSP stuffs
@@ -94,8 +96,6 @@ return packer.startup(function(use)
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-	use("nvim-telescope/telescope-ui-select.nvim")
-	use("nvim-telescope/telescope-file-browser.nvim")
 	use("jvgrootveld/telescope-zoxide")
 	use("debugloop/telescope-undo.nvim")
 
