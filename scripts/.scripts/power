@@ -6,11 +6,11 @@ uptime=$(uptime -p | sed -e 's/up //g')
 wm_name="$(wmctrl -m | awk -F ":" {'print $2'} | head -n 1)"
 wm_pid=$(pidof ${wm_name})
 
-shutdown="Shutdown"
-reboot="Restart"
-lock="Lock"
-logout="Logout"
-cancel="Cancel"
+shutdown="shutdown"
+reboot="restart"
+lock="lock"
+logout="logout"
+cancel="cancel"
 
 option="$cancel\n$shutdown\n$reboot\n$lock\n$logout"
 

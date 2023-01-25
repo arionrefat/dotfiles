@@ -25,8 +25,8 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 alias list_systemctl="systemctl list-unit-files --state=enabled"
 
 #list
-alias ls='lsd -l'
-alias ll='lsd -al'
+alias ls='exa'
+alias ll='exa -l'
 alias l.="ls -A | egrep '^\.'"
 
 #pacman unlock
@@ -71,16 +71,11 @@ alias skel='cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -
 #backup contents of /etc/skel to hidden backup folder in home/user
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
-#switch between bash and zsh
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
 #hardware info --short
 alias hw="hwinfo --short"
 
 #skip integrity check
 alias yayskip='yay -S --mflags --skipinteg'
-alias trizenskip='trizen -S --skipinteg'
 
 #check vulnerabilities microcode
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
@@ -132,24 +127,18 @@ alias nz="$EDITOR ~/.zshrc"
 
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
-alias downgrada="sudo downgrade --ala-url https://bike.seedhost.eu/arcolinux/"
 
 #systeminfo
 alias probe="sudo -E hw-probe -all -upload"
 alias sysfailed="systemctl list-units --failed"
-
-#shutdown or reboot
-alias ssn="sudo shutdown now"
-alias sr="sudo reboot"
-
-#update betterlockscreen images
-alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
 
 #Fzf with bat preview
 alias fzfp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
+alias clip="greenclip print | grep . | fzf -e | xargs -r -d'\n' -I '{}' greenclip print '{}'"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>

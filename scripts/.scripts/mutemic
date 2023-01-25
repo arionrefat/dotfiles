@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+state=$(pactl list | awk '/Mute:/ {print $2}' | sed -n 4p)
+
+if [ "$state" = "yes" ]; then
+    pactl set-source-mute @DEFAULT_SOURCE@ 0
+    notify-send " Microphone" "Mic is now Unmuted"
+else
+    pactl set-source-mute @DEFAULT_SOURCE@ 1
+    notify-send " Microphone" "Mic is now Muted"
+fi

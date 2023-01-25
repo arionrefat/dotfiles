@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+device=$(xinput | sed '/Touchpad/s/.*id=\([0-9]*\).*/\1/;t;d')
+state=$(xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$")
+
+if [ "$state" -eq 1 ]; then
+    xinput disable "$device"
+    notify-send "Touchpad" "Turned Off"
+else
+    xinput enable "$device"
+    notify-send "Touchpad" "Turned On"
+fi

@@ -33,18 +33,16 @@
 |               | [[https://dwm.suckless.org/][dwm]]       |
 | Browser       |           |
 |               | [[https://brave.com/][brave]]     |
-|               | [[https://luakit.github.io/][Luakit]]    |
 | Editor        |           |
 |               | [[https://neovim.io/][Neovim]]    |
 |               | [[https://www.gnu.org/software/emacs/][Emacs]]     |
 |               | [[https://vscodium.com/][VSCodium]]  |
 | Filemanager   |           |
 |               | [[https://github.com/ranger/ranger][Ranger]]    |
-|               | [[https://github.com/gokcehan/lf][lf]]        |
 |               | [[https://wiki.archlinux.org/title/PCManFM][Pcmanfm]]   |
 
 * For suckless builds Here is the repo link
-[[https://github.com/arionrefat/suckless-builds][suckless-build]]
+[[https://gitlab.com/arionrefat/suckless-builds][suckless-build]]
 
 I use *GNU Stow* for managing my dotfiles, if you want to use my use my dots, run the root folder name
 
