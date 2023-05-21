@@ -34,7 +34,7 @@ local function factory(args)
 
     args             = args or {}
 
-    local timeout    = args.timeout or 5
+    local timeout    = args.timeout or 10
     local settings   = args.settings or function() end
     local width      = args.width or 63
     local height     = args.height or 1

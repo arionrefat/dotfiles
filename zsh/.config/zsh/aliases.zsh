@@ -1,6 +1,4 @@
 #!/bin/sh
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -25,8 +23,6 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 alias list_systemctl="systemctl list-unit-files --state=enabled"
 
 #list
-alias ls='exa'
-alias ll='exa -l'
 alias l.="ls -A | egrep '^\.'"
 
 #pacman unlock

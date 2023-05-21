@@ -18,7 +18,7 @@ local function factory(args)
     args           = args or {}
 
     local pulse    = { widget = args.widget or wibox.widget.textbox(), device = "N/A" }
-    local timeout  = args.timeout or 5
+    local timeout  = args.timeout or 10
     local settings = args.settings or function() end
 
     pulse.devicetype = args.devicetype or "sink"

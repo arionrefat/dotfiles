@@ -17,7 +17,7 @@ local string  = string
 local function factory(args)
     args           = args or {}
     local alsa     = { widget = args.widget or wibox.widget.textbox() }
-    local timeout  = args.timeout or 5
+    local timeout  = args.timeout or 10
     local settings = args.settings or function() end
 
     alsa.cmd           = args.cmd or "amixer"

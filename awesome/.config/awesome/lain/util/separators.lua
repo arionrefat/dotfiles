@@ -1,17 +1,16 @@
 --[[
-
      Licensed under GNU General Public License v2
       * (c) 2015, Luca CPZ
       * (c) 2015, plotnikovanton
-
 --]]
 
 local wibox = require("wibox")
 local gears = require("gears")
+local beautiful = require("beautiful")
 
 -- Lain Cairo separators util submodule
 -- lain.util.separators
-local separators = { height = 0, width = 9 }
+local separators = { height = beautiful.separators_height or 0, width = beautiful.separators_width or 9 }
 
 -- [[ Arrow
 

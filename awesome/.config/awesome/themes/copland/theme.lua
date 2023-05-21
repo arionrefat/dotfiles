@@ -21,8 +21,8 @@ theme.wallpaper = os.getenv("HOME") .. "/.config/wall.png"
 theme.font = "VictorMono Nerd Font Bold 11"
 theme.fg_normal = "#BBBBBB"
 theme.fg_focus = "#78A4FF"
-theme.bg_normal = "#111111"
-theme.bg_focus = "#111111"
+theme.bg_normal = "#000f14"
+theme.bg_focus = "#0a191e"
 theme.fg_urgent = "#000000"
 theme.bg_urgent = "#FFFFFF"
 theme.border_width = dpi(0)
@@ -35,7 +35,7 @@ theme.titlebar_bg_normal = "#191919"
 theme.titlebar_bg_focus = "#262626"
 theme.menu_height = dpi(16)
 theme.menu_width = dpi(130)
-theme.useless_gap = 15
+theme.useless_gap = 8
 theme.tasklist_disable_icon = false
 theme.awesome_icon = theme.dir .. "/icons/awesome.png"
 theme.menu_submenu_icon = theme.dir .. "/icons/submenu.png"
@@ -296,14 +296,6 @@ theme.volume.bar:buttons(my_table.join(
 local volumebg = wibox.container.background(theme.volume.bar, "#474747", gears.shape.rectangle)
 local volumewidget = wibox.container.margin(volumebg, dpi(2), dpi(7), dpi(4), dpi(4))
 
--- Weather
---[[ to be set before use
-theme.weather = lain.widget.weather({
-    --APPID =
-    city_id = 2643743, -- placeholder (London)
-})
---]]
-
 -- Separators
 local first = wibox.widget.textbox(markup.font("Terminus 3", " "))
 local spr = wibox.widget.textbox("  ")
@@ -334,7 +326,7 @@ function theme.at_screen_connect(s)
 	gears.wallpaper.maximized(wallpaper, s, true)
 
 	-- Tags
-	awful.tag(awful.util.tagnames, s, awful.layout.layouts)
+    awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
 
 	-- Create a promptbox for each screen
 	s.mypromptbox = awful.widget.prompt()
@@ -403,9 +395,6 @@ function theme.at_screen_connect(s)
 			baticon,
 			batwidget,
 			bar_spr,
-			-- fsicon,
-			-- fswidget,
-			-- bar_spr,
 			volicon,
 			volumewidget,
 			bar_spr,

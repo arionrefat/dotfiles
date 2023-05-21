@@ -1,6 +1,1 @@
-# This is my neovim config
-
-### List of Plugins
-- 
-
-
+# No longer maintained, I use lunarvim now

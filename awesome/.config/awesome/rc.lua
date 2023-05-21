@@ -46,27 +46,16 @@ do
 	end)
 end
 
--- This function implements the XDG autostart specification
---[[
-awful.spawn.with_shell(
-    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
-    'xrdb -merge <<< "awesome.started:true";' ..
-    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
-)
---]]
-
 local chosen_theme = "copland"
 local modkey = "Mod4"
 local altkey = "Mod1"
-local terminal = "wezterm"
+local terminal = "kitty"
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = os.getenv("EDITOR") or "vim"
-local gui_editor = os.getenv("GUI_EDITOR") or "emacsclient -c -a 'emacs'"
+local gui_editor = "emacsclient -c -a 'emacs'"
 local browser = os.getenv("BROWSER") or "firefox"
 local scrlocker = "slock"
 
--- awful.util.shell = "sh"
 awful.util.terminal = terminal
 awful.util.tagnames = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }
 awful.layout.layouts = {
@@ -148,6 +137,17 @@ awful.util.tasklist_buttons = mytable.join(
 
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 
+local dpi = beautiful.xresources.apply_dpi
+
+-- Notification
+naughty.config.defaults.timeout = 5
+naughty.config.defaults.border_width = 0
+naughty.config.defaults.position = "top_right"
+naughty.config.defaults.margin = 10
+beautiful.notification_max_width = 380
+beautiful.notification_max_height = 380
+beautiful.notification_icon_size = 115
+
 -- {{{ Menu
 
 -- Create a launcher widget and a main menu
@@ -213,13 +213,9 @@ end)
 
 -- {{{ Mouse bindings
 
-root.buttons(mytable.join(
-	awful.button({}, 3, function()
-		mymainmenu:toggle()
-	end),
-	awful.button({}, 4, awful.tag.viewnext),
-	awful.button({}, 5, awful.tag.viewprev)
-))
+root.buttons(mytable.join(awful.button({}, 3, function()
+	mymainmenu:toggle()
+end)))
 
 -- {{{ Key bindings
 
@@ -245,14 +241,6 @@ globalkeys = mytable.join(
 		lain.util.tag_view_nonempty(1)
 	end, { description = "view  previous nonempty", group = "tag" }),
 	awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
-
-	-- Default client focus
-	awful.key({ altkey }, "j", function()
-		awful.client.focus.byidx(1)
-	end, { description = "focus next by index", group = "client" }),
-	awful.key({ altkey }, "k", function()
-		awful.client.focus.byidx(-1)
-	end, { description = "focus previous by index", group = "client" }),
 
 	-- By-direction client focus
 	awful.key({ modkey }, "j", function()
@@ -351,7 +339,6 @@ globalkeys = mytable.join(
 	end, { description = "open a terminal", group = "launcher" }),
 	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "c", awesome.quit, { description = "quit awesome", group = "awesome" }),
-
 	awful.key({ modkey, altkey }, "l", function()
 		awful.tag.incmwfact(0.05)
 	end, { description = "increase master width factor", group = "layout" }),
@@ -387,18 +374,17 @@ globalkeys = mytable.join(
 
 	-- Dropdown application
 	awful.key({ modkey }, "z", function()
-		awful.spawn.with_shell(
-			"greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'"
-		)
+		awful.spawn.with_shell("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'")
 	end, { description = "Dropdown Clipboard", group = "launcher" }),
 
 	-- Widgets popups
-	awful.key({ altkey }, "l", function()
+	awful.key({ altkey }, "i", function()
 		if beautiful.cal then
 			beautiful.cal.show(7)
 		end
 	end, { description = "show calendar", group = "widgets" }),
-	awful.key({ altkey }, "h", function()
+
+	awful.key({ altkey }, "o", function()
 		if beautiful.fs then
 			beautiful.fs.show(7)
 		end
@@ -438,27 +424,21 @@ globalkeys = mytable.join(
 		awful.util.spawn("pcmanfm")
 	end, { description = "Open Pcmanfm", group = "My_Binds" }),
 
-	awful.key({ "Mod4" }, "F1", function()
-		awful.util.spawn("kitty -e ranger")
-	end, { description = "Open ranger via Kitty", group = "My_Binds" }),
-
-	awful.key({ "Mod4" }, "F10", function()
-		awful.spawn.with_shell("~/.scripts/touchpadoff")
-		naughty.notify({ title = "Trackpad Disabled", timeout = 3 })
-	end, { description = "Disable Trackpad", group = "My_Binds" }),
-
-	awful.key({ "Mod4" }, "F8", function()
-		awful.spawn.with_shell("~/.scripts/touchpadon")
-		naughty.notify({ title = "Trackpad Enabled", timeout = 3 })
+	awful.key({}, "XF86TouchpadToggle", function()
+		awful.spawn.with_shell("~/.scripts/touchpad")
 	end, { description = "Enable Trackpad", group = "My_Binds" }),
 
 	awful.key({ altkey, "Ctrl" }, "k", function()
 		awful.spawn.with_shell("~/.scripts/power")
 	end, { description = "Power Options", group = "My_Binds" }),
 
+	awful.key({ "Mod4", altkey }, "m", function()
+		awful.spawn.with_shell("~/.scripts/multimon")
+	end, { description = "Multi monitor", group = "My_Binds" }),
+
 	-- Rofi
 	awful.key({ "Mod4" }, "d", function()
-		awful.util.spawn("rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/config.rasi")
+		awful.util.spawn("rofi -no-lazy-grab -show drun")
 	end, { description = "Spawm Rofi", group = "My_Binds" }),
 
 	-- Dmenu
@@ -467,9 +447,8 @@ globalkeys = mytable.join(
 	end, { description = "Spawm Dmenu", group = "My_Binds" }),
 
 	--Mute Mic
-	awful.key({ "Mod4", "Ctrl" }, "F4", function()
-		awful.util.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle")
-		naughty.notify({ text = "Mic Mute", timeout = 3 })
+	awful.key({}, "XF86AudioMicMute", function()
+		awful.spawn.with_shell("~/.scripts/mutemic")
 	end, { description = "Mute Mic", group = "My_Binds" }),
 
 	-- Screenshot Selection
@@ -645,15 +624,9 @@ awful.rules.rules = {
 
 	-- Set Apps to always map on the first tag on screen 1.
 	{ rule = { class = "Brave-browser" }, properties = { screen = 1, tag = "II" } },
-
 	{ rule = { class = "firefox" }, properties = { screen = 1, tag = "II" } },
-
 	{ rule = { class = "mpv" }, properties = { screen = 1, tag = "VI" } },
-
-	{ rule = { class = "Emacs" }, properties = { screen = 1, tag = "IV" } },
-
 	{ rule = { class = "Pcmanfm" }, properties = { screen = 1, tag = "V" } },
-
 	{ rule = { class = "Gimp", role = "gimp-image-window" }, properties = { maximized = true } },
 }
 

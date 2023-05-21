@@ -17,7 +17,7 @@ local function factory(args)
     args           = args or {}
 
     local mem      = { widget = args.widget or wibox.widget.textbox() }
-    local timeout  = args.timeout or 3
+    local timeout  = args.timeout or 10
     local settings = args.settings or function() end
 
     function mem.update()
