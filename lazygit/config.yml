@@ -1,0 +1,3 @@
+gui:
+  showIcons: true
+  splitDiff: 'auto' # one of 'auto' | 'always'
