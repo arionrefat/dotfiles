@@ -1,0 +1,59 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgba
+Xft.autohint: false
+Xft.hintstyle: hintlight
+Xft.lcdfilter: lcddefault
+
+xcursor.theme: Bibata-Modern-Ice
+xscreensaver.fade:   false
+xscreensaver.unfade: false
+
+xterm*selectToClipboard: true
+
+! Disabling menuBar from emacs
+!emacs.menuBar: off
+
+st.font: JetBrainsMono Nerd Font Mono:pixelsize=19
+
+! window padding
+st.borderpx: 14
+
+!- 0.1 to 0.9 = transparency
+st.alpha: 1.0
+
+*background: #181f21
+*foreground: #dadada
+
+! Black + DarkGrey
+*color0:  #22292b
+*color8:  #575e60
+
+! DarkRed + Red
+*color1:  #e06e6e
+*color9:  #ef7d7d
+
+! DarkGreen + Green
+*color2:  #8ccf7e
+*color10: #9bdead
+
+! DarkYellow + Yellow
+*color3:  #e5c76b
+*color11: #f4d67a
+
+! DarkBlue + Blue
+*color4:  #67b0e8
+*color12: #6cb5ed
+
+! DarkMagenta + Magenta
+*color5:  #c47fd5
+*color13: #ce89df
+
+! DarkCyan + Cyan
+*color6:  #6da4cd
+*color14: #67cbe7
+
+! LightGrey + White
+*color7:  #b3b9b8
+*color15: #bdc3c2
