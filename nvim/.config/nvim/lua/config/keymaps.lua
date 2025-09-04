@@ -5,10 +5,11 @@
 local keymap = vim.keymap
 local options = { noremap = true, silent = true }
 
--- select all text in the buffer
-keymap.set("n", "<C-a>", "ggVG")
-
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
+end, options)
+
+keymap.set("n", "<C-k>", function()
+  vim.diagnostic.goto_prev()
 end, options)

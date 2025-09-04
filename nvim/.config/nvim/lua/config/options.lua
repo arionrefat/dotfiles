@@ -5,3 +5,6 @@
 local opt = vim.opt
 
 opt.relativenumber = false
+
+vim.g.lazyvim_python_lsp = "pylsp"
+vim.g.lazyvim_picker = "telescope"

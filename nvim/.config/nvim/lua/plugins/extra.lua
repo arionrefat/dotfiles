@@ -22,15 +22,16 @@ return {
     end,
   },
   {
-    "folke/zen-mode.nvim",
-    cmd = "ZenMode",
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@type snacks.Config
     opts = {
-      plugins = {
-        gitsigns = true,
-        tmux = true,
-        kitty = { enabled = true, font = "+4" },
+      notifier = {
+        enabled = false,
+        timeout = 3000,
       },
+      scroll = { enabled = false },
     },
-    keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 }

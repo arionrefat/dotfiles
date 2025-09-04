@@ -2,11 +2,7 @@ return {
   -- messages, cmdline and the popupmenu
   {
     "folke/noice.nvim",
-    enabled = false,
-  },
-  {
-    "rcarriga/nvim-notify",
-    enabled = false,
+    enabled = true,
   },
   {
     "catppuccin/nvim",
@@ -23,6 +19,12 @@ return {
           { "location", padding = { left = 1, right = 1 } },
         },
       },
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = false },
     },
   },
 }
