@@ -15,7 +15,7 @@ video_default	= [
 ]
 
 text_default	= [
-	{ command = "lvim" },
+	{ command = "nvim" },
 ]
 
 reader_default	= [
@@ -166,7 +166,7 @@ kdenlive.app_list = [
 ]
 
 tex.app_list	= [
-	{ command = "lvim" },
+	{ command = "nvim" },
 	{ command = "bat", confirm_exit = true },
 	{ command = "pdflatex" } ]
 
