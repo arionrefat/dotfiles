@@ -1,0 +1,45 @@
+# ===== secrets / credentials — never commit =====
+**/.credentials.json
+**/credentials.json
+**/hosts.yml
+**/*.pem
+**/*.key
+.env
+.env.*
+
+# ===== shell state / history / caches =====
+**/.zsh_history
+**/.zcompdump*
+**/.zcompcache/
+**/.zsh_sessions/
+**/.bash_history
+
+# ===== tool state / plugins (reinstalled, not versioned) =====
+**/.config/tmux/plugins/
+**/.config/lazygit/state.yml
+**/.config/gh/hosts.yml
+**/.config/kitty/sessions/
+
+# ===== Claude — private session data (defense in depth) =====
+shared/claude/.claude/projects/
+shared/claude/.claude/todos/
+shared/claude/.claude/tasks/
+shared/claude/.claude/plans/
+shared/claude/.claude/sessions/
+shared/claude/.claude/session-env/
+shared/claude/.claude/shell-snapshots/
+shared/claude/.claude/file-history/
+shared/claude/.claude/paste-cache/
+shared/claude/.claude/backups/
+shared/claude/.claude/statsig/
+shared/claude/.claude/cache/
+shared/claude/.claude/history.jsonl
+shared/claude/.claude/mcp-needs-auth-cache.json
+shared/claude/.claude/settings.local.json
+shared/claude/.claude/.last-cleanup
+shared/claude/.claude/plugins/cache/
+shared/claude/.claude/plugins/plugin-catalog-cache.json
+
+# ===== misc =====
+**/node_modules/
+.DS_Store

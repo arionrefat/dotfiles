@@ -1,0 +1,18 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/gazirefatul/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-06-08T00:12:14.862Z"
+  },
+  "wakatime": {
+    "source": {
+      "source": "git",
+      "url": "https://github.com/wakatime/claude-code-wakatime.git"
+    },
+    "installLocation": "/Users/gazirefatul/.claude/plugins/marketplaces/wakatime",
+    "lastUpdated": "2026-06-07T18:02:39.884Z"
+  }
+}

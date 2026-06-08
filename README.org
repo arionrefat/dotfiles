@@ -1,53 +1,48 @@
 * Welcome to my dotfiles!
 
-* Showcase:
+Managed with [[https://www.gnu.org/software/stow/][GNU Stow]] and split by platform.
 
-#+CAPTION: Screenshots
-#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss4.png]]
+* Structure
 
-#+CAPTION: Screenshots
-#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss2.png]]
+| Folder    | Purpose                                                      |
+|-----------+-------------------------------------------------------------|
+| =shared/= | Cross-platform configs (used on both macOS and Linux)       |
+| =mac/=    | macOS-only configs (yabai, skhd, aerospace, sketchybar, …)  |
+| =linux/=  | Linux-only configs (awesome, hyprland, …)                   |
 
-#+CAPTION: Screenshots
-#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss3.png]]
+Each folder is a Stow root: every package inside mirrors its target path under =$HOME=
+(e.g. =shared/nvim/.config/nvim/= → =~/.config/nvim/=).
 
-#+CAPTION: Screenshots
-#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss1.png]]
+* Usage
 
-* Fetch:
-
-#+CAPTION: Screenshots
-#+ATTR_HTMK: :alt Screenshot :title Screenshot :align center
-[[https://raw.githubusercontent.com/arionrefat/dotfiles/master/screenshots/.screenshots/ss5.png]]
-
-* Free(libre) Softwares I use:
-| Terminal      |           |
-|               | [[https://github.com/kovidgoyal/kitty][kitty]]     |
-|               | [[https://st.suckless.org/][st]]        |
-| Window Manger |           |
-|               | [[https://awesomewm.org/][awesomewm]] |
-|               | [[https://dwm.suckless.org/][dwm]]       |
-| Browser       |           |
-|               | [[https://brave.com/][brave]]     |
-| Editor        |           |
-|               | [[https://neovim.io/][Neovim]]    |
-|               | [[https://www.gnu.org/software/emacs/][Emacs]]     |
-|               | [[https://vscodium.com/][VSCodium]]  |
-| Filemanager   |           |
-|               | [[https://github.com/ranger/ranger][Ranger]]    |
-|               | [[https://wiki.archlinux.org/title/PCManFM][Pcmanfm]]   |
-
-* For suckless builds Here is the repo link
-[[https://gitlab.com/arionrefat/suckless-builds][suckless-build]]
-
-I use *GNU Stow* for managing my dotfiles, if you want to use my use my dots, run the root folder name
-
-For example you want to get neovim folder on your ~/.config file, first delete(or backup your previous config) the neovim folder then run:
+Stow a package from the folder it lives in, targeting your home directory. Back up or
+remove any existing config at the target first.
 
 #+begin_src sh
-    stow neovim
+  # cross-platform
+  stow -d shared -t ~ nvim kitty tmux zsh git yazi lazygit gh gh-dash tmux-sessionizer claude
+
+  # linux box
+  stow -d linux -t ~ awesome joshuto zathura mpv
+
+  # macOS box (window-manager configs added over time)
+  stow -d mac -t ~ <package>
 #+end_src
+
+* Notes
+
+- =shared/zsh/.zprofile= sets =ZDOTDIR=$HOME/.config/zsh=; the rest of the zsh config lives under =shared/zsh/.config/zsh/=.
+- tmux plugins are installed by [[https://github.com/tmux-plugins/tpm][tpm]] and are not versioned.
+- =shared/claude/= holds only authored Claude Code config (instructions, settings, skills); private session data is git-ignored.
+- Secrets (gh =hosts.yml=, credentials, shell history) are git-ignored — see [[file:.gitignore][.gitignore]].
+
+* Free (libre) software I use
+
+| Terminal     | [[https://github.com/kovidgoyal/kitty][kitty]]                                   |
+| Window Mgr   | [[https://awesomewm.org/][awesomewm]] (Linux), [[https://hyprland.org/][Hyprland]] (planned)   |
+| Editor       | [[https://neovim.io/][Neovim]]                                  |
+| File manager | [[https://github.com/sxyazi/yazi][yazi]], [[https://github.com/kamiyaa/joshuto][joshuto]]                           |
+
+* Suckless builds
+
+[[https://gitlab.com/arionrefat/suckless-builds][suckless-build]]
