@@ -4,11 +4,11 @@ Managed with [[https://www.gnu.org/software/stow/][GNU Stow]] and split by platf
 
 * Structure
 
-| Folder    | Purpose                                                      |
-|-----------+-------------------------------------------------------------|
-| =shared/= | Cross-platform configs (used on both macOS and Linux)       |
-| =mac/=    | macOS-only configs (yabai, skhd, aerospace, sketchybar, …)  |
-| =linux/=  | Linux-only configs (awesome, hyprland, …)                   |
+| Folder    | Purpose                                                  |
+|-----------+----------------------------------------------------------|
+| =shared/= | Cross-platform configs (used on both macOS and Linux)    |
+| =mac/=    | macOS-only configs (none yet — reserved for future use)  |
+| =linux/=  | Linux-only configs (awesome, zathura, mpv)               |
 
 Each folder is a Stow root: every package inside mirrors its target path under =$HOME=
 (e.g. =shared/nvim/.config/nvim/= → =~/.config/nvim/=).
@@ -23,11 +23,11 @@ remove any existing config at the target first.
   stow -d shared -t ~ nvim kitty tmux zsh git yazi lazygit gh gh-dash tmux-sessionizer claude
 
   # linux box
-  stow -d linux -t ~ awesome joshuto zathura mpv
-
-  # macOS box (window-manager configs added over time)
-  stow -d mac -t ~ <package>
+  stow -d linux -t ~ awesome zathura mpv
 #+end_src
+
+The =mac/= folder has no packages yet; stow from it the same way once it does
+(=stow -d mac -t ~ <package>=).
 
 * Notes
 
@@ -38,10 +38,12 @@ remove any existing config at the target first.
 
 * Free (libre) software I use
 
-| Terminal     | [[https://github.com/kovidgoyal/kitty][kitty]]                                   |
-| Window Mgr   | [[https://awesomewm.org/][awesomewm]] (Linux), [[https://hyprland.org/][Hyprland]] (planned)   |
-| Editor       | [[https://neovim.io/][Neovim]]                                  |
-| File manager | [[https://github.com/sxyazi/yazi][yazi]], [[https://github.com/kamiyaa/joshuto][joshuto]]                           |
+| Terminal     | [[https://github.com/kovidgoyal/kitty][kitty]]              |
+| Window Mgr   | [[https://awesomewm.org/][awesomewm]] (Linux)  |
+| Editor       | [[https://neovim.io/][Neovim]]             |
+| File manager | [[https://github.com/sxyazi/yazi][yazi]]               |
+| Media player | [[https://mpv.io/][mpv]]                |
+| PDF viewer   | [[https://pwmt.org/projects/zathura/][zathura]]            |
 
 * Suckless builds
 
